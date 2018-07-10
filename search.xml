@@ -13,7 +13,7 @@
   <entry>
     <title><![CDATA[Projects]]></title>
     <url>%2Fprojects%2Findex.html</url>
-    <content type="text"><![CDATA[ProjectsAudio basics 通过librosa进行音频的基本操作和特征提取 使用lirosa库，读取音频，提取频谱，MFCC等。 Have fun Urban Sound Classification Inspired by http://aqibsaeed.github.io/2016-09-03-urban-sound-classification-part-1/ Urban Sound Classifier using NN 这是我搭建的第一个神经网络，可以说是边做边学，代码有一些混乱。整个流程几乎是跟着上面博客的思路来，准确度虽然不高，但work了，还是满意的。 Urban Sound Classifier using CNN v2 第一版的CNN非常惨烈，所以废弃了，第二版开始work了，但准确率实在堪忧，只有50%左右。 Urban Sound Classifier using CNN v3 紧接着第二版做的一些变体，单纯的娱乐，看看不同网络效果的区别，虽然没有看到。 Urban Sound Classifier using LSTM v1 第一次尝试LSTM，LSTM的搭建也很简单，预计效果不错，然而实际却低于NN和CNN。原因还不明。 ← Back to Homepage]]></content>
+    <content type="text"><![CDATA[ProjectsAudio basics 通过librosa进行音频的基本操作和特征提取 使用lirosa库，读取音频，提取频谱，MFCC等。 MATLAB中进行声场可视化 Have fun Urban Sound Classification Inspired by http://aqibsaeed.github.io/2016-09-03-urban-sound-classification-part-1/ Urban Sound Classifier using NN 这是我搭建的第一个神经网络，可以说是边做边学，代码有一些混乱。整个流程几乎是跟着上面博客的思路来，准确度虽然不高，但work了，还是满意的。 Urban Sound Classifier using CNN v2 第一版的CNN非常惨烈，所以废弃了，第二版开始work了，但准确率实在堪忧，只有50%左右。 Urban Sound Classifier using CNN v3 紧接着第二版做的一些变体，单纯的娱乐，看看不同网络效果的区别，虽然没有看到。 Urban Sound Classifier using LSTM v1 第一次尝试LSTM，LSTM的搭建也很简单，预计效果不错，然而实际却低于NN和CNN。原因还不明。 ← Back to Homepage]]></content>
   </entry>
   <entry>
     <title><![CDATA[tags]]></title>
