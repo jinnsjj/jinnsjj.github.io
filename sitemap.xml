@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jinnsjj.github.io/2018-07-11/Sudoku-Solver/</loc>
+    
+    <lastmod>2018-07-11T12:34:18.557Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jinnsjj.github.io/2018-07-11/Valid-Sudoku/</loc>
+    
+    <lastmod>2018-07-11T12:34:14.121Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jinnsjj.github.io/projects/index.html</loc>
     
-    <lastmod>2018-07-11T09:16:53.582Z</lastmod>
+    <lastmod>2018-07-11T11:57:40.935Z</lastmod>
     
   </url>
   

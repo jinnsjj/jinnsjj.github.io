@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LeetCode-37 Sudoku Solver]]></title>
+    <url>%2F2018-07-11%2FSudoku-Solver%2F</url>
+    <content type="text"><![CDATA[37. Sudoku Solver求解数独。前两天做了验证数独那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。 我之前的版本，dfs函数没有加入i与j两个变量，每次调用都重新扫描一遍需要填的空，这导致效率很低，引入i和j后果然好了很多。另外之前的dfs是void不返回值，通过一个cnt变量计算总共的空数，当cnt等于0时停止，但由于我们需要在中途中断dfs函数（找到正确的解时，否则答案会被填回’.’），采用void的类型也会比较难以中断。借鉴了别人的解法，让dfs返回一个值来判定是否完成整个数独，这样好了很多。 算法解释： solveSudoku： 功能函数入口。 dfs：深度优先搜索函数。 输入整个表和一个坐标。 如果该坐标已有数字，搜索下一个格子j++；当j==9，说明这一排已搜索完，搜索下一排的第一个格子i++, j=0；如果所有的行都已搜索完，说明所有的格子都被正确的填入了数字，则返回true。 如果该坐标下没有数字&#39;.&#39;，从1开始填入，并验证该数字是否可行isValid(board, i, j)。如果不可行，擦除填入的数字并填入下一个数字直到9。如果可行，搜索下一个格子，并直到整张表被填完。 如果一个没有填的格子所有的数字都不可行，代表之前填的数字有错，那么返回false。 isValid：验证某个格子里的数字是否可行，是之前验证数独的简化版，因为只用验证特定位置的数字。 1234567891011121314151617181920212223242526272829303132333435363738394041class Solution &#123;public: void solveSudoku(vector&lt;vector&lt;char&gt;&gt;&amp; board) &#123; dfs(board, 0, 0); &#125; bool dfs(vector&lt;vector&lt;char&gt;&gt;&amp; board, int i, int j)&#123; if (i&gt;=9) return true; if (j&gt;=9) return dfs(board, i+1, 0); if (board[i][j]=='.')&#123; for (int num = 1; num &lt;= 9; num++)&#123; board[i][j] = (char)(num+'0'); if(isValid(board, i, j))&#123; if(dfs(board, i, j+1)) return true; &#125; board[i][j] = '.'; &#125; &#125;else &#123; return dfs(board, i, j+1); &#125; return false; &#125; bool isValid(vector&lt;vector&lt;char&gt;&gt;&amp; board, int i, int j)&#123; for (int col = 0; col &lt; 9; col++)&#123; if (col != j &amp;&amp; board[i][j]==board[i][col]) return false; &#125; for (int row = 0; row &lt; 9; row++)&#123; if (row != i &amp;&amp; board[i][j]==board[row][j]) return false; &#125; for (int row = i / 3 * 3; row &lt; i / 3 * 3 + 3; ++row) &#123; for (int col = j / 3 * 3; col &lt; j / 3 * 3 + 3; ++col) &#123; if ((row != i || col != j) &amp;&amp; board[i][j] == board[row][col]) return false; &#125; &#125; return true; &#125;&#125;; Reference http://www.cnblogs.com/grandyang/p/4421852.html]]></content>
+      <categories>
+        <category>coding</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode-36 Valid Sudoku]]></title>
+    <url>%2F2018-07-11%2FValid-Sudoku%2F</url>
+    <content type="text"><![CDATA[36. Valid Sudoku要验证数独的棋盘，就是三个标准，行没有重复，列没有重复以及3x3格子没有重复。最开始的思路是建立1*9的hash表，依据这个标准检测三次，但这样带来一个问题是需要遍历棋盘三次。但其实可以扩大hash表，只需遍历棋盘一次。 123456789101112131415161718192021222324class Solution &#123;public: bool row[9][9] = &#123;0&#125;; // 9行的hash bool col[9][9] = &#123;0&#125;; // 9列的hash bool box[9][9] = &#123;0&#125;; // 9个box的hash bool isValidSudoku(vector&lt;vector&lt;char&gt;&gt;&amp; board) &#123; for (int i = 0; i &lt; 9; i++)&#123; for (int j = 0; j &lt; 9; j++)&#123; char c = board[i][j]; if (c != '.')&#123; if(!row[i][c-'1']) row[i][c-'1'] = !row[i][c-'1']; else return false; if(!col[j][c-'1']) col[j][c-'1'] = !col[j][c-'1']; else return false; int idxBox = (i/3)*3+j/3; // 判定该元素属于哪个格子 if(!box[idxBox][c-'1']) box[idxBox][c-'1'] = !box[idxBox][c-'1']; else return false; &#125; &#125; &#125; return true; &#125;&#125;;]]></content>
+      <categories>
+        <category>coding</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018-07-09%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
   <entry>
+    <title><![CDATA[Projects]]></title>
+    <url>%2Fprojects%2Findex.html</url>
+    <content type="text"><![CDATA[ProjectsAudio basics 通过librosa进行音频的基本操作和特征提取 使用lirosa库，读取音频，提取频谱，MFCC等。 MATLAB中进行声场可视化 Have fun Urban Sound Classification Inspired by http://aqibsaeed.github.io/2016-09-03-urban-sound-classification-part-1/ Urban Sound Classifier using NN 这是我搭建的第一个神经网络，可以说是边做边学，代码有一些混乱。整个流程几乎是跟着上面博客的思路来，准确度虽然不高，但work了，还是满意的。 Urban Sound Classifier using CNN v2 第一版的CNN非常惨烈，所以废弃了，第二版开始work了，但准确率实在堪忧，只有50%左右。 Urban Sound Classifier using CNN v3 紧接着第二版做的一些变体，单纯的娱乐，看看不同网络效果的区别，虽然没有看到。 Urban Sound Classifier using LSTM v1 第一次尝试LSTM，LSTM的搭建也很简单，预计效果不错，然而实际却低于NN和CNN。原因还不明。 ← Back to Homepage]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[categories]]></title>
     <url>%2Fcategories%2Findex.html</url>
     <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[project]]></title>
-    <url>%2Fprojects%2Findex.html</url>
-    <content type="text"><![CDATA[ProjectsAudio basics 通过librosa进行音频的基本操作和特征提取 使用lirosa库，读取音频，提取频谱，MFCC等。 MATLAB中进行声场可视化 Have fun Urban Sound Classification Inspired by http://aqibsaeed.github.io/2016-09-03-urban-sound-classification-part-1/ Urban Sound Classifier using NN 这是我搭建的第一个神经网络，可以说是边做边学，代码有一些混乱。整个流程几乎是跟着上面博客的思路来，准确度虽然不高，但work了，还是满意的。 Urban Sound Classifier using CNN v2 第一版的CNN非常惨烈，所以废弃了，第二版开始work了，但准确率实在堪忧，只有50%左右。 Urban Sound Classifier using CNN v3 紧接着第二版做的一些变体，单纯的娱乐，看看不同网络效果的区别，虽然没有看到。 Urban Sound Classifier using LSTM v1 第一次尝试LSTM，LSTM的搭建也很简单，预计效果不错，然而实际却低于NN和CNN。原因还不明。 ← Back to Homepage]]></content>
   </entry>
   <entry>
     <title><![CDATA[tags]]></title>

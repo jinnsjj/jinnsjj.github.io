@@ -108,24 +108,25 @@
 
 
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+  <meta name="description" content="37. Sudoku Solver求解数独。前两天做了验证数独那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。 我之前的版本，dfs">
+<meta name="keywords" content="leetcode,c++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://jinnsjj.github.io/2018-07-09/hello-world/index.html">
+<meta property="og:title" content="LeetCode-37 Sudoku Solver">
+<meta property="og:url" content="http://jinnsjj.github.io/2018-07-11/Sudoku-Solver/index.html">
 <meta property="og:site_name" content="JOHZEN">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="37. Sudoku Solver求解数独。前两天做了验证数独那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。 我之前的版本，dfs">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-09T09:42:00.388Z">
+<meta property="og:updated_time" content="2018-07-11T12:34:18.557Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="twitter:title" content="LeetCode-37 Sudoku Solver">
+<meta name="twitter:description" content="37. Sudoku Solver求解数独。前两天做了验证数独那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。 我之前的版本，dfs">
 
 
 
 
 
 
-  <link rel="canonical" href="http://jinnsjj.github.io/2018-07-09/hello-world/"/>
+  <link rel="canonical" href="http://jinnsjj.github.io/2018-07-11/Sudoku-Solver/"/>
 
 
 
@@ -135,7 +136,7 @@
   };
 </script>
 
-  <title>Hello World | JOHZEN</title>
+  <title>LeetCode-37 Sudoku Solver | JOHZEN</title>
   
 
 
@@ -339,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jinnsjj.github.io/2018-07-09/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://jinnsjj.github.io/2018-07-11/Sudoku-Solver/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jon">
@@ -356,7 +357,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Hello World
+          <h2 class="post-title" itemprop="name headline">LeetCode-37 Sudoku Solver
               
             
           </h2>
@@ -381,7 +382,7 @@
                 
               
 
-              <time title="Created: 2018-07-09 17:49:29 / Modified: 18:42:00" itemprop="dateCreated datePublished" datetime="2018-07-09T17:49:29+09:00">2018-07-09</time>
+              <time title="Created: 2018-07-11 21:18:58 / Modified: 21:34:18" itemprop="dateCreated datePublished" datetime="2018-07-11T21:18:58+09:00">2018-07-11</time>
             
 
             
@@ -392,6 +393,24 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/coding/" itemprop="url" rel="index"><span itemprop="name">coding</span></a></span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -400,10 +419,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018-07-09/hello-world/#comments" itemprop="discussionUrl">
+                <a href="/2018-07-11/Sudoku-Solver/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018-07-09/hello-world/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018-07-11/Sudoku-Solver/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -411,7 +430,7 @@
 
           
           
-             <span id="/2018-07-09/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2018-07-11/Sudoku-Solver/" class="leancloud_visitors" data-flag-title="LeetCode-37 Sudoku Solver">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -442,16 +461,24 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="37-Sudoku-Solver"><a href="#37-Sudoku-Solver" class="headerlink" title="37. Sudoku Solver"></a><a href="https://leetcode.com/problems/sudoku-solver/description/" target="_blank" rel="noopener">37. Sudoku Solver</a></h1><p>求解数独。前两天做了<a href="https://leetcode.com/problems/valid-sudoku/description/" target="_blank" rel="noopener">验证数独</a>那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。</p>
+<p>我之前的版本，dfs函数没有加入i与j两个变量，每次调用都重新扫描一遍需要填的空，这导致效率很低，引入i和j后果然好了很多。另外之前的dfs是void不返回值，通过一个cnt变量计算总共的空数，当cnt等于0时停止，但由于我们需要在中途中断dfs函数（找到正确的解时，否则答案会被填回’.’），采用void的类型也会比较难以中断。借鉴了别人的解法，让dfs返回一个值来判定是否完成整个数独，这样好了很多。</p>
+<p><strong>算法解释：</strong> </p>
+<ul>
+<li>solveSudoku： 功能函数入口。</li>
+<li>dfs：深度优先搜索函数。<ul>
+<li>输入整个表和一个坐标。</li>
+<li>如果该坐标已有数字，搜索下一个格子<code>j++</code>；当<code>j==9</code>，说明这一排已搜索完，搜索下一排的第一个格子<code>i++, j=0</code>；如果所有的行都已搜索完，说明所有的格子都被正确的填入了数字，则返回<code>true</code>。</li>
+<li>如果该坐标下没有数字<code>&#39;.&#39;</code>，从1开始填入，并验证该数字是否可行<code>isValid(board, i, j)</code>。如果不可行，擦除填入的数字并填入下一个数字直到9。如果可行，搜索下一个格子，并直到整张表被填完。</li>
+<li>如果一个没有填的格子所有的数字都不可行，代表之前填的数字有错，那么返回<code>false</code>。</li>
+</ul>
+</li>
+<li>isValid：验证某个格子里的数字是否可行，是之前验证数独的简化版，因为只用验证特定位置的数字。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">solveSudoku</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board)</span> </span>&#123;</span><br><span class="line">        dfs(board, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i&gt;=<span class="number">9</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (j&gt;=<span class="number">9</span>) <span class="keyword">return</span> dfs(board, i+<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (board[i][j]==<span class="string">'.'</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> num = <span class="number">1</span>; num &lt;= <span class="number">9</span>; num++)&#123;</span><br><span class="line">                board[i][j] = (<span class="keyword">char</span>)(num+<span class="string">'0'</span>);</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span>(isValid(board, i, j))&#123;</span><br><span class="line">                    <span class="keyword">if</span>(dfs(board, i, j+<span class="number">1</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                </span><br><span class="line">                board[i][j] = <span class="string">'.'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> dfs(board, i, j+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> col = <span class="number">0</span>; col &lt; <span class="number">9</span>; col++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (col != j &amp;&amp; board[i][j]==board[i][col]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> row = <span class="number">0</span>; row &lt; <span class="number">9</span>; row++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (row != i &amp;&amp; board[i][j]==board[row][j]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> row = i / <span class="number">3</span> * <span class="number">3</span>; row &lt; i / <span class="number">3</span> * <span class="number">3</span> + <span class="number">3</span>; ++row) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> col = j / <span class="number">3</span> * <span class="number">3</span>; col &lt; j / <span class="number">3</span> * <span class="number">3</span> + <span class="number">3</span>; ++col) &#123;</span><br><span class="line">                <span class="keyword">if</span> ((row != i || col != j) &amp;&amp; board[i][j] == board[row][col]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><blockquote>
+<p><a href="http://www.cnblogs.com/grandyang/p/4421852.html" target="_blank" rel="noopener">http://www.cnblogs.com/grandyang/p/4421852.html</a></p>
+</blockquote>
 
       
     </div>
@@ -470,6 +497,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          
+            <a href="/tags/c/" rel="tag"># c++</a>
+          
+        </div>
+      
 
       
       
@@ -479,15 +514,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018-07-11/Valid-Sudoku/" rel="next" title="LeetCode-36 Valid Sudoku">
+                <i class="fa fa-chevron-left"></i> LeetCode-36 Valid Sudoku
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018-07-11/Valid-Sudoku/" rel="prev" title="LeetCode-36 Valid Sudoku">
-                LeetCode-36 Valid Sudoku <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -658,7 +693,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#37-Sudoku-Solver"><span class="nav-number">1.</span> <span class="nav-text">37. Sudoku Solver</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.1.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -825,9 +860,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://jinnsjj.github.io/2018-07-09/hello-world/';
-        this.page.identifier = '2018-07-09/hello-world/';
-        this.page.title = 'Hello World';
+        this.page.url = 'http://jinnsjj.github.io/2018-07-11/Sudoku-Solver/';
+        this.page.identifier = '2018-07-11/Sudoku-Solver/';
+        this.page.title = 'LeetCode-37 Sudoku Solver';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
