@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[搭建hexo+next博客并把项目主页放在上面]]></title>
+    <url>%2F2018-07-11%2F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%E4%B8%BB%E9%A1%B5%2F</url>
+    <content type="text"><![CDATA[搭建hexo+next博客并把项目主页放在上面其实博客还是想用csdn写，但是像jupyter notebook这些，想在网上贴出来，一方面和大家分享，一方面也想留作存档，在csdn就不太方便，还是githube page好。之前在github page上搭了博客，随后由于懒惰废弃了，想从新捡起，可当属安装了很多依赖，现在找不回来，导致hexo已经生成不了，因为之前用的不多，所以索性从新再来，也一边在这里记录，免得下次又忘。 这次还是选择hexo，一方面好看，另外也方便，配置好了后直接hexo d就可以同步到page上。 那么开始。 怎么在github pages上搭主页可以参考GitHub-Pages-Hexo-NexT-快速构建静态Blog。 找好看的主题首先要找个好的hexo主题，要明确我不是想用来做博客，而是分享一些项目，所以要求主页清晰明了。 找了一圈，没有特别满意的， 还是用next吧 主要步骤 装npm 装hexo 初始化hexo 命令行输入hexo init page page是想初始化的文件夹名 next主题 https://github.com/theme-next/hexo-theme-next 进入文件夹，克隆next库 cd page git clone https://github.com/theme-next/hexo-theme-next themes/next 切换主题：在根目录里的_config.yml文件中，theme字段设为next 完工，看一看完成情况hexo s 配置deploy https://hexo.io/docs/deployment.html 安装hexo-deployer-git 根目录里的_config.yml文件 12345deploy: type: git repo: git@github.com:username/username.github.io.git branch: master message: &quot;&#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;&quot; hexo d部署 访问一下 jinnsjj.github.com 一些配置首先还是去_config.yml里，把最上面的title啊描述啊按自己的喜好改一改 资源文件夹对于每个文章，生成一个文件夹存放里面的媒体文件。 根目录里的_config.yml文件 1post_asset_folder: true 网站内搜索https://github.com/theme-next/hexo-generator-searchdb npm install hexo-generator-searchdb --save 站点的配置文件中加入 12345search: path: search.xml field: all format: html limit: 10000 注意field改为all，这样我们自己的project页面才能被搜索到。 leancloud阅读计数https://leaferx.online/2018/02/11/lc-security/ add this 分享https://theme-next.iissnan.com/third-party-services.html+https://github.com/iissnan/hexo-theme-next/issues/906 放置项目的地方在source文件夹里面建立一个projects文件夹，把jupyter notebook导出的html文件或者其他的html直接放在里面就好。再在根目录的_config.yml中间的skip_render项中加入projects/**，这样这个文件夹里的html就会直接显示了。 无关紧要但好玩的东西主页上的黑猫:https://huaji8.top/post/live2d-plugin-2.0/https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md 首先安装模块 npm install --save hexo-helper-live2d _config.yml中加入1234567891011121314live2d: enable: true scriptFrom: local pluginRootPath: live2dw/ pluginJsPath: lib/ pluginModelPath: assets/ model: use: live2d-widget-model-hijiki display: position: right width: 150 height: 300 mobile: show: true model下use的模型需要安装npm install live2d-widget-model-hijiki 备注npm命令的–save是将安装的依赖包写入目录里的package.json文件中]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[LeetCode-37 Sudoku Solver]]></title>
     <url>%2F2018-07-11%2FSudoku-Solver%2F</url>
     <content type="text"><![CDATA[37. Sudoku Solver求解数独。前两天做了验证数独那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。 我之前的版本，dfs函数没有加入i与j两个变量，每次调用都重新扫描一遍需要填的空，这导致效率很低，引入i和j后果然好了很多。另外之前的dfs是void不返回值，通过一个cnt变量计算总共的空数，当cnt等于0时停止，但由于我们需要在中途中断dfs函数（找到正确的解时，否则答案会被填回’.’），采用void的类型也会比较难以中断。借鉴了别人的解法，让dfs返回一个值来判定是否完成整个数独，这样好了很多。 算法解释： solveSudoku： 功能函数入口。 dfs：深度优先搜索函数。 输入整个表和一个坐标。 如果该坐标已有数字，搜索下一个格子j++；当j==9，说明这一排已搜索完，搜索下一排的第一个格子i++, j=0；如果所有的行都已搜索完，说明所有的格子都被正确的填入了数字，则返回true。 如果该坐标下没有数字&#39;.&#39;，从1开始填入，并验证该数字是否可行isValid(board, i, j)。如果不可行，擦除填入的数字并填入下一个数字直到9。如果可行，搜索下一个格子，并直到整张表被填完。 如果一个没有填的格子所有的数字都不可行，代表之前填的数字有错，那么返回false。 isValid：验证某个格子里的数字是否可行，是之前验证数独的简化版，因为只用验证特定位置的数字。 1234567891011121314151617181920212223242526272829303132333435363738394041class Solution &#123;public: void solveSudoku(vector&lt;vector&lt;char&gt;&gt;&amp; board) &#123; dfs(board, 0, 0); &#125; bool dfs(vector&lt;vector&lt;char&gt;&gt;&amp; board, int i, int j)&#123; if (i&gt;=9) return true; if (j&gt;=9) return dfs(board, i+1, 0); if (board[i][j]=='.')&#123; for (int num = 1; num &lt;= 9; num++)&#123; board[i][j] = (char)(num+'0'); if(isValid(board, i, j))&#123; if(dfs(board, i, j+1)) return true; &#125; board[i][j] = '.'; &#125; &#125;else &#123; return dfs(board, i, j+1); &#125; return false; &#125; bool isValid(vector&lt;vector&lt;char&gt;&gt;&amp; board, int i, int j)&#123; for (int col = 0; col &lt; 9; col++)&#123; if (col != j &amp;&amp; board[i][j]==board[i][col]) return false; &#125; for (int row = 0; row &lt; 9; row++)&#123; if (row != i &amp;&amp; board[i][j]==board[row][j]) return false; &#125; for (int row = i / 3 * 3; row &lt; i / 3 * 3 + 3; ++row) &#123; for (int col = j / 3 * 3; col &lt; j / 3 * 3 + 3; ++col) &#123; if ((row != i || col != j) &amp;&amp; board[i][j] == board[row][col]) return false; &#125; &#125; return true; &#125;&#125;; Reference http://www.cnblogs.com/grandyang/p/4421852.html]]></content>
@@ -30,14 +35,14 @@
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
   <entry>
-    <title><![CDATA[categories]]></title>
-    <url>%2Fcategories%2Findex.html</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[Projects]]></title>
     <url>%2Fprojects%2Findex.html</url>
     <content type="text"><![CDATA[ProjectsAudio basics 通过librosa进行音频的基本操作和特征提取 使用lirosa库，读取音频，提取频谱，MFCC等。 MATLAB中进行声场可视化 Have fun Urban Sound Classification Inspired by http://aqibsaeed.github.io/2016-09-03-urban-sound-classification-part-1/ Urban Sound Classifier using NN 这是我搭建的第一个神经网络，可以说是边做边学，代码有一些混乱。整个流程几乎是跟着上面博客的思路来，准确度虽然不高，但work了，还是满意的。 Urban Sound Classifier using CNN v2 第一版的CNN非常惨烈，所以废弃了，第二版开始work了，但准确率实在堪忧，只有50%左右。 Urban Sound Classifier using CNN v3 紧接着第二版做的一些变体，单纯的娱乐，看看不同网络效果的区别，虽然没有看到。 Urban Sound Classifier using LSTM v1 第一次尝试LSTM，LSTM的搭建也很简单，预计效果不错，然而实际却低于NN和CNN。原因还不明。 ← Back to Homepage]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[categories]]></title>
+    <url>%2Fcategories%2Findex.html</url>
+    <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[tags]]></title>
