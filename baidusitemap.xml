@@ -4,6 +4,77 @@
 
     
   <url>
+    <loc>https://jinnsjj.github.io/2018-07-12/something-of-HOA/</loc>
+    <lastmod>2018-07-12T16:54:50.635Z</lastmod>
+    <data>
+        <display>
+        <title>HOA声场重建</title>
+        <pubTime>2018-07-12T14:00:46.000Z</pubTime>
+        
+        <tag>HOA</tag>
+         
+        <tag>spatial audio</tag>
+         
+        <tag>sound field reproduction</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
+          
+             
+              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jinnsjj.github.io/2018-07-12/librosa-audio/</loc>
+    <lastmod>2018-07-12T16:19:05.638Z</lastmod>
+    <data>
+        <display>
+        <title>librosa音频操作基础和特征提取</title>
+        <pubTime>2018-07-12T05:43:41.000Z</pubTime>
+        
+        <tag>librosa</tag>
+         
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
+          
+             
+              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jinnsjj.github.io/2018-07-12/hexo-next%E4%B8%ADnote%E6%8F%90%E7%A4%BA%E5%9D%97/</loc>
+    <lastmod>2018-07-12T15:49:54.544Z</lastmod>
+    <data>
+        <display>
+        <title>在hexo-NexT中插入note提示块</title>
+        <pubTime>2018-07-12T06:28:34.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>NexT</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jinnsjj.github.io/2018-07-11/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%E4%B8%BB%E9%A1%B5/</loc>
     <lastmod>2018-07-12T13:49:55.897Z</lastmod>
     <data>
@@ -22,45 +93,6 @@
     </url>
 
     
-  <url>
-    <loc>https://jinnsjj.github.io/2018-07-12/hexo%E4%B8%ADnote%E6%8F%90%E7%A4%BA%E5%9D%97/</loc>
-    <lastmod>2018-07-12T09:21:14.000Z</lastmod>
-    <data>
-        <display>
-        <title>在hexo中插入note提示块</title>
-        <pubTime>2018-07-12T06:28:34.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>https://jinnsjj.github.io/2018-07-12/librosa-audio/</loc>
-    <lastmod>2018-07-12T08:55:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>librosa音频操作基础和特征提取</title>
-        <pubTime>2018-07-12T05:43:41.000Z</pubTime>
-        
-        <tag>librosa</tag>
-         
-        <tag>python</tag>
-         
-         
-           
-             
-              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/audio/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
     
   <url>

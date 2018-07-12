@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[在hexo中插入note提示块]]></title>
-    <url>%2F2018-07-12%2Fhexo%E4%B8%ADnote%E6%8F%90%E7%A4%BA%E5%9D%97%2F</url>
-    <content type="text"><![CDATA[hexo中可以插入一些很酷的提示块，效果如下： default 提示块标签 primary 提示块标签 success 提示块标签 info 提示块标签 warning 提示块标签 danger 提示块标签 使用方法1234567891011121314151617181920212223&#123;% note default %&#125;default 提示块标签&#123;% endnote %&#125;&#123;% note primary %&#125;primary 提示块标签&#123;% endnote %&#125;&#123;% note success %&#125;success 提示块标签&#123;% endnote %&#125;&#123;% note info %&#125;info 提示块标签&#123;% endnote %&#125;&#123;% note warning %&#125;warning 提示块标签&#123;% endnote %&#125;&#123;% note danger %&#125;danger 提示块标签&#123;% endnote %&#125; 主题配置文件中可以修改风格12345678910111213# Note tag (bs-callout).note: # Note tag style values: # - simple bs-callout old alert style. Default. # - modern bs-callout new (v2-v3) alert style. # - flat flat callout style with background, like on Mozilla or StackOverflow. # - disabled disable all CSS styles import of note tag. style: flat icons: true border_radius: 3 # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6). # Offset also applied to label tag variables. This option can work with disabled note tag. light_bg_offset: 0 除此之外还可以实现选项卡等很酷的功能。 tab 1tab 2A选项卡 1 选项卡 2 选项卡 3 名字为A 使用方法1234567891011&#123;% tabs tab,1 %&#125; 名字为tab，默认在第1个选项卡，如果是-1则隐藏&lt;!-- tab --&gt;**选项卡 1** &lt;!-- endtab --&gt;&lt;!-- tab --&gt;**选项卡 2**&lt;!-- endtab --&gt;&lt;!-- tab A --&gt;**选项卡 3** 名字为A&lt;!-- endtab --&gt;&#123;% endtabs %&#125; 参考→Hexo+markdown优雅写博客]]></content>
+    <title><![CDATA[HOA声场重建]]></title>
+    <url>%2F2018-07-12%2Fsomething-of-HOA%2F</url>
+    <content type="text"><![CDATA[空间音频是什么？空间音频很多地方也叫做三维音频，它源于我们人据有分辨声音来源方向的能力。虽然一直是比较冷门的研究方向，但在VR的发展下，空间音频也火了一把，很大程度是因为空间音频在在VR的应用所讲究的沉浸感中扮演着极为重要的作用，当声音的方向与画面不匹配的时候，沉浸感会荡然无存，所以高品质的空间音频也成为了VR研究中很重要的一环。 https://developers.google.com/resonance-audio/discover/overview HOA?HOA 全称是 Higher Order Ambisonics，强硬的翻译的话就是高次混响。它最初的目的是要重建空间中声场的分布。我们可以想象一个空间中的一个球面，我们在球的中心，那么从球外传来的声音会在这个球面上有一个投影，这让我们想到，我们可以把球面以外的声音都无视掉，并假设声源分布在这个球面上。用球面上的声源产生的声场来拟合原来生源产生的声场。HOA就是一个这样去拟合声场的方法。 https://developers.google.com/resonance-audio/discover/concepts 一些基本概念球面调和函数 Spherical harmonics球面调和函数并不好理解，有机会可以详细的聊一聊，这里只做最最最抽象的介绍，力求知其然不求知其所以然。 这里要做的是类比一下傅里叶变换。我们通常接触的函数都是分布在一维的，每一个$x$对应一个$f(x)$，我们对$f(x)$进行傅里叶变换会得到$F(\omega)$。现在我们的目标是一个在球面上分布的函数，我们使用一个球坐标系，球面上的点$(r,\theta,\phi)$，而对于一个固定大小的球，$r$是一个定值，我们可以暂时只关注$\theta$和$\phi$，那么对于每一组$(\theta,\phi)$对应一个$f(\theta,\phi)$。傅里叶变换可以将时域信号转化到频域，这样方便我们分析特定频域的信号，对于$f(\theta,\phi)$，我们只想知道这个函数在空间中一个大概的分布，所以$f(\theta,\phi)$记录的东西无疑太多了，所以我们可以把它转换为$F_n^m$，这里的$n$和$m$就类似与傅里叶中的 $\omega$。当我们只需要粗略的空间分辨率时，很小的$n$就足够，当需要更精细的空间分辨率时，就需要较大的$n$时的$F_n^m$，它们会对小的$n$的$F_n^m$的空间的缝隙中进行插值，使空间的分辨率增高。通过球谐分解，我们可以把球面上的函数用更少的数值表达。就如下面这张图，从上至下$n$逐渐增大，对空间的描述能力也逐渐增强。 https://en.wikipedia.org/wiki/Spherical_harmonics 格林函数 Green function格林函数用于描述在开放空间中（没有障碍物没有反射折射）一个声源到空间另外一点的响应。用$x_0$表示声源的位置，$x$点的声强为$p(\omega) = \dfrac{e^{i\omega|x-x_0|}}{4\pi|x-x_0|}$。$\omega$表示声音的频率，格林函数同样有在时域上的表达，可以看作是一个延时函数。 HOA!UNDER CONSTRUCTION… 行路难·其一李白金樽清酒斗十千，玉盘珍羞直万钱。停杯投箸不能食，拔剑四顾心茫然。欲渡黄河冰塞川，将登太行雪满山。闲来垂钓碧溪上，忽复乘舟梦日边。行路难！行路难！多歧路，今安在？长风破浪会有时，直挂云帆济沧海。]]></content>
+      <categories>
+        <category>tech</category>
+        <category>audio</category>
+      </categories>
+      <tags>
+        <tag>HOA</tag>
+        <tag>spatial audio</tag>
+        <tag>sound field reproduction</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[在hexo-NexT中插入note提示块]]></title>
+    <url>%2F2018-07-12%2Fhexo-next%E4%B8%ADnote%E6%8F%90%E7%A4%BA%E5%9D%97%2F</url>
+    <content type="text"><![CDATA[hexo中可以插入一些很酷的提示块，效果如下： default 提示块标签 primary 提示块标签 success 提示块标签 info 提示块标签 warning 提示块标签 danger 提示块标签 使用方法1234567891011121314151617181920212223&#123;% note default %&#125;default 提示块标签&#123;% endnote %&#125;&#123;% note primary %&#125;primary 提示块标签&#123;% endnote %&#125;&#123;% note success %&#125;success 提示块标签&#123;% endnote %&#125;&#123;% note info %&#125;info 提示块标签&#123;% endnote %&#125;&#123;% note warning %&#125;warning 提示块标签&#123;% endnote %&#125;&#123;% note danger %&#125;danger 提示块标签&#123;% endnote %&#125; 主题配置文件中可以修改风格12345678910111213# Note tag (bs-callout).note: # Note tag style values: # - simple bs-callout old alert style. Default. # - modern bs-callout new (v2-v3) alert style. # - flat flat callout style with background, like on Mozilla or StackOverflow. # - disabled disable all CSS styles import of note tag. style: flat icons: true border_radius: 3 # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6). # Offset also applied to label tag variables. This option can work with disabled note tag. light_bg_offset: 0 除此之外还可以实现选项卡等很酷的功能。 tab 1tab 2A选项卡 1 选项卡 2 选项卡 3 名字为A 使用方法1234567891011&#123;% tabs tab,1 %&#125; 名字为tab，默认在第1个选项卡，如果是-1则隐藏&lt;!-- tab --&gt;**选项卡 1** &lt;!-- endtab --&gt;&lt;!-- tab --&gt;**选项卡 2**&lt;!-- endtab --&gt;&lt;!-- tab A --&gt;**选项卡 3** 名字为A&lt;!-- endtab --&gt;&#123;% endtabs %&#125; 参考→打造个性超赞博客Hexo+NexT+GithubPages的超深度优化Hexo+markdown优雅写博客]]></content>
       <tags>
         <tag>hexo</tag>
+        <tag>NexT</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[librosa音频操作基础和特征提取]]></title>
     <url>%2F2018-07-12%2Flibrosa-audio%2F</url>
-    <content type="text"><![CDATA[把项目页面里面的这个python音频操作和特征提取小教程搬到了这里，用gist分享，jupyter notebook也可以显示啦。 →更大更干净的页面 涌金门外小瀛洲。寒食更风流。红船满湖歌吹，花外有高楼。晴日暖，淡烟浮。恣嬉游。三千粉黛，十二阑干，一片云头。 诉衷情·寒食 仲殊]]></content>
+    <content type="text"><![CDATA[把项目页面里面的这个python音频操作和特征提取小教程搬到了这里，用gist分享，jupyter notebook也可以显示啦。 →更大更干净的页面 诉衷情·寒食仲殊涌金门外小瀛洲。寒食更风流。红船满湖歌吹，花外有高楼。晴日暖，淡烟浮。恣嬉游。三千粉黛，十二阑干，一片云头。]]></content>
       <categories>
+        <category>tech</category>
         <category>audio</category>
       </categories>
       <tags>
@@ -59,16 +75,6 @@
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
   <entry>
-    <title><![CDATA[about]]></title>
-    <url>%2Fabout%2Findex.html</url>
-    <content type="text"><![CDATA[游褒禅山记王安石 &emsp;&emsp;褒禅山亦谓之华山，唐浮图慧褒始舍于其址，而卒葬之；以故其后名之曰“褒禅”。今所谓慧空禅院者，褒之庐冢也。距其院东五里，所谓华山洞者，以其乃华山之阳名之也。距洞百余步，有碑仆道，其文漫灭，独其为文犹可识曰“花山”。今言“华”如“华实”之“华”者，盖音谬也。 &emsp;&emsp;其下平旷，有泉侧出，而记游者甚众，所谓前洞也。由山以上五六里，有穴窈然，入之甚寒，问其深，则其好游者不能穷也，谓之后洞。余与四人拥火以入，入之愈深，其进愈难，而其见愈奇。有怠而欲出者，曰：“不出，火且尽。”遂与之俱出。盖余所至，比好游者尚不能十一，然视其左右，来而记之者已少。盖其又深，则其至又加少矣。方是时，予之力尚足以入，火尚足以明也。既其出，则或咎其欲出者，而余亦悔其随之而不得极夫游之乐也。 &emsp;&emsp;于是余有叹焉。古人之观于天地、山川、草木、虫鱼、鸟兽，往往有得，以其求思之深而无不在也。夫夷以近，则游者众；险以远，则至者少。而世之奇伟、瑰怪，非常之观，常在于险远，而人之所罕至焉，故非有志者不能至也。有志矣，不随以止也，然力不足者，亦不能至也。有志与力，而又不随以怠，至于幽暗昏惑而无物以相之，亦不能至也。然力足以至焉，于人为可讥，而在己为有悔；尽吾志也而不能至者，可以无悔矣，其孰能讥之乎？此余之所得也！ &emsp;&emsp;余于仆碑，又以悲夫古书之不存，后世之谬其传而莫能名者，何可胜道也哉！此所以学者不可以不深思而慎取之也。 &emsp;&emsp;四人者：庐陵萧君圭君玉，长乐王回深父，余弟安国平父、安上纯父。至和元年七月某日，临川王某记。]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[categories]]></title>
-    <url>%2Fcategories%2Findex.html</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[Projects]]></title>
     <url>%2Fprojects%2Findex.html</url>
     <content type="text"><![CDATA[ProjectsAudio basics 通过librosa进行音频的基本操作和特征提取 使用librosa库，读取音频，提取频谱，MFCC等。 MATLAB中进行声场可视化 Have fun Urban Sound Classification Inspired by http://aqibsaeed.github.io/2016-09-03-urban-sound-classification-part-1/ Urban Sound Classifier using NN 这是我搭建的第一个神经网络，可以说是边做边学，代码有一些混乱。整个流程几乎是跟着上面博客的思路来，准确度虽然不高，但work了，还是满意的。 Urban Sound Classifier using CNN v2 第一版的CNN非常惨烈，所以废弃了，第二版开始work了，但准确率实在堪忧，只有50%左右。 Urban Sound Classifier using CNN v3 紧接着第二版做的一些变体，单纯的娱乐，看看不同网络效果的区别，虽然没有看到。 Urban Sound Classifier using LSTM v1 第一次尝试LSTM，LSTM的搭建也很简单，预计效果不错，然而实际却低于NN和CNN。原因还不明。 ← Back to Homepage]]></content>
@@ -76,6 +82,16 @@
   <entry>
     <title><![CDATA[tags]]></title>
     <url>%2Ftags%2Findex.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[about]]></title>
+    <url>%2Fabout%2Findex.html</url>
+    <content type="text"><![CDATA[游褒禅山记王安石 &emsp;&emsp;褒禅山亦谓之华山，唐浮图慧褒始舍于其址，而卒葬之；以故其后名之曰“褒禅”。今所谓慧空禅院者，褒之庐冢也。距其院东五里，所谓华山洞者，以其乃华山之阳名之也。距洞百余步，有碑仆道，其文漫灭，独其为文犹可识曰“花山”。今言“华”如“华实”之“华”者，盖音谬也。 &emsp;&emsp;其下平旷，有泉侧出，而记游者甚众，所谓前洞也。由山以上五六里，有穴窈然，入之甚寒，问其深，则其好游者不能穷也，谓之后洞。余与四人拥火以入，入之愈深，其进愈难，而其见愈奇。有怠而欲出者，曰：“不出，火且尽。”遂与之俱出。盖余所至，比好游者尚不能十一，然视其左右，来而记之者已少。盖其又深，则其至又加少矣。方是时，予之力尚足以入，火尚足以明也。既其出，则或咎其欲出者，而余亦悔其随之而不得极夫游之乐也。 &emsp;&emsp;于是余有叹焉。古人之观于天地、山川、草木、虫鱼、鸟兽，往往有得，以其求思之深而无不在也。夫夷以近，则游者众；险以远，则至者少。而世之奇伟、瑰怪，非常之观，常在于险远，而人之所罕至焉，故非有志者不能至也。有志矣，不随以止也，然力不足者，亦不能至也。有志与力，而又不随以怠，至于幽暗昏惑而无物以相之，亦不能至也。然力足以至焉，于人为可讥，而在己为有悔；尽吾志也而不能至者，可以无悔矣，其孰能讥之乎？此余之所得也！ &emsp;&emsp;余于仆碑，又以悲夫古书之不存，后世之谬其传而莫能名者，何可胜道也哉！此所以学者不可以不深思而慎取之也。 &emsp;&emsp;四人者：庐陵萧君圭君玉，长乐王回深父，余弟安国平父、安上纯父。至和元年七月某日，临川王某记。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[categories]]></title>
+    <url>%2Fcategories%2Findex.html</url>
     <content type="text"></content>
   </entry>
 </search>
