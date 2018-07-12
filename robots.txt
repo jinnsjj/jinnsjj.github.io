@@ -11,3 +11,4 @@ Disallow: /js/
 Disallow: /css/
 
 Sitemap: https://jinnsjj.github.io/sitemap.xml
+Sitemap: https://hoxis.github.io/baidusitemap.xml
