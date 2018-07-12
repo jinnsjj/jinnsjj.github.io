@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="36. Valid Sudoku要验证数独的棋盘，就是三个标准，行没有重复，列没有重复以及3x3格子没有重复。最开始的思路是建立1*9的hash表，依据这个标准检测三次，但这样带来一个问题是需要遍历棋盘三次。但其实可以扩大hash表，只需遍历棋盘一次。 123456789101112131415161718192021222324class Solution &amp;#123;public:    bo">
+  <meta name="description" content="36. Valid Sudoku要验证数独的棋盘，就是三个标准，行没有重复，列没有重复以及3x3格子没有重复。最开始的思路是建立1*9的hash表，依据这个标准检测三次，但这样带来一个问题是需要遍历棋盘三次。但其实可以扩大hash表，只需遍历棋盘一次。">
 <meta name="keywords" content="leetcode,c++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode-36 Valid Sudoku">
 <meta property="og:url" content="https://jinnsjj.github.io/2018-07-11/Valid-Sudoku/index.html">
 <meta property="og:site_name" content="JOHZEN">
-<meta property="og:description" content="36. Valid Sudoku要验证数独的棋盘，就是三个标准，行没有重复，列没有重复以及3x3格子没有重复。最开始的思路是建立1*9的hash表，依据这个标准检测三次，但这样带来一个问题是需要遍历棋盘三次。但其实可以扩大hash表，只需遍历棋盘一次。 123456789101112131415161718192021222324class Solution &amp;#123;public:    bo">
+<meta property="og:description" content="36. Valid Sudoku要验证数独的棋盘，就是三个标准，行没有重复，列没有重复以及3x3格子没有重复。最开始的思路是建立1*9的hash表，依据这个标准检测三次，但这样带来一个问题是需要遍历棋盘三次。但其实可以扩大hash表，只需遍历棋盘一次。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-11T12:34:14.121Z">
+<meta property="og:updated_time" content="2018-07-12T06:35:59.867Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode-36 Valid Sudoku">
-<meta name="twitter:description" content="36. Valid Sudoku要验证数独的棋盘，就是三个标准，行没有重复，列没有重复以及3x3格子没有重复。最开始的思路是建立1*9的hash表，依据这个标准检测三次，但这样带来一个问题是需要遍历棋盘三次。但其实可以扩大hash表，只需遍历棋盘一次。 123456789101112131415161718192021222324class Solution &amp;#123;public:    bo">
+<meta name="twitter:description" content="36. Valid Sudoku要验证数独的棋盘，就是三个标准，行没有重复，列没有重复以及3x3格子没有重复。最开始的思路是建立1*9的hash表，依据这个标准检测三次，但这样带来一个问题是需要遍历棋盘三次。但其实可以扩大hash表，只需遍历棋盘一次。">
 
 
 
@@ -382,12 +382,24 @@
                 
               
 
-              <time title="Created: 2018-07-11 21:18:41 / Modified: 21:34:14" itemprop="dateCreated datePublished" datetime="2018-07-11T21:18:41+09:00">2018-07-11</time>
+              <time title="Created: 2018-07-11 21:18:41" itemprop="dateCreated datePublished" datetime="2018-07-11T21:18:41+09:00">2018-07-11</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-12 15:35:59" itemprop="dateModified" datetime="2018-07-12T15:35:59+09:00">2018-07-12</time>
               
             
           </span>
@@ -462,6 +474,7 @@
 
       
         <h1 id="36-Valid-Sudoku"><a href="#36-Valid-Sudoku" class="headerlink" title="36. Valid Sudoku"></a><a href="https://leetcode.com/problems/valid-sudoku/description/" target="_blank" rel="noopener">36. Valid Sudoku</a></h1><p>要验证数独的棋盘，就是三个标准，行没有重复，列没有重复以及3x3格子没有重复。最开始的思路是建立1*9的hash表，依据这个标准检测三次，但这样带来一个问题是需要遍历棋盘三次。但其实可以扩大hash表，只需遍历棋盘一次。</p>
+<a id="more"></a>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">bool</span> row[<span class="number">9</span>][<span class="number">9</span>] = &#123;<span class="number">0</span>&#125;; <span class="comment">// 9行的hash</span></span><br><span class="line">    <span class="keyword">bool</span> col[<span class="number">9</span>][<span class="number">9</span>] = &#123;<span class="number">0</span>&#125;; <span class="comment">// 9列的hash</span></span><br><span class="line">    <span class="keyword">bool</span> box[<span class="number">9</span>][<span class="number">9</span>] = &#123;<span class="number">0</span>&#125;; <span class="comment">// 9个box的hash</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValidSudoku</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">9</span>; j++)&#123;</span><br><span class="line">                <span class="keyword">char</span> c = board[i][j];</span><br><span class="line">                <span class="keyword">if</span> (c != <span class="string">'.'</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(!row[i][c-<span class="string">'1'</span>]) row[i][c-<span class="string">'1'</span>] = !row[i][c-<span class="string">'1'</span>];</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">if</span>(!col[j][c-<span class="string">'1'</span>]) col[j][c-<span class="string">'1'</span>] = !col[j][c-<span class="string">'1'</span>];</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">int</span> idxBox = (i/<span class="number">3</span>)*<span class="number">3</span>+j/<span class="number">3</span>; <span class="comment">// 判定该元素属于哪个格子</span></span><br><span class="line">                    <span class="keyword">if</span>(!box[idxBox][c-<span class="string">'1'</span>]) box[idxBox][c-<span class="string">'1'</span>] = !box[idxBox][c-<span class="string">'1'</span>];</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -603,7 +616,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -618,7 +631,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -635,7 +650,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1351,6 +1374,30 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
