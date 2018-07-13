@@ -4,6 +4,33 @@
 
     
   <url>
+    <loc>https://jinnsjj.github.io/tech/audio/something-of-HOA/</loc>
+    <lastmod>2018-07-13T07:54:12.023Z</lastmod>
+    <data>
+        <display>
+        <title>HOA声场重建</title>
+        <pubTime>2018-07-12T14:00:46.000Z</pubTime>
+        
+        <tag>HOA</tag>
+         
+        <tag>spatial audio</tag>
+         
+        <tag>sound field reproduction</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
+          
+             
+              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jinnsjj.github.io/uncategorized/build-projects-page/</loc>
     <lastmod>2018-07-13T06:12:22.573Z</lastmod>
     <data>
@@ -36,33 +63,6 @@
          
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://jinnsjj.github.io/tech/audio/something-of-HOA/</loc>
-    <lastmod>2018-07-13T05:55:45.288Z</lastmod>
-    <data>
-        <display>
-        <title>HOA声场重建</title>
-        <pubTime>2018-07-12T14:00:46.000Z</pubTime>
-        
-        <tag>HOA</tag>
-         
-        <tag>spatial audio</tag>
-         
-        <tag>sound field reproduction</tag>
-         
-         
-           
-             
-              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
-          
-             
-              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
-          
         </display>
     </data>
     </url>
