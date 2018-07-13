@@ -108,25 +108,31 @@
 
 
 
-  <meta name="description" content="hexo中可以插入一些很酷的提示块，效果如下： default 提示块标签 primary 提示块标签 success 提示块标签">
-<meta name="keywords" content="hexo,NexT">
+  <meta name="description" content="在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。">
+<meta name="keywords" content="HOA,spatial audio,sound field reproduction,空间音频,声场重建">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在hexo-NexT中插入note提示块">
-<meta property="og:url" content="https://jinnsjj.github.io/2018-07-12/hexo-next中note提示块/index.html">
+<meta property="og:title" content="HOA声场重建">
+<meta property="og:url" content="https://jinnsjj.github.io/tech/audio/something-of-HOA/index.html">
 <meta property="og:site_name" content="JOHZEN">
-<meta property="og:description" content="hexo中可以插入一些很酷的提示块，效果如下： default 提示块标签 primary 提示块标签 success 提示块标签">
+<meta property="og:description" content="在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-12T15:49:54.544Z">
+<meta property="og:image" content="https://jinnsjj.github.io/tech/audio/something-of-HOA/RA_Discover.png">
+<meta property="og:image" content="https://jinnsjj.github.io/tech/audio/something-of-HOA/speakers-surround-head-3d.png">
+<meta property="og:image" content="https://jinnsjj.github.io/tech/audio/something-of-HOA/Spherical_Harmonics.png">
+<meta property="og:updated_time" content="2018-07-13T05:55:45.288Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在hexo-NexT中插入note提示块">
-<meta name="twitter:description" content="hexo中可以插入一些很酷的提示块，效果如下： default 提示块标签 primary 提示块标签 success 提示块标签">
+<meta name="twitter:title" content="HOA声场重建">
+<meta name="twitter:description" content="在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。">
+<meta name="twitter:image" content="https://jinnsjj.github.io/tech/audio/something-of-HOA/RA_Discover.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="JOHZEN" type="application/atom+xml" />
 
 
 
 
-
-
-  <link rel="canonical" href="https://jinnsjj.github.io/2018-07-12/hexo-next中note提示块/"/>
+  <link rel="canonical" href="https://jinnsjj.github.io/tech/audio/something-of-HOA/"/>
 
 
 
@@ -136,7 +142,7 @@
   };
 </script>
 
-  <title>在hexo-NexT中插入note提示块 | JOHZEN</title>
+  <title>HOA声场重建 | JOHZEN</title>
   
 
 
@@ -357,7 +363,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/2018-07-12/hexo-next中note提示块/">
+    <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/tech/audio/something-of-HOA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jon">
@@ -374,7 +380,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">在hexo-NexT中插入note提示块
+          <h2 class="post-title" itemprop="name headline">HOA声场重建
               
             
           </h2>
@@ -399,7 +405,7 @@
                 
               
 
-              <time title="Created: 2018-07-12 15:28:34" itemprop="dateCreated datePublished" datetime="2018-07-12T15:28:34+09:00">2018-07-12</time>
+              <time title="Created: 2018-07-12 23:00:46" itemprop="dateCreated datePublished" datetime="2018-07-12T23:00:46+09:00">2018-07-12</time>
             
 
             
@@ -416,11 +422,36 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-13 00:49:54" itemprop="dateModified" datetime="2018-07-13T00:49:54+09:00">2018-07-13</time>
+                <time title="Modified: 2018-07-13 14:55:45" itemprop="dateModified" datetime="2018-07-13T14:55:45+09:00">2018-07-13</time>
               
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">tech</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/audio/" itemprop="url" rel="index"><span itemprop="name">audio</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -430,10 +461,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018-07-12/hexo-next中note提示块/#comments" itemprop="discussionUrl">
+                <a href="/tech/audio/something-of-HOA/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018-07-12/hexo-next中note提示块/" itemprop="commentCount"></span>
+                        data-disqus-identifier="tech/audio/something-of-HOA/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -441,7 +472,7 @@
 
           
           
-             <span id="/2018-07-12/hexo-next中note提示块/" class="leancloud_visitors" data-flag-title="在hexo-NexT中插入note提示块">
+             <span id="/tech/audio/something-of-HOA/" class="leancloud_visitors" data-flag-title="HOA声场重建">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -458,6 +489,8 @@
           
 
           
+              <div class="post-description">在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。</div>
+          
 
         </div>
       </header>
@@ -472,24 +505,27 @@
       
 
       
-        <p>hexo中可以插入一些很酷的提示块，效果如下：</p>
-<div class="note default"><p>default 提示块标签</p></div>
-<div class="note primary"><p>primary 提示块标签</p></div>
-<div class="note success"><p>success 提示块标签</p></div>
-<a id="more"></a>
-<div class="note info"><p>info 提示块标签</p></div>
-<div class="note warning"><p>warning 提示块标签</p></div>
-<div class="note danger"><p>danger 提示块标签</p></div>
-<p>使用方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">default 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure></p>
-<p>主题配置文件中可以修改风格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># Note tag (bs-callout).</span><br><span class="line">note:</span><br><span class="line">  # Note tag style values:</span><br><span class="line">  #  - simple    bs-callout old alert style. Default.</span><br><span class="line">  #  - modern    bs-callout new (v2-v3) alert style.</span><br><span class="line">  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span><br><span class="line">  #  - disabled  disable all CSS styles import of note tag.</span><br><span class="line">  style: flat</span><br><span class="line">  icons: true</span><br><span class="line">  border_radius: 3</span><br><span class="line">  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span><br><span class="line">  # Offset also applied to label tag variables. This option can work with disabled note tag.</span><br><span class="line">  light_bg_offset: 0</span><br></pre></td></tr></table></figure></p>
-<p>除此之外还可以实现选项卡等很酷的功能。</p>
-<div class="tabs" id="tab"><ul class="nav-tabs"><li class="tab active"><a href="#tab-1">tab 1</a></li><li class="tab"><a href="#tab-2">tab 2</a></li><li class="tab"><a href="#tab-3">A</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-1"><p><strong>选项卡 1</strong> </p>
-</div><div class="tab-pane" id="tab-2"><p><strong>选项卡 2</strong></p>
-</div><div class="tab-pane" id="tab-3"><p><strong>选项卡 3</strong> 名字为A</p>
-</div></div></div>
-<p>使用方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs tab,1 %&#125; 名字为tab，默认在第1个选项卡，如果是-1则隐藏</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**选项卡 1** </span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**选项卡 2**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab A --&gt;</span><br><span class="line">**选项卡 3** 名字为A</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure></p>
-<p>参考→<br><a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">打造个性超赞博客Hexo+NexT+GithubPages的超深度优化</a><br><a href="https://biueo.github.io/2018/01/11/Hexo-markdown%E4%BC%98%E9%9B%85%E5%86%99%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener">Hexo+markdown优雅写博客</a></p>
-
+        <h2 id="空间音频是什么？"><a href="#空间音频是什么？" class="headerlink" title="空间音频是什么？"></a>空间音频是什么？</h2><p>空间音频很多地方也叫做三维音频，它源于我们人据有分辨声音来源方向的能力。虽然一直是比较冷门的研究方向，但在VR的发展下，空间音频也火了一把，很大程度是因为空间音频在在VR的应用所讲究的沉浸感中扮演着极为重要的作用，当声音的方向与画面不匹配的时候，沉浸感会荡然无存，所以高品质的空间音频也成为了VR研究中很重要的一环。</p>
+<p><img src="RA_Discover.png" alt=""></p>
+<blockquote>
+<p><a href="https://developers.google.com/resonance-audio/discover/overview" target="_blank" rel="noopener">https://developers.google.com/resonance-audio/discover/overview</a></p>
+</blockquote>
+<h2 id="HOA"><a href="#HOA" class="headerlink" title="HOA?"></a>HOA?</h2><p>HOA 全称是 Higher Order Ambisonics，强硬的翻译的话就是高次混响。它最初的目的是要重建空间中声场的分布。我们可以想象一个空间中的一个球面，我们在球的中心，那么从球外传来的声音会在这个球面上有一个投影，这让我们想到，我们可以把球面以外的声音都无视掉，并假设声源分布在这个球面上。用球面上的声源产生的声场来拟合原来生源产生的声场。HOA就是一个这样去拟合声场的方法。</p>
+<p><img src="speakers-surround-head-3d.png" alt=""></p>
+<blockquote>
+<p><a href="https://developers.google.com/resonance-audio/discover/concepts" target="_blank" rel="noopener">https://developers.google.com/resonance-audio/discover/concepts</a></p>
+</blockquote>
+<h2 id="一些基本概念"><a href="#一些基本概念" class="headerlink" title="一些基本概念"></a>一些基本概念</h2><h3 id="球面调和函数-Spherical-harmonics"><a href="#球面调和函数-Spherical-harmonics" class="headerlink" title="球面调和函数 Spherical harmonics"></a>球面调和函数 Spherical harmonics</h3><p>球面调和函数并不好理解，有机会可以详细的聊一聊，这里只做最最最抽象的介绍，力求知其然不求知其所以然。</p>
+<p>这里要做的是类比一下傅里叶变换。我们通常接触的函数都是分布在一维的，每一个$x$对应一个$f(x)$，我们对$f(x)$进行傅里叶变换会得到$F(\omega)$。现在我们的目标是一个在球面上分布的函数，我们使用一个球坐标系，球面上的点$(r,\theta,\phi)$，而对于一个固定大小的球，$r$是一个定值，我们可以暂时只关注$\theta$和$\phi$，那么对于每一组$(\theta,\phi)$对应一个$f(\theta,\phi)$。傅里叶变换可以将时域信号转化到频域，这样方便我们分析特定频域的信号，对于$f(\theta,\phi)$，我们只想知道这个函数在空间中一个大概的分布，所以$f(\theta,\phi)$记录的东西无疑太多了，所以我们可以把它转换为$F_n^m$，这里的$n$和$m$就类似与傅里叶中的 $\omega$。当我们只需要粗略的空间分辨率时，很小的$n$就足够，当需要更精细的空间分辨率时，就需要较大的$n$时的$F_n^m$，它们会对小的$n$的$F_n^m$的空间的缝隙中进行插值，使空间的分辨率增高。通过球谐分解，我们可以把球面上的函数用更少的数值表达。就如下面这张图，从上至下$n$逐渐增大，对空间的描述能力也逐渐增强。</p>
+<p><img src="Spherical_Harmonics.png" alt="spherical harmonics"></p>
+<blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Spherical_harmonics" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Spherical_harmonics</a></p>
+</blockquote>
+<h3 id="格林函数-Green-function"><a href="#格林函数-Green-function" class="headerlink" title="格林函数 Green function"></a>格林函数 Green function</h3><p>格林函数用于描述在开放空间中（没有障碍物没有反射折射）一个声源到空间另外一点的响应。用$x_0$表示声源的位置，$x$点的声强为$p(\omega) = \dfrac{e^{i\omega|x-x_0|}}{4\pi|x-x_0|}$。$\omega$表示声音的频率，格林函数同样有在时域上的表达，可以看作是一个延时函数。</p>
+<h2 id="HOA-1"><a href="#HOA-1" class="headerlink" title="HOA!"></a>HOA!</h2><div class="note warning"><p>UNDER CONSTRUCTION…</p></div>
+<hr>
+<blockquote class="blockquote-center"><p><strong>行路难·其一</strong><br>李白<br>金樽清酒斗十千，玉盘珍羞直万钱。停杯投箸不能食，拔剑四顾心茫然。<br>欲渡黄河冰塞川，将登太行雪满山。闲来垂钓碧溪上，忽复乘舟梦日边。<br>行路难！行路难！多歧路，今安在？长风破浪会有时，直挂云帆济沧海。</p>
+</blockquote>
       
     </div>
 
@@ -538,9 +574,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+            <a href="/tags/HOA/" rel="tag"><i class="fa fa-tag"></i> HOA</a>
           
-            <a href="/tags/NexT/" rel="tag"><i class="fa fa-tag"></i> NexT</a>
+            <a href="/tags/spatial-audio/" rel="tag"><i class="fa fa-tag"></i> spatial audio</a>
+          
+            <a href="/tags/sound-field-reproduction/" rel="tag"><i class="fa fa-tag"></i> sound field reproduction</a>
           
         </div>
       
@@ -553,8 +591,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018-07-12/librosa-audio/" rel="next" title="librosa音频操作基础和特征提取">
-                <i class="fa fa-chevron-left"></i> librosa音频操作基础和特征提取
+              <a href="/uncategorized/hexo-next中note提示块/" rel="next" title="在hexo-NexT中插入note提示块">
+                <i class="fa fa-chevron-left"></i> 在hexo-NexT中插入note提示块
               </a>
             
           </div>
@@ -562,10 +600,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018-07-12/something-of-HOA/" rel="prev" title="HOA声场重建">
-                HOA声场重建 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -630,8 +664,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -709,6 +752,13 @@
           
 
           
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
 
           
             <div class="links-of-author motion-element">
@@ -746,6 +796,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#空间音频是什么？"><span class="nav-number">1.</span> <span class="nav-text">空间音频是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HOA"><span class="nav-number">2.</span> <span class="nav-text">HOA?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些基本概念"><span class="nav-number">3.</span> <span class="nav-text">一些基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#球面调和函数-Spherical-harmonics"><span class="nav-number">3.1.</span> <span class="nav-text">球面调和函数 Spherical harmonics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格林函数-Green-function"><span class="nav-number">3.2.</span> <span class="nav-text">格林函数 Green function</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HOA-1"><span class="nav-number">4.</span> <span class="nav-text">HOA!</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -907,9 +973,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://jinnsjj.github.io/2018-07-12/hexo-next中note提示块/';
-        this.page.identifier = '2018-07-12/hexo-next中note提示块/';
-        this.page.title = '在hexo-NexT中插入note提示块';
+        this.page.url = 'https://jinnsjj.github.io/tech/audio/something-of-HOA/';
+        this.page.identifier = 'tech/audio/something-of-HOA/';
+        this.page.title = 'HOA声场重建';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');

@@ -108,25 +108,27 @@
 
 
 
-  <meta name="description" content="36. Valid Sudoku要验证数独的棋盘，就是三个标准，行没有重复，列没有重复以及3x3格子没有重复。最开始的思路是建立1*9的hash表，依据这个标准检测三次，但这样带来一个问题是需要遍历棋盘三次。但其实可以扩大hash表，只需遍历棋盘一次。">
+  <meta name="description" content="37. Sudoku Solver求解数独。前两天做了验证数独那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。 我之前的版本，dfs">
 <meta name="keywords" content="leetcode,c++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode-36 Valid Sudoku">
-<meta property="og:url" content="https://jinnsjj.github.io/2018-07-11/Valid-Sudoku/index.html">
+<meta property="og:title" content="LeetCode-37 Sudoku Solver">
+<meta property="og:url" content="https://jinnsjj.github.io/coding/Sudoku-Solver/index.html">
 <meta property="og:site_name" content="JOHZEN">
-<meta property="og:description" content="36. Valid Sudoku要验证数独的棋盘，就是三个标准，行没有重复，列没有重复以及3x3格子没有重复。最开始的思路是建立1*9的hash表，依据这个标准检测三次，但这样带来一个问题是需要遍历棋盘三次。但其实可以扩大hash表，只需遍历棋盘一次。">
+<meta property="og:description" content="37. Sudoku Solver求解数独。前两天做了验证数独那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。 我之前的版本，dfs">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-12T06:35:59.000Z">
+<meta property="og:updated_time" content="2018-07-12T06:35:55.631Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode-36 Valid Sudoku">
-<meta name="twitter:description" content="36. Valid Sudoku要验证数独的棋盘，就是三个标准，行没有重复，列没有重复以及3x3格子没有重复。最开始的思路是建立1*9的hash表，依据这个标准检测三次，但这样带来一个问题是需要遍历棋盘三次。但其实可以扩大hash表，只需遍历棋盘一次。">
+<meta name="twitter:title" content="LeetCode-37 Sudoku Solver">
+<meta name="twitter:description" content="37. Sudoku Solver求解数独。前两天做了验证数独那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。 我之前的版本，dfs">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="JOHZEN" type="application/atom+xml" />
 
 
 
 
-
-
-  <link rel="canonical" href="https://jinnsjj.github.io/2018-07-11/Valid-Sudoku/"/>
+  <link rel="canonical" href="https://jinnsjj.github.io/coding/Sudoku-Solver/"/>
 
 
 
@@ -136,7 +138,7 @@
   };
 </script>
 
-  <title>LeetCode-36 Valid Sudoku | JOHZEN</title>
+  <title>LeetCode-37 Sudoku Solver | JOHZEN</title>
   
 
 
@@ -357,7 +359,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/2018-07-11/Valid-Sudoku/">
+    <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/coding/Sudoku-Solver/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jon">
@@ -374,7 +376,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">LeetCode-36 Valid Sudoku
+          <h2 class="post-title" itemprop="name headline">LeetCode-37 Sudoku Solver
               
             
           </h2>
@@ -399,7 +401,7 @@
                 
               
 
-              <time title="Created: 2018-07-11 21:18:41" itemprop="dateCreated datePublished" datetime="2018-07-11T21:18:41+09:00">2018-07-11</time>
+              <time title="Created: 2018-07-11 21:18:58" itemprop="dateCreated datePublished" datetime="2018-07-11T21:18:58+09:00">2018-07-11</time>
             
 
             
@@ -416,7 +418,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-12 15:35:59" itemprop="dateModified" datetime="2018-07-12T15:35:59+09:00">2018-07-12</time>
+                <time title="Modified: 2018-07-12 15:35:55" itemprop="dateModified" datetime="2018-07-12T15:35:55+09:00">2018-07-12</time>
               
             
           </span>
@@ -448,10 +450,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018-07-11/Valid-Sudoku/#comments" itemprop="discussionUrl">
+                <a href="/coding/Sudoku-Solver/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018-07-11/Valid-Sudoku/" itemprop="commentCount"></span>
+                        data-disqus-identifier="coding/Sudoku-Solver/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -459,7 +461,7 @@
 
           
           
-             <span id="/2018-07-11/Valid-Sudoku/" class="leancloud_visitors" data-flag-title="LeetCode-36 Valid Sudoku">
+             <span id="/coding/Sudoku-Solver/" class="leancloud_visitors" data-flag-title="LeetCode-37 Sudoku Solver">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -490,9 +492,26 @@
       
 
       
-        <h1 id="36-Valid-Sudoku"><a href="#36-Valid-Sudoku" class="headerlink" title="36. Valid Sudoku"></a><a href="https://leetcode.com/problems/valid-sudoku/description/" target="_blank" rel="noopener">36. Valid Sudoku</a></h1><p>要验证数独的棋盘，就是三个标准，行没有重复，列没有重复以及3x3格子没有重复。最开始的思路是建立1*9的hash表，依据这个标准检测三次，但这样带来一个问题是需要遍历棋盘三次。但其实可以扩大hash表，只需遍历棋盘一次。</p>
+        <h1 id="37-Sudoku-Solver"><a href="#37-Sudoku-Solver" class="headerlink" title="37. Sudoku Solver"></a><a href="https://leetcode.com/problems/sudoku-solver/description/" target="_blank" rel="noopener">37. Sudoku Solver</a></h1><p>求解数独。前两天做了<a href="https://leetcode.com/problems/valid-sudoku/description/" target="_blank" rel="noopener">验证数独</a>那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。</p>
+<p>我之前的版本，dfs函数没有加入i与j两个变量，每次调用都重新扫描一遍需要填的空，这导致效率很低，引入i和j后果然好了很多。另外之前的dfs是void不返回值，通过一个cnt变量计算总共的空数，当cnt等于0时停止，但由于我们需要在中途中断dfs函数（找到正确的解时，否则答案会被填回’.’），采用void的类型也会比较难以中断。借鉴了别人的解法，让dfs返回一个值来判定是否完成整个数独，这样好了很多。</p>
 <a id="more"></a>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">bool</span> row[<span class="number">9</span>][<span class="number">9</span>] = &#123;<span class="number">0</span>&#125;; <span class="comment">// 9行的hash</span></span><br><span class="line">    <span class="keyword">bool</span> col[<span class="number">9</span>][<span class="number">9</span>] = &#123;<span class="number">0</span>&#125;; <span class="comment">// 9列的hash</span></span><br><span class="line">    <span class="keyword">bool</span> box[<span class="number">9</span>][<span class="number">9</span>] = &#123;<span class="number">0</span>&#125;; <span class="comment">// 9个box的hash</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValidSudoku</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">9</span>; j++)&#123;</span><br><span class="line">                <span class="keyword">char</span> c = board[i][j];</span><br><span class="line">                <span class="keyword">if</span> (c != <span class="string">'.'</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(!row[i][c-<span class="string">'1'</span>]) row[i][c-<span class="string">'1'</span>] = !row[i][c-<span class="string">'1'</span>];</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">if</span>(!col[j][c-<span class="string">'1'</span>]) col[j][c-<span class="string">'1'</span>] = !col[j][c-<span class="string">'1'</span>];</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">int</span> idxBox = (i/<span class="number">3</span>)*<span class="number">3</span>+j/<span class="number">3</span>; <span class="comment">// 判定该元素属于哪个格子</span></span><br><span class="line">                    <span class="keyword">if</span>(!box[idxBox][c-<span class="string">'1'</span>]) box[idxBox][c-<span class="string">'1'</span>] = !box[idxBox][c-<span class="string">'1'</span>];</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>算法解释：</strong> </p>
+<ul>
+<li>solveSudoku： 功能函数入口。</li>
+<li>dfs：深度优先搜索函数。<ul>
+<li>输入整个表和一个坐标。</li>
+<li>如果该坐标已有数字，搜索下一个格子<code>j++</code>；当<code>j==9</code>，说明这一排已搜索完，搜索下一排的第一个格子<code>i++, j=0</code>；如果所有的行都已搜索完，说明所有的格子都被正确的填入了数字，则返回<code>true</code>。</li>
+<li>如果该坐标下没有数字<code>&#39;.&#39;</code>，从1开始填入，并验证该数字是否可行<code>isValid(board, i, j)</code>。如果不可行，擦除填入的数字并填入下一个数字直到9。如果可行，搜索下一个格子，并直到整张表被填完。</li>
+<li>如果一个没有填的格子所有的数字都不可行，代表之前填的数字有错，那么返回<code>false</code>。</li>
+</ul>
+</li>
+<li>isValid：验证某个格子里的数字是否可行，是之前验证数独的简化版，因为只用验证特定位置的数字。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">solveSudoku</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board)</span> </span>&#123;</span><br><span class="line">        dfs(board, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i&gt;=<span class="number">9</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (j&gt;=<span class="number">9</span>) <span class="keyword">return</span> dfs(board, i+<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (board[i][j]==<span class="string">'.'</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> num = <span class="number">1</span>; num &lt;= <span class="number">9</span>; num++)&#123;</span><br><span class="line">                board[i][j] = (<span class="keyword">char</span>)(num+<span class="string">'0'</span>);</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span>(isValid(board, i, j))&#123;</span><br><span class="line">                    <span class="keyword">if</span>(dfs(board, i, j+<span class="number">1</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                </span><br><span class="line">                board[i][j] = <span class="string">'.'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> dfs(board, i, j+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> col = <span class="number">0</span>; col &lt; <span class="number">9</span>; col++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (col != j &amp;&amp; board[i][j]==board[i][col]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> row = <span class="number">0</span>; row &lt; <span class="number">9</span>; row++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (row != i &amp;&amp; board[i][j]==board[row][j]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> row = i / <span class="number">3</span> * <span class="number">3</span>; row &lt; i / <span class="number">3</span> * <span class="number">3</span> + <span class="number">3</span>; ++row) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> col = j / <span class="number">3</span> * <span class="number">3</span>; col &lt; j / <span class="number">3</span> * <span class="number">3</span> + <span class="number">3</span>; ++col) &#123;</span><br><span class="line">                <span class="keyword">if</span> ((row != i || col != j) &amp;&amp; board[i][j] == board[row][col]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><blockquote>
+<p><a href="http://www.cnblogs.com/grandyang/p/4421852.html" target="_blank" rel="noopener">http://www.cnblogs.com/grandyang/p/4421852.html</a></p>
+</blockquote>
+
       
     </div>
 
@@ -556,8 +575,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018-07-10/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/coding/Valid-Sudoku/" rel="next" title="LeetCode-36 Valid Sudoku">
+                <i class="fa fa-chevron-left"></i> LeetCode-36 Valid Sudoku
               </a>
             
           </div>
@@ -566,8 +585,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018-07-11/Sudoku-Solver/" rel="prev" title="LeetCode-37 Sudoku Solver">
-                LeetCode-37 Sudoku Solver <i class="fa fa-chevron-right"></i>
+              <a href="/uncategorized/搭建一个项目主页/" rel="prev" title="搭建hexo+next博客并把项目主页放在上面">
+                搭建hexo+next博客并把项目主页放在上面 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -721,6 +740,13 @@
           
 
           
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
 
           
             <div class="links-of-author motion-element">
@@ -768,7 +794,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#36-Valid-Sudoku"><span class="nav-number">1.</span> <span class="nav-text">36. Valid Sudoku</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#37-Sudoku-Solver"><span class="nav-number">1.</span> <span class="nav-text">37. Sudoku Solver</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.1.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -935,9 +961,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://jinnsjj.github.io/2018-07-11/Valid-Sudoku/';
-        this.page.identifier = '2018-07-11/Valid-Sudoku/';
-        this.page.title = 'LeetCode-36 Valid Sudoku';
+        this.page.url = 'https://jinnsjj.github.io/coding/Sudoku-Solver/';
+        this.page.identifier = 'coding/Sudoku-Solver/';
+        this.page.title = 'LeetCode-37 Sudoku Solver';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
