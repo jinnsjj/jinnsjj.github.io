@@ -111,19 +111,19 @@
   <meta name="description" content="在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。">
 <meta name="keywords" content="HOA,spatial audio,sound field reproduction,空间音频,声场重建">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HOA声场重建">
+<meta property="og:title" content="HOA声场重建原理">
 <meta property="og:url" content="https://jinnsjj.github.io/tech/audio/something-of-HOA/index.html">
 <meta property="og:site_name" content="JOHZEN">
 <meta property="og:description" content="在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://jinnsjj.github.io/tech/audio/something-of-HOA/RA_Discover.png">
-<meta property="og:image" content="https://jinnsjj.github.io/tech/audio/something-of-HOA/speakers-surround-head-3d.png">
-<meta property="og:image" content="https://jinnsjj.github.io/tech/audio/something-of-HOA/Spherical_Harmonics.png">
-<meta property="og:updated_time" content="2018-07-13T07:54:12.023Z">
+<meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a0596b0e92.png">
+<meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a059786b90.png">
+<meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a059ae5ed3.png">
+<meta property="og:updated_time" content="2018-07-14T15:09:29.392Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HOA声场重建">
+<meta name="twitter:title" content="HOA声场重建原理">
 <meta name="twitter:description" content="在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。">
-<meta name="twitter:image" content="https://jinnsjj.github.io/tech/audio/something-of-HOA/RA_Discover.png">
+<meta name="twitter:image" content="https://i.loli.net/2018/07/14/5b4a0596b0e92.png">
 
 
 
@@ -142,7 +142,7 @@
   };
 </script>
 
-  <title>HOA声场重建 | JOHZEN</title>
+  <title>HOA声场重建原理 | JOHZEN</title>
   
 
 
@@ -380,7 +380,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">HOA声场重建
+          <h2 class="post-title" itemprop="name headline">HOA声场重建原理
               
             
           </h2>
@@ -422,7 +422,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-13 16:54:12" itemprop="dateModified" datetime="2018-07-13T16:54:12+09:00">2018-07-13</time>
+                <time title="Modified: 2018-07-15 00:09:29" itemprop="dateModified" datetime="2018-07-15T00:09:29+09:00">2018-07-15</time>
               
             
           </span>
@@ -472,7 +472,7 @@
 
           
           
-             <span id="/tech/audio/something-of-HOA/" class="leancloud_visitors" data-flag-title="HOA声场重建">
+             <span id="/tech/audio/something-of-HOA/" class="leancloud_visitors" data-flag-title="HOA声场重建原理">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -506,27 +506,42 @@
 
       
         <h2 id="空间音频是什么？"><a href="#空间音频是什么？" class="headerlink" title="空间音频是什么？"></a>空间音频是什么？</h2><p>空间音频很多地方也叫做三维音频，它源于我们人据有分辨声音来源方向的能力。虽然一直是比较冷门的研究方向，但在VR的发展下，空间音频也火了一把，很大程度是因为空间音频在在VR的应用所讲究的沉浸感中扮演着极为重要的作用，当声音的方向与画面不匹配的时候，沉浸感会荡然无存，所以高品质的空间音频也成为了VR研究中很重要的一环。</p>
-<p><img src="RA_Discover.png" alt=""></p>
+<!-- ![](RA_Discover.png) -->
+<p><img src="https://i.loli.net/2018/07/14/5b4a0596b0e92.png" alt="RA_Discover.png"></p>
 <blockquote>
 <p><a href="https://developers.google.com/resonance-audio/discover/overview" target="_blank" rel="noopener">https://developers.google.com/resonance-audio/discover/overview</a></p>
 </blockquote>
 <h2 id="HOA"><a href="#HOA" class="headerlink" title="HOA?"></a>HOA?</h2><p>HOA 全称是 Higher Order Ambisonics，强硬的翻译的话就是高次混响。它最初的目的是要重建空间中声场的分布。我们可以想象一个空间中的一个球面，我们在球的中心，那么从球外传来的声音会在这个球面上有一个投影，这让我们想到，我们可以把球面以外的声音都无视掉，并假设声源分布在这个球面上。用球面上的声源产生的声场来拟合原来生源产生的声场。HOA就是一个这样去拟合声场的方法。</p>
-<p><img src="speakers-surround-head-3d.png" alt=""></p>
+<!-- ![](speakers-surround-head-3d.png) -->
+<p><img src="https://i.loli.net/2018/07/14/5b4a059786b90.png" alt="speakers-surround-head-3d.png"></p>
 <blockquote>
 <p><a href="https://developers.google.com/resonance-audio/discover/concepts" target="_blank" rel="noopener">https://developers.google.com/resonance-audio/discover/concepts</a></p>
 </blockquote>
-<h2 id="一些基本概念"><a href="#一些基本概念" class="headerlink" title="一些基本概念"></a>一些基本概念</h2><h3 id="球面调和函数-Spherical-harmonics"><a href="#球面调和函数-Spherical-harmonics" class="headerlink" title="球面调和函数 Spherical harmonics"></a>球面调和函数 Spherical harmonics</h3><p>球面调和函数也叫球谐函数，它并不好理解，有机会可以详细的聊一聊，这里只做最最最抽象的介绍，力求知其然不求知其所以然。</p>
-<p>这里要做的是类比一下傅里叶变换。我们通常接触的函数都是分布在一维的，每一个$x$对应一个$f(x)$，我们对$f(x)$进行傅里叶变换会得到$F(\omega)$。现在我们的目标是一个在球面上分布的函数，我们使用一个球坐标系，球面上的点$(r,\theta,\phi)$，而对于一个固定大小的球，$r$是一个定值，我们可以暂时只关注$\theta$和$\phi$，那么对于每一组$(\theta,\phi)$对应一个$f(\theta,\phi)$。傅里叶变换可以将时域信号转化到频域，这样方便我们分析特定频域的信号，对于$f(\theta,\phi)$，我们只想知道这个函数在空间中一个大概的分布，所以$f(\theta,\phi)$记录的东西无疑太多了，所以我们可以把它转换为$F_n^m$，这里的$n$和$m$就类似与傅里叶中的 $\omega$。当我们只需要粗略的空间分辨率时，很小的$n$就足够，当需要更精细的空间分辨率时，就需要较大的$n$时的$F_n^m$，它们会对小的$n$的$F_n^m$的空间的缝隙中进行插值，使空间的分辨率增高。通过球谐分解，我们可以把球面上的函数用更少的数值表达。就如下面这张图，从上至下$n$逐渐增大，对空间的描述能力也逐渐增强。</p>
-<p><img src="Spherical_Harmonics.png" alt="spherical harmonics"></p>
+<h2 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h2><h3 id="球面调和函数-Spherical-harmonics"><a href="#球面调和函数-Spherical-harmonics" class="headerlink" title="球面调和函数 Spherical harmonics"></a>球面调和函数 Spherical harmonics</h3><p>球面调和函数也叫球谐函数，它并不好理解，有机会可以详细的聊一聊，这里只做最最最抽象的介绍，力求知其然不求知其所以然。</p>
+<p>这里要做的是类比一下傅里叶变换。我们通常接触的函数都是分布在一维的，每一个 $x$ 对应一个 $f(x)$，我们对 $f(x)$ 进行傅里叶变换会得到 $F(\omega)$。现在我们的目标是一个在球面上分布的函数，我们使用一个球坐标系，球面上的点 $(r,\theta,\phi)$，而对于一个固定大小的球，$r$是一个定值，我们可以暂时只关注$\theta$和$\phi$，那么对于每一组 $(\theta,\phi)$对应一个$f(\theta,\phi)$。傅里叶变换可以将时域信号转化到频域，这样方便我们分析特定频域的信号，对于 $f(\theta,\phi)$，我们只想知道这个函数在空间中一个大概的分布，所以$f(\theta,\phi)$记录的东西无疑太多了，所以我们可以把它转换为 $F_n^m$，这里的 $n$ 和 $m$ 就类似与傅里叶中的 $\omega$。当我们只需要粗略的空间分辨率时，很小的$n$就足够，当需要更精细的空间分辨率时，就需要较大的 $n$ 时的 $F_n^m$，它们会对小的$n$的$F_n^m$的空间的缝隙中进行插值，使空间的分辨率增高。通过球谐分解，我们可以把球面上的函数用更少的数值表达。就如下面这张图，从上至下$n$逐渐增大，对空间的描述能力也逐渐增强。</p>
+<!-- ![spherical harmonics](Spherical_Harmonics.png) -->
+<p><img src="https://i.loli.net/2018/07/14/5b4a059ae5ed3.png" alt="Spherical_Harmonics.png"></p>
 <blockquote>
 <p><a href="https://en.wikipedia.org/wiki/Spherical_harmonics" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Spherical_harmonics</a></p>
 </blockquote>
-<h3 id="球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function"><a href="#球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function" class="headerlink" title="球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function"></a>球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function</h3><p>这两个函数的表达式也比较复杂，好在我们通常也不需要记住，只需要知道它门描述了波动方程在球坐标系下的解，它与三个参数有关，对应的上面的球谐函数的阶数$n$，波的频率球面的半径有关，在之后的数学中我们会用到。贝塞尔函数写作$j_n(kr)$或者$j_n(\frac{\omega}{c}r)$，$k$是一个波的波数，它等于$\frac{\omega}{c}$，$\omega$表示声音的角频率，$r$表示球面的半径。汉克尔函数类似，但有一类汉克尔函数和二类汉克尔函数，分别表示从外往内传播的入射波和从内往外传递的出射波，写作$h_n^{(1)}(kr)$与$h_n^{(2)}(kr)$。</p>
-<h3 id="格林函数-Green-function"><a href="#格林函数-Green-function" class="headerlink" title="格林函数 Green function"></a>格林函数 Green function</h3><p>格林函数用于描述在开放空间中（没有障碍物没有反射折射）一个声源到空间另外一点的响应。用$x_0$表示声源的位置，$x$点的声强为$p(\omega) = \dfrac{e^{i\omega|x-x_0|}}{4\pi|x-x_0|}$。$\omega$表示声音的角频率，格林函数同样有在时域上的表达，可以看作是一个延时函数。</p>
-<h2 id="HOA-1"><a href="#HOA-1" class="headerlink" title="HOA!"></a>HOA!</h2><div class="note warning"><p>UNDER CONSTRUCTION…</p></div>
+<p>基于球谐函数，球面上的任意函数可以被分解为球谐系数：</p>
+<p>$$p(\theta,\phi) = \sum_{n=0}^\infty \sum_{m=-n}^{n} A_n^m Y_n^m(\theta,\phi) $$</p>
+<p>这个式子看起来是不是也非常像傅里叶变换呢。</p>
+<h3 id="球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function"><a href="#球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function" class="headerlink" title="球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function"></a>球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function</h3><p>这两个函数的表达式也比较复杂，好在我们通常也不需要记住，只需要知道它门描述了波动方程在球坐标系下的解，它与三个参数有关，对应的上面的球谐函数的阶数 $n$，波的频率球面的半径有关，在之后的数学中我们会用到。贝塞尔函数写作 $j_n(kr)$ 或者 $j_n(\frac{\omega}{c}r)$，$k$是一个波的波数，它等于 $\frac{\omega}{c}$，$\omega$ 表示声音的角频率，$r$表示球面的半径。汉克尔函数类似，但有一类汉克尔函数和二类汉克尔函数，分别表示从外往内传播的入射波和从内往外传递的出射波，写作 $h_n^{(1)}(kr)$ 与 $h_n^{(2)}(kr)$。</p>
+<h3 id="格林函数-Green-function"><a href="#格林函数-Green-function" class="headerlink" title="格林函数 Green function"></a>格林函数 Green function</h3><p>格林函数用于描述在开放空间中（没有障碍物没有反射折射）一个声源到空间另外一点的响应。用$\bf{x_0}$表示声源的位置，声源到$\bf{x}$点的传达函数为为 $G(\bf{x}-\bf{x_0},\omega) = \dfrac{e^{i\omega|\bf{x}-\bf{x_0}|}}{4\pi|\bf{x}-\bf{x_0}|}$。$\omega$表示声音的角频率，格林函数同样有在时域上的表达，可以看作是一个延时函数。</p>
+<h2 id="HOA-1"><a href="#HOA-1" class="headerlink" title="HOA!"></a>HOA!</h2><p>我们之前说到了，HOA的思路是用一个球面上的音源去拟合球内的声场。我们把这个思想在球坐标系中用公式描述出来。对于一个特定频率的声波（角频率为 $\omega$ ）球内一点 $\bf{x}$，该点的声强是球面$S_0$上声源的在该点的响应的叠加：</p>
+<p>$$p(\bf{x},\omega) = \int_{\Omega_0 \in S_0} D(\bf{x_0},\omega) G(\bf{x}-\bf{x_0},\omega)d\Omega_0$$</p>
+<p>这里 $D(\bf{x_0},\omega)$ 表示了球面分布的声源的驱动信号(driving signal)，$\bf{x_0}$ 则代表着它们对应的坐标。</p>
+<p>于此同时，我们也可以对 $p(\bf{x},\omega)$ 进行球谐分解，把它写作：</p>
+<p>$$p(r,\theta,\phi,\omega) = \sum_{n=0}^\infty \sum_{m=-n}^{n} P_n^m(r,\omega) Y_n^m(\theta,\phi)$$</p>
+<p>同样 $D(\bf{x_0},\omega)$ 和 $G(\bf{x}-\bf{x_0},\omega)$ 也进行对应的球谐变换，原本的积分式就可以转换为一个对于球谐系数的等式：</p>
+<!-- $$P_n^m(r,\omega) =  2\pi r_0 \sqrt{\frac{4\pi}{2n+1}} D_n^m(r_0,\omega) G_n^m(r,\omega)$$ -->
+<p>$$\bf{P_n^m} = \bf{D_n^m} \cdot \bf{G_n^m}$$</p>
+<p>这样通过求矩阵的逆，我们就可以求得 $\bf{D_n^m}$ 并依次得到驱动信号，从而重建声场。</p>
+<!-- <div class="note warning"><p>UNDER CONSTRUCTION…</p></div> –&gt;
 <hr>
 <blockquote class="blockquote-center"><p><strong>行路难·其一</strong><br>李白<br>金樽清酒斗十千，玉盘珍羞直万钱。停杯投箸不能食，拔剑四顾心茫然。<br>欲渡黄河冰塞川，将登太行雪满山。闲来垂钓碧溪上，忽复乘舟梦日边。<br>行路难！行路难！多歧路，今安在？长风破浪会有时，直挂云帆济沧海。</p>
-</blockquote>
+</blockquote>-->
       
     </div>
 
@@ -807,7 +822,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#空间音频是什么？"><span class="nav-number">1.</span> <span class="nav-text">空间音频是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HOA"><span class="nav-number">2.</span> <span class="nav-text">HOA?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些基本概念"><span class="nav-number">3.</span> <span class="nav-text">一些基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#球面调和函数-Spherical-harmonics"><span class="nav-number">3.1.</span> <span class="nav-text">球面调和函数 Spherical harmonics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function"><span class="nav-number">3.2.</span> <span class="nav-text">球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格林函数-Green-function"><span class="nav-number">3.3.</span> <span class="nav-text">格林函数 Green function</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HOA-1"><span class="nav-number">4.</span> <span class="nav-text">HOA!</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#空间音频是什么？"><span class="nav-number">1.</span> <span class="nav-text">空间音频是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HOA"><span class="nav-number">2.</span> <span class="nav-text">HOA?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关知识"><span class="nav-number">3.</span> <span class="nav-text">相关知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#球面调和函数-Spherical-harmonics"><span class="nav-number">3.1.</span> <span class="nav-text">球面调和函数 Spherical harmonics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function"><span class="nav-number">3.2.</span> <span class="nav-text">球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格林函数-Green-function"><span class="nav-number">3.3.</span> <span class="nav-text">格林函数 Green function</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HOA-1"><span class="nav-number">4.</span> <span class="nav-text">HOA!</span></a></li></ol></div>
             
 
           </div>
@@ -861,8 +876,6 @@
   <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Pisces</a> v6.3.0</div>
 
 
-
-  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.github.com/"><b>GitHub Pages</b></a></div>
 
 
         
@@ -976,7 +989,7 @@
       var disqus_config = function () {
         this.page.url = 'https://jinnsjj.github.io/tech/audio/something-of-HOA/';
         this.page.identifier = 'tech/audio/something-of-HOA/';
-        this.page.title = 'HOA声场重建';
+        this.page.title = 'HOA声场重建原理';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
