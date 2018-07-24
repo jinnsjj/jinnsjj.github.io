@@ -123,7 +123,7 @@
 <meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a0596b0e92.png">
 <meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a059786b90.png">
 <meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a059ae5ed3.png">
-<meta property="og:updated_time" content="2018-07-14T15:50:51.426Z">
+<meta property="og:updated_time" content="2018-07-24T08:30:26.410Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HOA声场重建原理">
 <meta name="twitter:description" content="在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。">
@@ -426,7 +426,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-15 00:50:51" itemprop="dateModified" datetime="2018-07-15T00:50:51+09:00">2018-07-15</time>
+                <time title="Modified: 2018-07-24 17:30:26" itemprop="dateModified" datetime="2018-07-24T17:30:26+09:00">2018-07-24</time>
               
             
           </span>
@@ -532,16 +532,19 @@
 <p>$$p(\theta,\phi) = \sum_{n=0}^\infty \sum_{m=-n}^{n} P_n^m Y_n^m(\theta,\phi) $$</p>
 <p>声场中方向的信息都被转换到了球谐因子 $Y_n^m(\theta,\phi)$ 中，这个式子看起来是不是也非常像傅里叶变换呢。</p>
 <h3 id="球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function"><a href="#球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function" class="headerlink" title="球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function"></a>球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function</h3><p>这两个函数的表达式也比较复杂，好在我们通常也不需要记住，只需要知道它门描述了波动方程在球坐标系下的解，它与三个参数有关，对应的上面的球谐函数的阶数 $n$，波的频率球面的半径有关，在之后的数学中我们会用到。贝塞尔函数写作 $j_n(kr)$ 或者 $j_n(\frac{\omega}{c}r)$，$k$是一个波的波数，它等于 $\frac{\omega}{c}$，$\omega$ 表示声音的角频率，$r$表示球面的半径。汉克尔函数类似，但有一类汉克尔函数和二类汉克尔函数，分别表示从外往内传播的入射波和从内往外传递的出射波，写作 $h_n^{(1)}(kr)$ 与 $h_n^{(2)}(kr)$。</p>
-<h3 id="格林函数-Green-function"><a href="#格林函数-Green-function" class="headerlink" title="格林函数 Green function"></a>格林函数 Green function</h3><p>格林函数用于描述在开放空间中（没有障碍物没有反射折射）一个声源到空间另外一点的响应。用$\bf{x_0}$表示声源的位置，声源到$\bf{x}$点的传达函数为为 $G(\bf{x}-\bf{x_0},\omega) = \dfrac{e^{i\omega|\bf{x}-\bf{x_0}|}}{4\pi|\bf{x}-\bf{x_0}|}$。$\omega$表示声音的角频率，格林函数同样有在时域上的表达，可以看作是一个延时函数。</p>
-<h2 id="HOA-1"><a href="#HOA-1" class="headerlink" title="HOA!"></a>HOA!</h2><p>我们之前说到了，HOA的思路是用一个球面上的音源去拟合球内的声场。我们把这个思想在球坐标系中用公式描述出来。对于一个特定频率的声波（角频率为 $\omega$ ）球内一点 $\bf{x}$，该点的声强是球面$S_0$上声源的在该点的响应的叠加：</p>
-<p>$$p(\bf{x},\omega) = \int_{\Omega_0 \in S_0} D(\bf{x_0},\omega) G(\bf{x}-\bf{x_0},\omega)d\Omega_0$$</p>
-<p>这里 $D(\bf{x_0},\omega)$ 表示了球面分布的声源的驱动信号(driving signal)，$\bf{x_0}$ 则代表着它们对应的坐标。</p>
-<p>于此同时，我们也可以对 $p(\bf{x},\omega)$ 进行球谐分解，把它写作：</p>
-<p>$$p(r,\theta,\phi,\omega) = \sum_{n=0}^\infty \sum_{m=-n}^{n} P_n^m(r,\omega) Y_n^m(\theta,\phi)$$</p>
-<p>同样 $D(\bf{x_0},\omega)$ 和 $G(\bf{x}-\bf{x_0},\omega)$ 也进行对应的球谐变换，原本的积分式就可以转换为一个对于球谐系数的等式：</p>
+<h3 id="格林函数-Green-function"><a href="#格林函数-Green-function" class="headerlink" title="格林函数 Green function"></a>格林函数 Green function</h3><p>格林函数用于描述在开放空间中（没有障碍物没有反射折射）一个声源到空间另外一点的响应。用$\boldsymbol{x_0}$表示声源的位置，声源到$\boldsymbol{x}$点的传达函数为为 $G(\boldsymbol{x}-\boldsymbol{x_0},\omega) = \dfrac{e^{ik|\boldsymbol{x}-\boldsymbol{x_0}|}}{4\pi|\boldsymbol{x}-\boldsymbol{x_0}|}$。$\omega$表示声音的角频率，格林函数同样有在时域上的表达，可以看作是一个延时函数。</p>
+<h2 id="HOA-1"><a href="#HOA-1" class="headerlink" title="HOA!"></a>HOA!</h2><p>我们之前说到了，HOA的思路是用一个球面上的音源去拟合球内的声场。我们把这个思想在球坐标系中用公式描述出来。对于一个特定频率的声波（角频率为 $\omega$ ）球内一点 $\boldsymbol{x}$，该点的声强是球面$S_0$上声源的在该点的响应的叠加：</p>
+<p>$$p(\boldsymbol{x},\omega) = \int_{\Omega_0 \in S_0} D(\boldsymbol{x_0},\omega) G(\boldsymbol{x}-\boldsymbol{x_0},\omega)d\Omega_0$$</p>
+<p>这里 $D(\boldsymbol{x_0},\omega)$ 表示了球面分布的声源的驱动信号(driving signal)，$\boldsymbol{x_0}$ 则代表着它们对应的坐标。</p>
+<p>于此同时，我们也可以对 $p(\boldsymbol{x},\omega)$ 进行球谐分解，把它写作：</p>
+<p>$$p(r,\theta,\phi,\omega) = \sum_{n=0}^\infty \sum_{m=-n}^{n} j_n(\frac{\omega}{c}r) P_n^m(\omega) Y_n^m(\theta,\phi)$$</p>
+<p>这一步，我们也叫做<strong>声场的编码</strong>，$p(\boldsymbol{x},\omega)$可以是录音得到的，也可以是仿真生成的。</p>
+<p>同样 $G(\boldsymbol{x}-\boldsymbol{x_0},\omega)$ 也进行对应的球谐变换。如果我们用$L$个扬声器重建声场，那么上面这个式子可以写作</p>
+<p>$$p(r,\theta,\phi,\omega) = \sum_{n=0}^\infty \sum_{m=-n}^{n} j_n(\frac{\omega}{c}r) { \sum_{\ell=1}^{L} D_\ell(\boldsymbol{x_0},\omega)G_{nm}^{\ell}(\omega) } Y_n^m(\theta,\phi)$$</p>
 <!-- $$P_n^m(r,\omega) =  2\pi r_0 \sqrt{\frac{4\pi}{2n+1}} D_n^m(r_0,\omega) G_n^m(r,\omega)$$ -->
-<p>$$\bf{P_n^m} = \bf{D_n^m} \cdot \bf{G_n^m}$$</p>
-<p>这样通过求矩阵的逆，我们就可以求得 $\bf{D_n^m}$ 并依此得到驱动信号，从而重建声场。</p>
+<p>$$\boldsymbol{P_n^m} = \boldsymbol{D(\boldsymbol x_0,\omega)} \cdot \boldsymbol{C(\omega)}$$</p>
+<p>$$\boldsymbol{C(\omega)} = [G_{nm}^{1}(\omega) \quad G_{nm}^{2}(\omega) \quad \cdots \quad G_{nm}^{L}(\omega)]$$</p>
+<p>这样通过求矩阵的逆，我们就可以求得 $\boldsymbol{D_n^m}$ 并依此得到驱动信号，从而重建声场。</p>
 <!-- <div class="note warning"><p>UNDER CONSTRUCTION…</p></div> –&gt;
 <hr>
 <blockquote class="blockquote-center"><p><strong>行路难·其一</strong><br>李白<br>金樽清酒斗十千，玉盘珍羞直万钱。停杯投箸不能食，拔剑四顾心茫然。<br>欲渡黄河冰塞川，将登太行雪满山。闲来垂钓碧溪上，忽复乘舟梦日边。<br>行路难！行路难！多歧路，今安在？长风破浪会有时，直挂云帆济沧海。</p>
@@ -620,6 +623,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/tech/audio/speech-emotion-recognition-survey/" rel="prev" title="语音情感识别探讨">
+                语音情感识别探讨 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -713,7 +720,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -763,7 +770,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/something-of-HOA/</loc>
-    <lastmod>2018-07-14T15:50:51.426Z</lastmod>
+    <lastmod>2018-07-24T08:30:26.410Z</lastmod>
     <data>
         <display>
         <title>HOA声场重建原理</title>
@@ -31,8 +31,31 @@
 
     
   <url>
+    <loc>https://jinnsjj.github.io/tech/audio/speech-emotion-recognition-survey/</loc>
+    <lastmod>2018-07-19T00:32:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>语音情感识别探讨</title>
+        <pubTime>2018-07-19T00:15:09.000Z</pubTime>
+        
+        <tag>speech emotion recognition</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
+          
+             
+              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jinnsjj.github.io/uncategorized/build-projects-page/</loc>
-    <lastmod>2018-07-13T06:12:22.000Z</lastmod>
+    <lastmod>2018-07-13T06:12:22.573Z</lastmod>
     <data>
         <display>
         <title>搭建hexo+next博客并把项目主页放在上面</title>
@@ -51,7 +74,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/hexo-next-note/</loc>
-    <lastmod>2018-07-13T06:12:02.000Z</lastmod>
+    <lastmod>2018-07-13T06:12:02.481Z</lastmod>
     <data>
         <display>
         <title>在hexo-NexT中插入note提示块</title>
@@ -70,7 +93,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/librosa-audio/</loc>
-    <lastmod>2018-07-12T16:19:05.638Z</lastmod>
+    <lastmod>2018-07-12T16:19:05.000Z</lastmod>
     <data>
         <display>
         <title>librosa音频操作基础和特征提取</title>
@@ -97,7 +120,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/coding/Valid-Sudoku/</loc>
-    <lastmod>2018-07-12T06:35:59.000Z</lastmod>
+    <lastmod>2018-07-12T06:35:59.867Z</lastmod>
     <data>
         <display>
         <title>LeetCode-36 Valid Sudoku</title>
@@ -119,7 +142,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/coding/Sudoku-Solver/</loc>
-    <lastmod>2018-07-12T06:35:55.000Z</lastmod>
+    <lastmod>2018-07-12T06:35:55.631Z</lastmod>
     <data>
         <display>
         <title>LeetCode-37 Sudoku Solver</title>
@@ -143,11 +166,11 @@
     
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/hello-world/</loc>
-    <lastmod>2018-07-09T09:42:00.000Z</lastmod>
+    <lastmod>2018-07-09T09:42:00.388Z</lastmod>
     <data>
         <display>
         <title>Hello World</title>
-        <pubTime>2018-07-09T15:24:36.092Z</pubTime>
+        <pubTime>2018-07-09T08:49:29.561Z</pubTime>
         
          
            
