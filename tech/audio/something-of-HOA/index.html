@@ -123,7 +123,7 @@
 <meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a0596b0e92.png">
 <meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a059786b90.png">
 <meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a059ae5ed3.png">
-<meta property="og:updated_time" content="2018-07-24T08:30:26.410Z">
+<meta property="og:updated_time" content="2018-07-24T10:50:41.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HOA声场重建原理">
 <meta name="twitter:description" content="在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。">
@@ -426,7 +426,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-24 17:30:26" itemprop="dateModified" datetime="2018-07-24T17:30:26+09:00">2018-07-24</time>
+                <time title="Modified: 2018-07-24 19:50:41" itemprop="dateModified" datetime="2018-07-24T19:50:41+09:00">2018-07-24</time>
               
             
           </span>
@@ -539,12 +539,18 @@
 <p>于此同时，我们也可以对 $p(\boldsymbol{x},\omega)$ 进行球谐分解，把它写作：</p>
 <p>$$p(r,\theta,\phi,\omega) = \sum_{n=0}^\infty \sum_{m=-n}^{n} j_n(\frac{\omega}{c}r) P_n^m(\omega) Y_n^m(\theta,\phi)$$</p>
 <p>这一步，我们也叫做<strong>声场的编码</strong>，$p(\boldsymbol{x},\omega)$可以是录音得到的，也可以是仿真生成的。</p>
+<blockquote>
+<p>因为$j_n(\frac{\omega}{c}r)$可能等于0，在某些频率无法得到$P_n^m(\omega)$,这时候就会遇到禁止频率的问题。这也是声场重建中一个比较重要的问题。</p>
+</blockquote>
 <p>同样 $G(\boldsymbol{x}-\boldsymbol{x_0},\omega)$ 也进行对应的球谐变换。如果我们用$L$个扬声器重建声场，那么上面这个式子可以写作</p>
 <p>$$p(r,\theta,\phi,\omega) = \sum_{n=0}^\infty \sum_{m=-n}^{n} j_n(\frac{\omega}{c}r) { \sum_{\ell=1}^{L} D_\ell(\boldsymbol{x_0},\omega)G_{nm}^{\ell}(\omega) } Y_n^m(\theta,\phi)$$</p>
 <!-- $$P_n^m(r,\omega) =  2\pi r_0 \sqrt{\frac{4\pi}{2n+1}} D_n^m(r_0,\omega) G_n^m(r,\omega)$$ -->
-<p>$$\boldsymbol{P_n^m} = \boldsymbol{D(\boldsymbol x_0,\omega)} \cdot \boldsymbol{C(\omega)}$$</p>
+<p>$$P_n^m = \boldsymbol{C(\omega)} \cdot \boldsymbol{D(\boldsymbol x_0,\omega)}$$</p>
 <p>$$\boldsymbol{C(\omega)} = [G_{nm}^{1}(\omega) \quad G_{nm}^{2}(\omega) \quad \cdots \quad G_{nm}^{L}(\omega)]$$</p>
-<p>这样通过求矩阵的逆，我们就可以求得 $\boldsymbol{D_n^m}$ 并依此得到驱动信号，从而重建声场。</p>
+<p>这样通过求矩阵的逆，我们就可以求得驱动信号$D(\boldsymbol x_0,\omega)$，从而重建声场。这也是HOA的<strong>解码</strong>。</p>
+<blockquote>
+<p>同时我们也可以避免矩阵的求逆，直接算出驱动函数的解析解。这里就不展开了。</p>
+</blockquote>
 <!-- <div class="note warning"><p>UNDER CONSTRUCTION…</p></div> –&gt;
 <hr>
 <blockquote class="blockquote-center"><p><strong>行路难·其一</strong><br>李白<br>金樽清酒斗十千，玉盘珍羞直万钱。停杯投箸不能食，拔剑四顾心茫然。<br>欲渡黄河冰塞川，将登太行雪满山。闲来垂钓碧溪上，忽复乘舟梦日边。<br>行路难！行路难！多歧路，今安在？长风破浪会有时，直挂云帆济沧海。</p>
