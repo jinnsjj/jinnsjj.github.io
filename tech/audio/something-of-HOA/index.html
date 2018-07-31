@@ -123,7 +123,7 @@
 <meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a0596b0e92.png">
 <meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a059786b90.png">
 <meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a059ae5ed3.png">
-<meta property="og:updated_time" content="2018-07-24T10:50:41.868Z">
+<meta property="og:updated_time" content="2018-07-31T06:58:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HOA声场重建原理">
 <meta name="twitter:description" content="在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。">
@@ -426,7 +426,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-24 19:50:41" itemprop="dateModified" datetime="2018-07-24T19:50:41+09:00">2018-07-24</time>
+                <time title="Modified: 2018-07-31 15:58:44" itemprop="dateModified" datetime="2018-07-31T15:58:44+09:00">2018-07-31</time>
               
             
           </span>
@@ -531,7 +531,7 @@
 <p>基于球谐函数，球面上的任意函数可以被分解为球谐系数：</p>
 <p>$$p(\theta,\phi) = \sum_{n=0}^\infty \sum_{m=-n}^{n} P_n^m Y_n^m(\theta,\phi) $$</p>
 <p>声场中方向的信息都被转换到了球谐因子 $Y_n^m(\theta,\phi)$ 中，这个式子看起来是不是也非常像傅里叶变换呢。</p>
-<h3 id="球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function"><a href="#球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function" class="headerlink" title="球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function"></a>球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function</h3><p>这两个函数的表达式也比较复杂，好在我们通常也不需要记住，只需要知道它门描述了波动方程在球坐标系下的解，它与三个参数有关，对应的上面的球谐函数的阶数 $n$，波的频率球面的半径有关，在之后的数学中我们会用到。贝塞尔函数写作 $j_n(kr)$ 或者 $j_n(\frac{\omega}{c}r)$，$k$是一个波的波数，它等于 $\frac{\omega}{c}$，$\omega$ 表示声音的角频率，$r$表示球面的半径。汉克尔函数类似，但有一类汉克尔函数和二类汉克尔函数，分别表示从外往内传播的入射波和从内往外传递的出射波，写作 $h_n^{(1)}(kr)$ 与 $h_n^{(2)}(kr)$。</p>
+<h3 id="球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function"><a href="#球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function" class="headerlink" title="球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function"></a>球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function</h3><p>这两个函数的表达式也比较复杂，好在我们通常也不需要记住，只需要知道它门描述了波动方程在球坐标系下的解，它与三个参数有关，对应的上面的球谐函数的阶数 $n$，波的频率球面的半径有关，在之后的数学中我们会用到。贝塞尔函数写作 $j_n(kr)$ 或者 $j_n(\frac{\omega}{c}r)$，$k$是一个波的波数，它等于 $\frac{\omega}{c}$，$\omega$ 表示声音的角频率，$r$表示球面的半径。汉克尔函数类似，但有一类汉克尔函数和二类汉克尔函数，分别表示从内往外传递的出射波和从外往内传播的入射波，写作 $h_n^{(1)}(kr)$ 与 $h_n^{(2)}(kr)$。</p>
 <h3 id="格林函数-Green-function"><a href="#格林函数-Green-function" class="headerlink" title="格林函数 Green function"></a>格林函数 Green function</h3><p>格林函数用于描述在开放空间中（没有障碍物没有反射折射）一个声源到空间另外一点的响应。用$\boldsymbol{x_0}$表示声源的位置，声源到$\boldsymbol{x}$点的传达函数为为 $G(\boldsymbol{x}-\boldsymbol{x_0},\omega) = \dfrac{e^{ik|\boldsymbol{x}-\boldsymbol{x_0}|}}{4\pi|\boldsymbol{x}-\boldsymbol{x_0}|}$。$\omega$表示声音的角频率，格林函数同样有在时域上的表达，可以看作是一个延时函数。</p>
 <h2 id="HOA-1"><a href="#HOA-1" class="headerlink" title="HOA!"></a>HOA!</h2><p>我们之前说到了，HOA的思路是用一个球面上的音源去拟合球内的声场。我们把这个思想在球坐标系中用公式描述出来。对于一个特定频率的声波（角频率为 $\omega$ ）球内一点 $\boldsymbol{x}$，该点的声强是球面$S_0$上声源的在该点的响应的叠加：</p>
 <p>$$p(\boldsymbol{x},\omega) = \int_{\Omega_0 \in S_0} D(\boldsymbol{x_0},\omega) G(\boldsymbol{x}-\boldsymbol{x_0},\omega)d\Omega_0$$</p>

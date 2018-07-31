@@ -120,10 +120,12 @@
 <meta property="og:site_name" content="JOHZEN">
 <meta property="og:description" content="近期开始了一个语音情感识别的任务，我对于这一方面完全没有经验，所以第一件事情就是调查相关的基础知识与背景，主要参考了一篇2010年的论文 “Survey on speech emotion recognition: Features, classification schemes, and databases”，如今有894个引用，可以说是较为权威的论文了。因为是2010年发表的，而智能音频这一块">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-24T10:36:27.472Z">
+<meta property="og:image" content="https://i.loli.net/2018/07/25/5b5820350ca89.png">
+<meta property="og:updated_time" content="2018-07-26T11:09:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="语音情感识别探讨">
 <meta name="twitter:description" content="近期开始了一个语音情感识别的任务，我对于这一方面完全没有经验，所以第一件事情就是调查相关的基础知识与背景，主要参考了一篇2010年的论文 “Survey on speech emotion recognition: Features, classification schemes, and databases”，如今有894个引用，可以说是较为权威的论文了。因为是2010年发表的，而智能音频这一块">
+<meta name="twitter:image" content="https://i.loli.net/2018/07/25/5b5820350ca89.png">
 
 
 
@@ -422,7 +424,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-24 19:36:27" itemprop="dateModified" datetime="2018-07-24T19:36:27+09:00">2018-07-24</time>
+                <time title="Modified: 2018-07-26 20:09:18" itemprop="dateModified" datetime="2018-07-26T20:09:18+09:00">2018-07-26</time>
               
             
           </span>
@@ -523,7 +525,16 @@
 <li>情感本身都难以明确的定义。</li>
 </ol>
 <h3 id="情感"><a href="#情感" class="headerlink" title="情感"></a>情感</h3><p>虽然情感本身十分复杂，但一个被广泛认同的模型是讲情感划分为两个维度：activation 和 valence。activation指得是表达这个情感需要的能量。比较强烈的情感比如愤怒，喜悦，恐惧。伴随着这类感情可能会有心跳加速，血压升高等等，同时人的语速会变快，音高变高。相反比较舒缓的请看比如忧伤，语速可能会降低，高频会减少。而activation类似的感情，比如愤怒与喜悦，则用valence来加以区分。用何种feature来描述valence尚无定论。因此，在情感识别系统中，强烈的感情与舒缓的感情很好区分，而区分不同类别的情感则还是一个挑战。</p>
-<h2 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h2><p>作为模式识别尤其是机器学习的应用，database的重要性不言而喻。但和大多数模式识别任务想必，情感识别显得特别特殊。原因在于情感的模糊性（fuzzy）。</p>
+<!-- ## Database
+
+作为模式识别尤其是机器学习的应用，database的重要性不言而喻。但和大多数模式识别任务想比，用于情感识别的数据库显得特别特殊。
+
+### 设计标准
+
+- 真实世界的情感或演出的情感
+- 情感的发出者（专业演员？业余演员？）
+- 如何模拟真实世界的发音
+-  -->
 <h2 id="语音情感识别中的特征"><a href="#语音情感识别中的特征" class="headerlink" title="语音情感识别中的特征"></a>语音情感识别中的特征</h2><p>特征提取是模式识别任务中最重要的一个环节之一，再语音情感识别的任务中亦然。我们会面对四个主要的问题</p>
 <ol>
 <li>特征提取的作用域。是对音频进行分帧(frame)再提取特征，或是对全局进行提取？</li>
@@ -531,7 +542,77 @@
 <li>是否要进行前处理与后处理？比如移除静音的部分。</li>
 <li>要不要结合其他的特征？比如语言模型或者面部表情。</li>
 </ol>
-<h3 id="对以上四个问题的分析"><a href="#对以上四个问题的分析" class="headerlink" title="对以上四个问题的分析"></a>对以上四个问题的分析</h3><hr>
+<h3 id="对以上四个问题的分析"><a href="#对以上四个问题的分析" class="headerlink" title="对以上四个问题的分析"></a>对以上四个问题的分析</h3><ol>
+<li><p>局部特征还是全局特征</p>
+<p> 全局特征在分类的准确率上往往比局部特征表现的要好，同时耗时也更少（特征量较少）。然而全局特征也有许多缺点：</p>
+<ol>
+<li>只在分类高兴奋度的情感（high-arousal emotions，也是我们之前说的activation较高的情感）中比较有效，比如在分类anger和joy时，全局特征就会失效。</li>
+<li>全局特征会丢失语音的短时信息（temporal information）。</li>
+<li><p>当使用较为复杂的分类器（HMM，SVM等）时，全局变量会因为特征较少而无法进行有效的训练。</p>
+<p>因此在复杂的模型中使用局部特征，模型的准确率更好。</p>
+<p>还有一种做法是对语音信号根据音素进行分段而不是分帧。研究显示了把分段的特征和全局特征相结合可以一定程度提高是别的准确率。</p>
+</li>
+</ol>
+</li>
+<li><p>提取什么样的特征</p>
+<p> 我们可以把语音特征划分为四类：</p>
+<ol>
+<li>连续语音特征（continuous speech features）；<ul>
+<li>pitch-related features</li>
+<li>formants features</li>
+<li>energy-related features</li>
+<li>timing features</li>
+<li>articulation features<br>常用的有F0，Energy，Duration，Formants。另外在特征的提取中，除了使用特征还对特征进行一些转换，比如平均，最大最小等。在INTERSPEECH 2009 中有个图表就很清晰的展示了这一点。<br><img src="https://i.loli.net/2018/07/25/5b5820350ca89.png" alt="1532502050.png"><br>这里请我们提取16个特征和它门的delta，在进行12种变换，特征向量于是有384维（16x2x12）。</li>
+</ul>
+</li>
+<li>定量特征（qualitative features）；</li>
+<li>频谱特征（spectral features）；</li>
+<li><p>TEO-based features。</p>
+<p>小结：TEO-based features 用于压力检测；fundamental frequency和pitch features 用来检测high-arousal和low-arousal的情感；频谱特征比如MFCC用来做N-way classification的问题。</p>
+</li>
+</ol>
+</li>
+<li><p>语音处理</p>
+<ul>
+<li>前处理<ul>
+<li>滤波</li>
+<li>静音去除<br>  静音的间隔也包含情感的信息的。</li>
+</ul>
+</li>
+<li>后处理<ul>
+<li>正规化<br>  重要！但由于方差中包含许多情感那信息，所以也有不足。 </li>
+<li>降维</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>声学特征与其他特征结合</p>
+<ul>
+<li>语言信息（linguistic information）</li>
+<li>视频信息</li>
+</ul>
+</li>
+</ol>
+<h2 id="分类方法"><a href="#分类方法" class="headerlink" title="分类方法"></a>分类方法</h2><p>一个情感识别系统包含两个部分：（1）提取合适的特征；（2）通过一个分类器进行分类。</p>
+<ul>
+<li>HMM<ul>
+<li>+： 常用，效果好</li>
+</ul>
+</li>
+<li>GMM<ul>
+<li>+： 比HMM要求少</li>
+<li>-： 不能利用短时特征</li>
+</ul>
+</li>
+<li>NN<ul>
+<li>+： </li>
+<li>-： </li>
+</ul>
+</li>
+<li>SVM</li>
+<li>多分类器</li>
+</ul>
+<hr>
 <blockquote class="blockquote-center"></blockquote>
       
     </div>
@@ -811,7 +892,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#情感识别的用处"><span class="nav-number">1.1.</span> <span class="nav-text">情感识别的用处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#情感识别面临的挑战"><span class="nav-number">1.2.</span> <span class="nav-text">情感识别面临的挑战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#情感"><span class="nav-number">1.3.</span> <span class="nav-text">情感</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Database"><span class="nav-number">2.</span> <span class="nav-text">Database</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语音情感识别中的特征"><span class="nav-number">3.</span> <span class="nav-text">语音情感识别中的特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对以上四个问题的分析"><span class="nav-number">3.1.</span> <span class="nav-text">对以上四个问题的分析</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#情感识别的用处"><span class="nav-number">1.1.</span> <span class="nav-text">情感识别的用处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#情感识别面临的挑战"><span class="nav-number">1.2.</span> <span class="nav-text">情感识别面临的挑战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#情感"><span class="nav-number">1.3.</span> <span class="nav-text">情感</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语音情感识别中的特征"><span class="nav-number">2.</span> <span class="nav-text">语音情感识别中的特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对以上四个问题的分析"><span class="nav-number">2.1.</span> <span class="nav-text">对以上四个问题的分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类方法"><span class="nav-number">3.</span> <span class="nav-text">分类方法</span></a></li></ol></div>
             
 
           </div>
