@@ -122,7 +122,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2018/07/25/5b5820350ca89.png">
 <meta property="og:image" content="https://i.loli.net/2018/09/05/5b8f4fbfc590e.png">
-<meta property="og:updated_time" content="2018-09-05T03:57:41.256Z">
+<meta property="og:updated_time" content="2018-09-05T06:51:34.974Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="语音情感识别探讨">
 <meta name="twitter:description" content="近期开始了一个语音情感识别的任务，我对于这一方面完全没有经验，所以第一件事情就是调查相关的基础知识与背景，主要参考了一篇2010年的论文 “Survey on speech emotion recognition: Features, classification schemes, and databases”，如今有894个引用，可以说是较为权威的论文了。因为是2010年发表的，而智能音频这一块">
@@ -425,7 +425,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-05 12:57:41" itemprop="dateModified" datetime="2018-09-05T12:57:41+09:00">2018-09-05</time>
+                <time title="Modified: 2018-09-05 15:51:34" itemprop="dateModified" datetime="2018-09-05T15:51:34+09:00">2018-09-05</time>
               
             
           </span>
@@ -508,9 +508,7 @@
       
 
       
-        <!-- 
-<div class="note warning"><p>UNDER CONSTRUCTION…</p></div> –&gt;
-<blockquote>
+        <blockquote>
 <p>El Ayadi M, Kamel M S, Karray F. Survey on speech emotion recognition: Features, classification schemes, and databases[J]. Pattern Recognition, 2011, 44(3): 572-587.</p>
 </blockquote>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>语音识别的发展可以说是非常成熟，但距离我们的目标——自然的人机交互，还差的很远，这其中的一个原因就是现在机器还无法理解我们说话时的情感。这是研究语音情感识别的一个重要的motivation。</p>
@@ -527,7 +525,8 @@
 <li>情感本身都难以明确的定义。</li>
 </ol>
 <h3 id="情感"><a href="#情感" class="headerlink" title="情感"></a>情感</h3><p>虽然情感本身十分复杂，但一个被广泛认同的模型是讲情感划分为两个维度：activation 和 valence。activation指得是表达这个情感需要的能量。比较强烈的情感比如愤怒，喜悦，恐惧。伴随着这类感情可能会有心跳加速，血压升高等等，同时人的语速会变快，音高变高。相反比较舒缓的请看比如忧伤，语速可能会降低，高频会减少。而activation类似的感情，比如愤怒与喜悦，则用valence来加以区分。用何种feature来描述valence尚无定论。因此，在情感识别系统中，强烈的感情与舒缓的感情很好区分，而区分不同类别的情感则还是一个挑战。</p>
-<!-- ## Database
+<!--
+ ## Database
 
 作为模式识别尤其是机器学习的应用，database的重要性不言而喻。但和大多数模式识别任务想比，用于情感识别的数据库显得特别特殊。
 
@@ -536,8 +535,8 @@
 - 真实世界的情感或演出的情感
 - 情感的发出者（专业演员？业余演员？）
 - 如何模拟真实世界的发音
--  -->
-<h2 id="语音情感识别中的特征"><a href="#语音情感识别中的特征" class="headerlink" title="语音情感识别中的特征"></a>语音情感识别中的特征</h2><p>特征提取是模式识别任务中最重要的一个环节之一，再语音情感识别的任务中亦然。我们会面对四个主要的问题</p>
+-->
+<h2 id="语音情感识别中的特征"><a href="#语音情感识别中的特征" class="headerlink" title="语音情感识别中的特征"></a>语音情感识别中的特征</h2><p>特征提取是模式识别任务中最重要的一个环节之一，在语音情感识别的任务中亦然。我们会面对四个主要的问题</p>
 <ol>
 <li>特征提取的作用域。是对音频进行分帧(frame)再提取特征，或是对全局进行提取？</li>
 <li>提取什么样的特征？</li>
@@ -906,7 +905,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#语音情感识别中的特征"><span class="nav-number">1.</span> <span class="nav-text">语音情感识别中的特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对以上四个问题的分析"><span class="nav-number">1.1.</span> <span class="nav-text">对以上四个问题的分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类方法"><span class="nav-number">2.</span> <span class="nav-text">分类方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#情感识别的用处"><span class="nav-number">1.1.</span> <span class="nav-text">情感识别的用处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#情感识别面临的挑战"><span class="nav-number">1.2.</span> <span class="nav-text">情感识别面临的挑战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#情感"><span class="nav-number">1.3.</span> <span class="nav-text">情感</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语音情感识别中的特征"><span class="nav-number">2.</span> <span class="nav-text">语音情感识别中的特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对以上四个问题的分析"><span class="nav-number">2.1.</span> <span class="nav-text">对以上四个问题的分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类方法"><span class="nav-number">3.</span> <span class="nav-text">分类方法</span></a></li></ol></div>
             
 
           </div>
