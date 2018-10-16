@@ -2,30 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jinnsjj.github.io/tech/audio/cconv/</loc>
+    
+    <lastmod>2018-10-16T07:46:18.682Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinnsjj.github.io/tech/audio/spatially-oriented-format-for-acoustics/</loc>
+    
+    <lastmod>2018-09-07T10:38:20.599Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jinnsjj.github.io/tech/audio/speech-emotion-recognition-survey/</loc>
     
-    <lastmod>2018-09-05T06:54:39.629Z</lastmod>
+    <lastmod>2018-09-05T07:44:21.168Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/something-of-HOA/</loc>
     
-    <lastmod>2018-07-31T06:58:44.676Z</lastmod>
+    <lastmod>2018-07-31T06:58:44.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/build-projects-page/</loc>
     
-    <lastmod>2018-07-13T06:12:22.573Z</lastmod>
+    <lastmod>2018-07-13T06:12:22.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/hexo-next-note/</loc>
     
-    <lastmod>2018-07-13T06:12:02.481Z</lastmod>
+    <lastmod>2018-07-13T06:12:02.000Z</lastmod>
     
   </url>
   
@@ -39,49 +53,49 @@
   <url>
     <loc>https://jinnsjj.github.io/projects/index.html</loc>
     
-    <lastmod>2018-07-12T09:14:35.202Z</lastmod>
+    <lastmod>2018-07-12T09:14:35.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/about/index.html</loc>
     
-    <lastmod>2018-07-12T08:44:38.005Z</lastmod>
+    <lastmod>2018-07-12T08:44:38.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/coding/Valid-Sudoku/</loc>
     
-    <lastmod>2018-07-12T06:35:59.867Z</lastmod>
+    <lastmod>2018-07-12T06:35:59.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/coding/Sudoku-Solver/</loc>
     
-    <lastmod>2018-07-12T06:35:55.631Z</lastmod>
+    <lastmod>2018-07-12T06:35:55.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/categories/index.html</loc>
     
-    <lastmod>2018-07-09T11:12:11.380Z</lastmod>
+    <lastmod>2018-07-09T11:12:11.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/tags/index.html</loc>
     
-    <lastmod>2018-07-09T11:11:43.656Z</lastmod>
+    <lastmod>2018-07-09T11:11:43.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/hello-world/</loc>
     
-    <lastmod>2018-07-09T09:42:00.388Z</lastmod>
+    <lastmod>2018-07-09T09:42:00.000Z</lastmod>
     
   </url>
   
