@@ -405,7 +405,7 @@
                 
               
 
-              <time title="Created: 2018-10-16 16:22:31 / Modified: 16:46:18" itemprop="dateCreated datePublished" datetime="2018-10-16T16:22:31+09:00">2018-10-16</time>
+              <time title="Created: 2018-10-16 16:22:31 / Modified: 16:49:48" itemprop="dateCreated datePublished" datetime="2018-10-16T16:22:31+09:00">2018-10-16</time>
             
 
             
@@ -492,26 +492,15 @@
 
       
         
-          
-            <div class="note warning"><p>UNDER CONSTRUCTION…</p></div>
-<p>在 impulse response 的使用中遇到了小小的问题，具体如图：</p>
+          <p>在 impulse response 的使用中遇到了小小的问题，具体如图，第一行是原始信号，第二行是响应的信号，在通过将原始信号和相应信号分别转换到频域求得 transfer function 后，ifft 得到 impulse response。第三行是原始信号和 ir 进行卷积得到的结果，可以看到在信号最开始的阶段，有一个意料外的响应。：</p>
 <p><img src="https://i.loli.net/2018/10/16/5bc592a31cd45.jpg" alt="r_conv.jpg"></p>
-<p>第一行是原始信号，第二行是响应的信号，在通过将原始信号和相应信号分别转换到频域求得 transfer function 后，ifft 得到 impulse response。第三行是原始信号和 ir 进行卷积得到的结果，可以看到在信号最开始的阶段，有一个意料外的响应。这一段的代码如下：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% src: 原始信号</span></span><br><span class="line"><span class="comment">% resp: 响应的信号</span></span><br><span class="line"></span><br><span class="line">Ssrc = fft(src);</span><br><span class="line">Sresp = fft(rest);</span><br><span class="line">Stf = Ssrc./Sresp;</span><br><span class="line">ir = ifft(Stf);</span><br><span class="line"></span><br><span class="line">z = conv(src,ir);</span><br></pre></td></tr></table></figure>
-<p>先说短的结论，把最后一条命令 <code>conv</code> 换为 <code>cconv</code> 即可。</p>
-<p><img src="https://i.loli.net/2018/10/16/5bc592a31daa2.jpg" alt="r_cconv.jpg"></p>
-<p>和 Daniel 探讨后，问题出在 得到的 ir 上。</p>
-<p><img src="https://i.loli.net/2018/10/16/5bc592a308780.jpg" alt="ir.jpg"></p>
-<p>对于这个ir，是不能直接进行卷积的，而应该先做一个 circular shift ( <code>ir = circshift(ir, Nshift)</code>, <code>z = circshift(z, -Nshift)</code> )。让响应变得完整。</p>
-<p><img src="https://i.loli.net/2018/10/16/5bc592a2e8e96.jpg" alt="shifted_ir.jpg"></p>
-<p>这样得到的响应就没有前面恼人的部分了。然而。。。。又出现了另一个问题，响应的后半部分消失了。。。。。</p>
-<p><img src="https://i.loli.net/2018/10/16/5bc59647cb500.jpg" alt="r_circshift.jpg"></p>
-<p>最后就索性使用圆周卷积，结果完美。</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% src: 原始信号</span></span><br><span class="line"><span class="comment">% resp: 响应的信号</span></span><br><span class="line"></span><br><span class="line">Ssrc = fft(src);</span><br><span class="line">Sresp = fft(rest);</span><br><span class="line">Stf = Ssrc./Sresp;</span><br><span class="line">ir = ifft(Stf);</span><br><span class="line"></span><br><span class="line">z = cconv(src,ir,<span class="number">800</span>); <span class="comment">% 800因为信号的长度为800</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/10/16/5bc592a31daa2.jpg" alt="r_cconv.jpg"></p>
-<h2 id="看来，信号处理的基本功还是不太扎实啊。"><a href="#看来，信号处理的基本功还是不太扎实啊。" class="headerlink" title="看来，信号处理的基本功还是不太扎实啊。"></a>看来，信号处理的基本功还是不太扎实啊。</h2><blockquote class="blockquote-center"><p><strong>将进酒</strong><br>李白<br>君不见，黄河之水天上来，奔流到海不复回。<br>君不见，高堂明镜悲白发，朝如青丝暮成雪。<br>人生得意须尽欢，莫使金樽空对月。<br>天生我材必有用，千金散尽还复来。<br>烹羊宰牛且为乐，会须一饮三百杯。<br>岑夫子，丹丘生，将进酒，杯莫停。<br>与君歌一曲，请君为我倾耳听。<br>钟鼓馔玉不足贵，但愿长醉不复醒。<br>古来圣贤皆寂寞，惟有饮者留其名。<br>陈王昔时宴平乐，斗酒十千恣欢谑。<br>主人何为言少钱，径须沽取对君酌。<br>五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。</p>
-</blockquote>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/tech/audio/cconv/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
