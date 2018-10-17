@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/resample-audio/</loc>
-    <lastmod>2018-10-17T07:44:09.827Z</lastmod>
+    <lastmod>2018-10-17T07:47:24.381Z</lastmod>
     <data>
         <display>
         <title>音频重采样 python+librosa</title>
@@ -25,6 +25,21 @@
              
               <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jinnsjj.github.io/uncategorized/hello-world/</loc>
+    <lastmod>2018-10-17T07:46:56.164Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>1998-12-31T15:00:00.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
@@ -240,19 +255,4 @@
 
     
     
-    
-  <url>
-    <loc>https://jinnsjj.github.io/uncategorized/hello-world/</loc>
-    <lastmod>2018-07-09T09:42:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2018-08-27T09:18:37.389Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
 </urlset>

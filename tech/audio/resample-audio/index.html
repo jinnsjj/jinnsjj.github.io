@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="JOHZEN">
 <meta property="og:description" content="python中的librosa库让我们可以非常方便的对音频文件进行重采样。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-17T07:44:09.827Z">
+<meta property="og:updated_time" content="2018-10-17T07:47:24.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="音频重采样 python+librosa">
 <meta name="twitter:description" content="python中的librosa库让我们可以非常方便的对音频文件进行重采样。">
@@ -413,7 +413,7 @@
                 
               
 
-              <time title="Created: 2018-10-17 16:28:06 / Modified: 16:44:09" itemprop="dateCreated datePublished" datetime="2018-10-17T16:28:06+09:00">2018-10-17</time>
+              <time title="Created: 2018-10-17 16:28:06 / Modified: 16:47:24" itemprop="dateCreated datePublished" datetime="2018-10-17T16:28:06+09:00">2018-10-17</time>
             
 
             
@@ -508,7 +508,7 @@
 <audio controls="controls"><br>  <source type="audio/mp3" src="ClapSound_8k.wav"><br>  <p>Your browser does not support the audio element.</p><br></audio>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> librosa</span><br><span class="line"><span class="comment"># to install librosa package</span></span><br><span class="line"><span class="comment"># &gt; conda install -c conda-forge librosa </span></span><br><span class="line"></span><br><span class="line">filename = <span class="string">'ClapSound.wav'</span></span><br><span class="line">newFilename = <span class="string">'ClapSound_8k.wav'</span></span><br><span class="line"></span><br><span class="line">y, sr = librosa.load(filename, sr=<span class="number">48000</span>)</span><br><span class="line">y_8k = librosa.resample(y,sr,<span class="number">8000</span>)</span><br><span class="line"></span><br><span class="line">librosa.output.write_wav(newFilename, y_8k, <span class="number">8000</span>)</span><br></pre></td></tr></table></figure>
-<p><a href="https://jinnsjj.github.io/projects/src/resample-audio.html">对应的jupyter lab</a></p>
+<p><a href="https://jinnsjj.github.io/projects/src/resample_audio.html">对应的jupyter lab</a></p>
 
       
     </div>
