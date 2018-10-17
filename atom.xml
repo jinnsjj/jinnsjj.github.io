@@ -36,11 +36,11 @@
       <category term="audio" scheme="https://jinnsjj.github.io/categories/tech/audio/"/>
     
     
+      <category term="signal processing" scheme="https://jinnsjj.github.io/tags/signal-processing/"/>
+    
       <category term="librosa" scheme="https://jinnsjj.github.io/tags/librosa/"/>
     
       <category term="python" scheme="https://jinnsjj.github.io/tags/python/"/>
-    
-      <category term="signal processing" scheme="https://jinnsjj.github.io/tags/signal-processing/"/>
     
   </entry>
   
@@ -65,9 +65,9 @@
       <category term="audio" scheme="https://jinnsjj.github.io/categories/tech/audio/"/>
     
     
-      <category term="signal processing" scheme="https://jinnsjj.github.io/tags/signal-processing/"/>
-    
       <category term="impulse response" scheme="https://jinnsjj.github.io/tags/impulse-response/"/>
+    
+      <category term="signal processing" scheme="https://jinnsjj.github.io/tags/signal-processing/"/>
     
   </entry>
   
