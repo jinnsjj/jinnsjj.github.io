@@ -4,8 +4,27 @@
 
     
   <url>
+    <loc>https://jinnsjj.github.io/uncategorized/build-projects-page/</loc>
+    <lastmod>2018-10-17T03:22:30.495Z</lastmod>
+    <data>
+        <display>
+        <title>搭建hexo+next博客并把项目主页放在上面</title>
+        <pubTime>2018-07-11T14:05:17.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>NexT</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jinnsjj.github.io/tech/audio/cconv/</loc>
-    <lastmod>2018-10-16T10:37:44.968Z</lastmod>
+    <lastmod>2018-10-17T02:23:54.560Z</lastmod>
     <data>
         <display>
         <title>impulse response 使用的踩坑 —— cconv</title>
@@ -98,25 +117,6 @@
              
               <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://jinnsjj.github.io/uncategorized/build-projects-page/</loc>
-    <lastmod>2018-07-13T06:12:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>搭建hexo+next博客并把项目主页放在上面</title>
-        <pubTime>2018-07-11T14:05:17.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>NexT</tag>
-         
-         
-           
         </display>
     </data>
     </url>

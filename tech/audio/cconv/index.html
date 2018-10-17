@@ -126,7 +126,7 @@
 <meta property="og:image" content="https://i.loli.net/2018/10/16/5bc592a2e8e96.jpg">
 <meta property="og:image" content="https://i.loli.net/2018/10/16/5bc59647cb500.jpg">
 <meta property="og:image" content="https://i.loli.net/2018/10/16/5bc592a31daa2.jpg">
-<meta property="og:updated_time" content="2018-10-16T10:37:44.968Z">
+<meta property="og:updated_time" content="2018-10-17T02:23:54.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="impulse response 使用的踩坑 —— cconv">
 <meta name="twitter:description" content="在 impulse response 的使用中遇到了小小的问题，具体如图，第一行是原始信号，第二行是响应的信号，在通过将原始信号和相应信号分别转换到频域求得 transfer function 后，ifft 得到 impulse response。第三行是原始信号和 ir 进行卷积得到的结果，可以看到在信号最开始的阶段，有一个意料外的响应。：">
@@ -262,6 +262,14 @@
         
         
           
+          <li class="menu-item menu-item-portfolio">
+    <a href="/portfolio/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-camera-retro"></i> <br />Portfolio</a>
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-about">
     <a href="/about/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
@@ -375,7 +383,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jon">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/uploads/a055(2).jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -412,12 +420,24 @@
                 
               
 
-              <time title="Created: 2018-10-16 16:22:31 / Modified: 19:37:44" itemprop="dateCreated datePublished" datetime="2018-10-16T16:22:31+09:00">2018-10-16</time>
+              <time title="Created: 2018-10-16 16:22:31" itemprop="dateCreated datePublished" datetime="2018-10-16T16:22:31+09:00">2018-10-16</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-17 11:23:54" itemprop="dateModified" datetime="2018-10-17T11:23:54+09:00">2018-10-17</time>
               
             
           </span>
@@ -516,10 +536,7 @@
 <p><img src="https://i.loli.net/2018/10/16/5bc592a31daa2.jpg" alt="r_cconv.jpg"></p>
 <p>看来，信号处理的基本功还是不太扎实啊。</p>
 <h2 id="圆周卷积与线性卷积的区别"><a href="#圆周卷积与线性卷积的区别" class="headerlink" title="圆周卷积与线性卷积的区别"></a>圆周卷积与线性卷积的区别</h2><blockquote>
-<p><a href="https://www.mathworks.com/help/signal/ug/linear-and-circular-convolution.html" target="_blank" rel="noopener">Linear and Circular Convolution - MathWorks Documents</a></p>
-</blockquote>
-<blockquote>
-<p><a href="https://blog.csdn.net/u012938704/article/details/79025175?utm_source=blogxgwz0" target="_blank" rel="noopener">Circular/Linear Convolution 与 DFT - CSDN blog</a></p>
+<p><a href="https://www.mathworks.com/help/signal/ug/linear-and-circular-convolution.html" target="_blank" rel="noopener">Linear and Circular Convolution - MathWorks Documents</a><br><a href="https://blog.csdn.net/u012938704/article/details/79025175?utm_source=blogxgwz0" target="_blank" rel="noopener">Circular/Linear Convolution 与 DFT - CSDN blog</a></p>
 </blockquote>
 <p>频域相乘等于时域卷积<strong>仅适用于圆周卷积</strong>。</p>
 <p>对于长度N与长度L的向量进行线性卷积，结果长度为N+L-1。</p>
@@ -678,7 +695,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/uploads/avatar.png"
+                src="/uploads/a055(2).jpg"
                 alt="Jon" />
             
               <p class="site-author-name" itemprop="name">Jon</p>

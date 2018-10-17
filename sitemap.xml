@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jinnsjj.github.io/uncategorized/build-projects-page/</loc>
+    
+    <lastmod>2018-10-17T03:22:30.495Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jinnsjj.github.io/tech/audio/cconv/</loc>
     
-    <lastmod>2018-10-16T10:37:44.968Z</lastmod>
+    <lastmod>2018-10-17T02:23:54.560Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>https://jinnsjj.github.io/tech/audio/something-of-HOA/</loc>
     
     <lastmod>2018-07-31T06:58:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/uncategorized/build-projects-page/</loc>
-    
-    <lastmod>2018-07-13T06:12:22.000Z</lastmod>
     
   </url>
   
