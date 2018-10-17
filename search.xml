@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[音频重采样 python+librosa]]></title>
+    <url>%2Ftech%2Faudio%2Fresample-audio%2F</url>
+    <content type="text"><![CDATA[python中的librosa库让我们可以非常方便的对音频文件进行重采样。 目标是一个48kHz的音频 Your browser does not support the audio element. 利用librosa库中中的resample将这段音频下采样到8kHz。 Your browser does not support the audio element. 1234567891011import librosa# to install librosa package# &gt; conda install -c conda-forge librosa filename = 'ClapSound.wav'newFilename = 'ClapSound_8k.wav'y, sr = librosa.load(filename, sr=48000)y_8k = librosa.resample(y,sr,8000)librosa.output.write_wav(newFilename, y_8k, 8000) 对应的jupyter lab]]></content>
+      <categories>
+        <category>tech</category>
+        <category>audio</category>
+      </categories>
+      <tags>
+        <tag>signal processing</tag>
+        <tag>librosa</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[impulse response 使用的踩坑 —— cconv]]></title>
     <url>%2Ftech%2Faudio%2Fcconv%2F</url>
     <content type="text"><![CDATA[在 impulse response 的使用中遇到了小小的问题，具体如图，第一行是原始信号，第二行是响应的信号，在通过将原始信号和相应信号分别转换到频域求得 transfer function 后，ifft 得到 impulse response。第三行是原始信号和 ir 进行卷积得到的结果，可以看到在信号最开始的阶段，有一个意料外的响应。： 这一段的代码如下： 123456789% src: 原始信号% resp: 响应的信号Ssrc = fft(src);Sresp = fft(rest);Stf = Ssrc./Sresp;ir = ifft(Stf);z = conv(src,ir); 先说短的结论，把最后一条命令 conv 换为 cconv 即可。 和 Daniel 探讨后，问题出在 得到的 ir 上。 对于这个ir，是不能直接进行卷积的，而应该先做一个 circular shift ( ir = circshift(ir, Nshift), z = circshift(z, -Nshift) )。让响应变得完整。 这样得到的响应就没有前面恼人的部分了。然而。。。。又出现了另一个问题，响应的后半部分消失了。。。。。 最后就索性使用圆周卷积，结果完美。 123456789% src: 原始信号% resp: 响应的信号Ssrc = fft(src);Sresp = fft(rest);Stf = Ssrc./Sresp;ir = ifft(Stf);z = cconv(src,ir,800); % 800因为信号的长度为800 看来，信号处理的基本功还是不太扎实啊。 圆周卷积与线性卷积的区别 Linear and Circular Convolution - MathWorks DocumentsCircular/Linear Convolution 与 DFT - CSDN blog 频域相乘等于时域卷积仅适用于圆周卷积。 对于长度N与长度L的向量进行线性卷积，结果长度为N+L-1。 对于圆周卷积，两个向量长度应当相同，不同的话要进行补零。 将进酒李白君不见，黄河之水天上来，奔流到海不复回。君不见，高堂明镜悲白发，朝如青丝暮成雪。人生得意须尽欢，莫使金樽空对月。天生我材必有用，千金散尽还复来。烹羊宰牛且为乐，会须一饮三百杯。岑夫子，丹丘生，将进酒，杯莫停。与君歌一曲，请君为我倾耳听。钟鼓馔玉不足贵，但愿长醉不复醒。古来圣贤皆寂寞，惟有饮者留其名。陈王昔时宴平乐，斗酒十千恣欢谑。主人何为言少钱，径须沽取对君酌。五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。]]></content>
@@ -123,13 +137,13 @@
     <content type="text"><![CDATA[ProjectsAudio basics 通过librosa进行音频的基本操作和特征提取 使用librosa库，读取音频，提取频谱，MFCC等。 MATLAB中进行声场可视化 Have fun Urban Sound Classification Inspired by http://aqibsaeed.github.io/2016-09-03-urban-sound-classification-part-1/ Urban Sound Classifier using NN 这是我搭建的第一个神经网络，可以说是边做边学，代码有一些混乱。整个流程几乎是跟着上面博客的思路来，准确度虽然不高，但work了，还是满意的。 Urban Sound Classifier using CNN v2 第一版的CNN非常惨烈，所以废弃了，第二版开始work了，但准确率实在堪忧，只有50%左右。 Urban Sound Classifier using CNN v3 紧接着第二版做的一些变体，单纯的娱乐，看看不同网络效果的区别，虽然没有看到。 Urban Sound Classifier using LSTM v1 第一次尝试LSTM，LSTM的搭建也很简单，预计效果不错，然而实际却低于NN和CNN。原因还不明。 ← Back to Homepage]]></content>
   </entry>
   <entry>
-    <title><![CDATA[tags]]></title>
-    <url>%2Ftags%2Findex.html</url>
+    <title><![CDATA[categories]]></title>
+    <url>%2Fcategories%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[categories]]></title>
-    <url>%2Fcategories%2Findex.html</url>
+    <title><![CDATA[tags]]></title>
+    <url>%2Ftags%2Findex.html</url>
     <content type="text"></content>
   </entry>
 </search>
