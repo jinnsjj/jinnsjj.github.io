@@ -5,8 +5,34 @@
     
     
   <url>
+    <loc>https://jinnsjj.github.io/tech/audio/librosa-load/</loc>
+    <lastmod>2018-10-18T04:36:59.352Z</lastmod>
+    <data>
+        <display>
+        <title>librosa.load() 读取音频的采样率处理</title>
+        <pubTime>2018-10-18T04:22:34.000Z</pubTime>
+        
+        <tag>librosa</tag>
+         
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
+          
+             
+              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>https://jinnsjj.github.io/tech/audio/resample-audio/</loc>
-    <lastmod>2018-10-17T12:08:45.306Z</lastmod>
+    <lastmod>2018-10-17T12:08:45.000Z</lastmod>
     <data>
         <display>
         <title>音频重采样 python+librosa</title>
@@ -33,7 +59,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/hello-world/</loc>
-    <lastmod>2018-10-17T07:46:56.000Z</lastmod>
+    <lastmod>2018-10-17T07:46:56.164Z</lastmod>
     <data>
         <display>
         <title>Hello World</title>
@@ -48,7 +74,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/build-projects-page/</loc>
-    <lastmod>2018-10-17T03:22:30.000Z</lastmod>
+    <lastmod>2018-10-17T03:22:30.495Z</lastmod>
     <data>
         <display>
         <title>搭建hexo+next博客并把项目主页放在上面</title>
@@ -67,7 +93,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/cconv/</loc>
-    <lastmod>2018-10-17T02:23:54.000Z</lastmod>
+    <lastmod>2018-10-17T02:23:54.560Z</lastmod>
     <data>
         <display>
         <title>impulse response 使用的踩坑 —— cconv</title>
@@ -92,7 +118,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/spatially-oriented-format-for-acoustics/</loc>
-    <lastmod>2018-09-07T10:38:20.000Z</lastmod>
+    <lastmod>2018-09-07T10:38:20.599Z</lastmod>
     <data>
         <display>
         <title>spatially oriented format for acoustics</title>
@@ -117,7 +143,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/speech-emotion-recognition-survey/</loc>
-    <lastmod>2018-09-05T07:44:21.000Z</lastmod>
+    <lastmod>2018-09-05T07:44:21.168Z</lastmod>
     <data>
         <display>
         <title>语音情感识别探讨</title>
@@ -146,9 +172,9 @@
         <title>HOA声场重建原理</title>
         <pubTime>2018-07-12T14:00:46.000Z</pubTime>
         
-        <tag>spatial audio</tag>
-         
         <tag>HOA</tag>
+         
+        <tag>spatial audio</tag>
          
         <tag>sound field reproduction</tag>
          
@@ -186,7 +212,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/librosa-audio/</loc>
-    <lastmod>2018-07-12T16:19:05.638Z</lastmod>
+    <lastmod>2018-07-12T16:19:05.000Z</lastmod>
     <data>
         <display>
         <title>librosa音频操作基础和特征提取</title>
@@ -208,7 +234,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://jinnsjj.github.io/coding/Valid-Sudoku/</loc>

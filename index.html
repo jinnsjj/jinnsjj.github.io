@@ -367,6 +367,199 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/tech/audio/librosa-load/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JOHZEN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/tech/audio/librosa-load/" itemprop="url">
+                  librosa.load() 读取音频的采样率处理
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-10-18 13:22:34 / Modified: 13:36:59" itemprop="dateCreated datePublished" datetime="2018-10-18T13:22:34+09:00">2018-10-18</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">tech</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/audio/" itemprop="url" rel="index"><span itemprop="name">audio</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/tech/audio/librosa-load/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="tech/audio/librosa-load/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/tech/audio/librosa-load/" class="leancloud_visitors" data-flag-title="librosa.load() 读取音频的采样率处理">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>利用python中的 <code>librosa.load()</code> 我们可以轻松的读取音频文件，但对于不同采样率的音频文件，使用这一函数有一些细节还需注意。</p>
+<p>如果 <code>sr</code> 缺省，librosa会默认以22050的采样率读取音频文件，<strong>高于该采样率的音频文件会被下采样，低于该采样率的文件会被上采样</strong>。</p>
+<p>如果希望以原始采样率读取音频文件，<code>sr</code> 应当设为 <code>None</code>。<strong>具体做法为 <code>y, sr = librosa(filename, sr=None)</code></strong>。</p>
+<blockquote>
+<p><a href="https://librosa.github.io/librosa/generated/librosa.core.load.html" target="_blank" rel="noopener">https://librosa.github.io/librosa/generated/librosa.core.load.html</a></p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/tech/audio/resample-audio/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2114,203 +2307,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/coding/Valid-Sudoku/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jon">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar2.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JOHZEN">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/coding/Valid-Sudoku/" itemprop="url">
-                  LeetCode-36 Valid Sudoku
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-11 21:18:41" itemprop="dateCreated datePublished" datetime="2018-07-11T21:18:41+09:00">2018-07-11</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-12 15:35:59" itemprop="dateModified" datetime="2018-07-12T15:35:59+09:00">2018-07-12</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/coding/" itemprop="url" rel="index"><span itemprop="name">coding</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/coding/Valid-Sudoku/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="coding/Valid-Sudoku/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/coding/Valid-Sudoku/" class="leancloud_visitors" data-flag-title="LeetCode-36 Valid Sudoku">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Views: </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="36-Valid-Sudoku"><a href="#36-Valid-Sudoku" class="headerlink" title="36. Valid Sudoku"></a><a href="https://leetcode.com/problems/valid-sudoku/description/" target="_blank" rel="noopener">36. Valid Sudoku</a></h1><p>要验证数独的棋盘，就是三个标准，行没有重复，列没有重复以及3x3格子没有重复。最开始的思路是建立1*9的hash表，依据这个标准检测三次，但这样带来一个问题是需要遍历棋盘三次。但其实可以扩大hash表，只需遍历棋盘一次。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/coding/Valid-Sudoku/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2362,7 +2358,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
