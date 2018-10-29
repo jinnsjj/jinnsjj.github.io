@@ -150,18 +150,18 @@
 
 
 
-  <meta name="description" content="利用python中的 librosa.load() 我们可以轻松的读取音频文件，但对于不同采样率的音频文件，使用这一函数有一些细节还需注意。 如果 sr 缺省，librosa会默认以22050的采样率读取音频文件，高于该采样率的音频文件会被下采样，低于该采样率的文件会被上采样。 如果希望以原始采样率读取音频文件，sr 应当设为 None。具体做法为 y, sr = librosa(filename">
-<meta name="keywords" content="librosa,python">
+  <meta name="description" content="Unity 中使用 Resources.Load() 命令读取资源文件。 使用中有几个值得注意的地方：  读取文件时的根目录是 Assets/Resources，所有资源文件都放在该文件夹下，命令中的路径从 Resources 文件夹里开始写。 用 / 表示子文件夹。 读取的文件不要加文件的后缀。 Load 后 &amp;lt;&amp;gt; 中写入读取的类型。  举个例子，如果我们想要读取音频文件 Asset">
+<meta name="keywords" content="unity,C#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="librosa.load() 读取音频的采样率处理">
-<meta property="og:url" content="https://jinnsjj.github.io/tech/audio/librosa-load/index.html">
+<meta property="og:title" content="Unity 读取资源文件 Resources.Load()">
+<meta property="og:url" content="https://jinnsjj.github.io/tech/UnityResourceLoad/index.html">
 <meta property="og:site_name" content="JOHZEN">
-<meta property="og:description" content="利用python中的 librosa.load() 我们可以轻松的读取音频文件，但对于不同采样率的音频文件，使用这一函数有一些细节还需注意。 如果 sr 缺省，librosa会默认以22050的采样率读取音频文件，高于该采样率的音频文件会被下采样，低于该采样率的文件会被上采样。 如果希望以原始采样率读取音频文件，sr 应当设为 None。具体做法为 y, sr = librosa(filename">
+<meta property="og:description" content="Unity 中使用 Resources.Load() 命令读取资源文件。 使用中有几个值得注意的地方：  读取文件时的根目录是 Assets/Resources，所有资源文件都放在该文件夹下，命令中的路径从 Resources 文件夹里开始写。 用 / 表示子文件夹。 读取的文件不要加文件的后缀。 Load 后 &amp;lt;&amp;gt; 中写入读取的类型。  举个例子，如果我们想要读取音频文件 Asset">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-18T04:43:31.592Z">
+<meta property="og:updated_time" content="2018-10-29T10:16:01.812Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="librosa.load() 读取音频的采样率处理">
-<meta name="twitter:description" content="利用python中的 librosa.load() 我们可以轻松的读取音频文件，但对于不同采样率的音频文件，使用这一函数有一些细节还需注意。 如果 sr 缺省，librosa会默认以22050的采样率读取音频文件，高于该采样率的音频文件会被下采样，低于该采样率的文件会被上采样。 如果希望以原始采样率读取音频文件，sr 应当设为 None。具体做法为 y, sr = librosa(filename">
+<meta name="twitter:title" content="Unity 读取资源文件 Resources.Load()">
+<meta name="twitter:description" content="Unity 中使用 Resources.Load() 命令读取资源文件。 使用中有几个值得注意的地方：  读取文件时的根目录是 Assets/Resources，所有资源文件都放在该文件夹下，命令中的路径从 Resources 文件夹里开始写。 用 / 表示子文件夹。 读取的文件不要加文件的后缀。 Load 后 &amp;lt;&amp;gt; 中写入读取的类型。  举个例子，如果我们想要读取音频文件 Asset">
 
 
 
@@ -170,7 +170,7 @@
 
 
 
-  <link rel="canonical" href="https://jinnsjj.github.io/tech/audio/librosa-load/"/>
+  <link rel="canonical" href="https://jinnsjj.github.io/tech/UnityResourceLoad/"/>
 
 
 
@@ -180,7 +180,7 @@
   };
 </script>
 
-  <title>librosa.load() 读取音频的采样率处理 | JOHZEN</title>
+  <title>Unity 读取资源文件 Resources.Load() | JOHZEN</title>
   
 
 
@@ -409,7 +409,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/tech/audio/librosa-load/">
+    <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/tech/UnityResourceLoad/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jon">
@@ -426,7 +426,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">librosa.load() 读取音频的采样率处理
+          <h2 class="post-title" itemprop="name headline">Unity 读取资源文件 Resources.Load()
               
             
           </h2>
@@ -451,7 +451,7 @@
                 
               
 
-              <time title="Created: 2018-10-18 13:22:34 / Modified: 13:43:31" itemprop="dateCreated datePublished" datetime="2018-10-18T13:22:34+09:00">2018-10-18</time>
+              <time title="Created: 2018-10-29 18:55:39 / Modified: 19:16:01" itemprop="dateCreated datePublished" datetime="2018-10-29T18:55:39+09:00">2018-10-29</time>
             
 
             
@@ -477,13 +477,6 @@
 
                 
                 
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/audio/" itemprop="url" rel="index"><span itemprop="name">audio</span></a></span>
-
-                
-                
               
             </span>
           
@@ -495,10 +488,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/tech/audio/librosa-load/#comments" itemprop="discussionUrl">
+                <a href="/tech/UnityResourceLoad/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="tech/audio/librosa-load/" itemprop="commentCount"></span>
+                        data-disqus-identifier="tech/UnityResourceLoad/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -506,7 +499,7 @@
 
           
           
-             <span id="/tech/audio/librosa-load/" class="leancloud_visitors" data-flag-title="librosa.load() 读取音频的采样率处理">
+             <span id="/tech/UnityResourceLoad/" class="leancloud_visitors" data-flag-title="Unity 读取资源文件 Resources.Load()">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -537,11 +530,20 @@
       
 
       
-        <p>利用python中的 <code>librosa.load()</code> 我们可以轻松的读取音频文件，但对于不同采样率的音频文件，使用这一函数有一些细节还需注意。</p>
-<p>如果 <code>sr</code> 缺省，librosa会默认以22050的采样率读取音频文件，<strong>高于该采样率的音频文件会被下采样，低于该采样率的文件会被上采样</strong>。</p>
-<p>如果希望以原始采样率读取音频文件，<code>sr</code> 应当设为 <code>None</code>。<strong>具体做法为 <code>y, sr = librosa(filename, sr=None)</code></strong>。</p>
+        <p>Unity 中使用 <code>Resources.Load()</code> 命令读取资源文件。</p>
+<p>使用中有几个值得注意的地方：</p>
+<ol>
+<li>读取文件时的根目录是 <code>Assets/Resources</code>，所有资源文件都放在该文件夹下，命令中的路径从 <code>Resources</code> 文件夹里开始写。</li>
+<li>用 <code>/</code> 表示子文件夹。</li>
+<li>读取的文件不要加文件的后缀。</li>
+<li><code>Load</code> 后 <code>&lt;&gt;</code> 中写入读取的类型。</li>
+</ol>
+<p>举个例子，如果我们想要读取音频文件 <code>Assets/Resources/AudioClips/1.wav</code>，那么命令写作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string fname = &quot;AudioClips/1&quot;;</span><br><span class="line">AudioClip clip = Resources.Load&lt;AudioClip&gt;(fname);</span><br></pre></td></tr></table></figure>
+<p>又比如想要读取一个混音文件 <code>Assets/Resources/AudioMixerGroup.mixer</code>，同上写作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string fname = &quot;AudioMixerGroup&quot;;</span><br><span class="line">AudioMixer mixer = Resources.Load&lt;AudioMixer&gt;(fname);</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p><a href="https://librosa.github.io/librosa/generated/librosa.core.load.html" target="_blank" rel="noopener">https://librosa.github.io/librosa/generated/librosa.core.load.html</a></p>
+<p><a href="https://docs.unity3d.com/ScriptReference/Resources.Load.html" target="_blank" rel="noopener">https://docs.unity3d.com/ScriptReference/Resources.Load.html</a> </p>
 </blockquote>
 
       
@@ -592,9 +594,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/librosa/" rel="tag"><i class="fa fa-tag"></i> librosa</a>
+            <a href="/tags/unity/" rel="tag"><i class="fa fa-tag"></i> unity</a>
           
-            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C#</a>
           
         </div>
       
@@ -607,8 +609,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/tech/audio/resample-audio/" rel="next" title="音频重采样 python+librosa">
-                <i class="fa fa-chevron-left"></i> 音频重采样 python+librosa
+              <a href="/tech/audio/librosa-load/" rel="next" title="librosa.load() 读取音频的采样率处理">
+                <i class="fa fa-chevron-left"></i> librosa.load() 读取音频的采样率处理
               </a>
             
           </div>
@@ -616,10 +618,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/tech/UnityResourceLoad/" rel="prev" title="Unity 读取资源文件 Resources.Load()">
-                Unity 读取资源文件 Resources.Load() <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -985,9 +983,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://jinnsjj.github.io/tech/audio/librosa-load/';
-        this.page.identifier = 'tech/audio/librosa-load/';
-        this.page.title = 'librosa.load() 读取音频的采样率处理';
+        this.page.url = 'https://jinnsjj.github.io/tech/UnityResourceLoad/';
+        this.page.identifier = 'tech/UnityResourceLoad/';
+        this.page.title = 'Unity 读取资源文件 Resources.Load()';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');

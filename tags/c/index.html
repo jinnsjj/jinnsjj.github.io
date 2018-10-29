@@ -152,7 +152,7 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="JOHZEN">
-<meta property="og:url" content="https://jinnsjj.github.io/tags/c/index.html">
+<meta property="og:url" content="https://jinnsjj.github.io/tags/C/index.html">
 <meta property="og:site_name" content="JOHZEN">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -165,7 +165,7 @@
 
 
 
-  <link rel="canonical" href="https://jinnsjj.github.io/tags/c/"/>
+  <link rel="canonical" href="https://jinnsjj.github.io/tags/C/"/>
 
 
 
@@ -175,7 +175,7 @@
   };
 </script>
 
-  <title>Tag: c++ | JOHZEN</title>
+  <title>Tag: C# | JOHZEN</title>
   
 
 
@@ -423,7 +423,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h2>c++<small>Tag</small>
+        <h2>C#<small>Tag</small>
         </h2>
       </div>
 
@@ -435,37 +435,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/coding/Sudoku-Solver/" itemprop="url">
+            <a class="post-title-link" href="/tech/UnityResourceLoad/" itemprop="url">
               
-                <span itemprop="name">LeetCode-37 Sudoku Solver</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-11T21:18:58+09:00"
-              content="2018-07-11" >
-          07-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/coding/Valid-Sudoku/" itemprop="url">
-              
-                <span itemprop="name">LeetCode-36 Valid Sudoku</span>
+                <span itemprop="name">Unity 读取资源文件 Resources.Load()</span>
               
             </a>
         
@@ -473,9 +445,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-11T21:18:41+09:00"
-              content="2018-07-11" >
-          07-11
+              datetime="2018-10-29T18:55:39+09:00"
+              content="2018-10-29" >
+          10-29
         </time>
       </div>
 
@@ -536,7 +508,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -594,7 +566,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1375,6 +1351,33 @@
           return $(e).text()
         }).toArray().join('\n')
         var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('Copied')
+          else $(this).text('Copy failed')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('Copy')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+</body>
+</html>
+a')
         document.body.appendChild(ta)
         ta.style.position = 'absolute'
         ta.style.top = '0px'

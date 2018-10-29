@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jinnsjj.github.io/"/>
-  <updated>2018-10-18T04:43:31.592Z</updated>
+  <updated>2018-10-29T10:16:01.812Z</updated>
   <id>https://jinnsjj.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Unity 读取资源文件 Resources.Load()</title>
+    <link href="https://jinnsjj.github.io/tech/UnityResourceLoad/"/>
+    <id>https://jinnsjj.github.io/tech/UnityResourceLoad/</id>
+    <published>2018-10-29T09:55:39.000Z</published>
+    <updated>2018-10-29T10:16:01.812Z</updated>
+    
+    <content type="html"><![CDATA[<p>Unity 中使用 <code>Resources.Load()</code> 命令读取资源文件。</p><p>使用中有几个值得注意的地方：</p><ol><li>读取文件时的根目录是 <code>Assets/Resources</code>，所有资源文件都放在该文件夹下，命令中的路径从 <code>Resources</code> 文件夹里开始写。</li><li>用 <code>/</code> 表示子文件夹。</li><li>读取的文件不要加文件的后缀。</li><li><code>Load</code> 后 <code>&lt;&gt;</code> 中写入读取的类型。</li></ol><p>举个例子，如果我们想要读取音频文件 <code>Assets/Resources/AudioClips/1.wav</code>，那么命令写作</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string fname = &quot;AudioClips/1&quot;;</span><br><span class="line">AudioClip clip = Resources.Load&lt;AudioClip&gt;(fname);</span><br></pre></td></tr></table></figure><p>又比如想要读取一个混音文件 <code>Assets/Resources/AudioMixerGroup.mixer</code>，同上写作</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string fname = &quot;AudioMixerGroup&quot;;</span><br><span class="line">AudioMixer mixer = Resources.Load&lt;AudioMixer&gt;(fname);</span><br></pre></td></tr></table></figure><blockquote><p><a href="https://docs.unity3d.com/ScriptReference/Resources.Load.html" target="_blank" rel="noopener">https://docs.unity3d.com/ScriptReference/Resources.Load.html</a> </p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Unity 中使用 &lt;code&gt;Resources.Load()&lt;/code&gt; 命令读取资源文件。&lt;/p&gt;
+&lt;p&gt;使用中有几个值得注意的地方：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;读取文件时的根目录是 &lt;code&gt;Assets/Resources&lt;/code&gt;，所有资源文件都放在该文
+      
+    
+    </summary>
+    
+      <category term="tech" scheme="https://jinnsjj.github.io/categories/tech/"/>
+    
+    
+      <category term="unity" scheme="https://jinnsjj.github.io/tags/unity/"/>
+    
+      <category term="C#" scheme="https://jinnsjj.github.io/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>librosa.load() 读取音频的采样率处理</title>
