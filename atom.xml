@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jinnsjj.github.io/"/>
-  <updated>2018-11-02T07:49:28.170Z</updated>
+  <updated>2018-11-02T07:59:33.732Z</updated>
   <id>https://jinnsjj.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://jinnsjj.github.io/tech/linux-useless-toy/"/>
     <id>https://jinnsjj.github.io/tech/linux-useless-toy/</id>
     <published>2018-11-02T07:43:44.000Z</published>
-    <updated>2018-11-02T07:49:28.170Z</updated>
+    <updated>2018-11-02T07:59:33.732Z</updated>
     
-    <content type="html"><![CDATA[<p>在 linux 上打发时间，发现两个无用但有趣的小玩具，<code>cmatrix</code> 和 <code>cowsay</code>。安装分别用 <code>sudo apt-get install cmatrix</code> 和 <code>sudo apt-get install cowsay</code>。</p><p><code>cmatrix</code> 的效果是很俗的下字母雨。</p><p><img src="https://i.loli.net/2018/11/02/5bdc000319198.png" alt="1541144541(1).png"></p><p><code>cowboy</code> 则是画一头牛，让它说一句话。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ cowsay 咩</span><br><span class="line"> ____</span><br><span class="line">&lt; 咩 &gt;</span><br><span class="line"> ----</span><br><span class="line">        \   ^__^</span><br><span class="line">         \  (oo)\_______</span><br><span class="line">            (__)\       )\/\</span><br><span class="line">                ||----w |</span><br><span class="line">                ||     ||</span><br></pre></td></tr></table></figure><p>Have fun!</p>]]></content>
+    <content type="html"><![CDATA[<p>在 linux 上打发时间，发现两个无用但有趣的小玩具，<code>cmatrix</code> 和 <code>cowsay</code>。安装分别用 <code>sudo apt-get install cmatrix</code> 和 <code>sudo apt-get install cowsay</code>。</p><p><code>cmatrix</code> 的效果是很俗的下字母雨。</p><p><img src="https://i.loli.net/2018/11/02/5bdc03da0e5c6.gif" alt="cmatrix.gif"></p><p><code>cowboy</code> 则是画一头牛，让它说一句话。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ cowsay 咩</span><br><span class="line"> ____</span><br><span class="line">&lt; 咩 &gt;</span><br><span class="line"> ----</span><br><span class="line">        \   ^__^</span><br><span class="line">         \  (oo)\_______</span><br><span class="line">            (__)\       )\/\</span><br><span class="line">                ||----w |</span><br><span class="line">                ||     ||</span><br></pre></td></tr></table></figure><p>Have fun!</p>]]></content>
     
     <summary type="html">
     
@@ -125,9 +125,9 @@
       <category term="audio" scheme="https://jinnsjj.github.io/categories/tech/audio/"/>
     
     
-      <category term="librosa" scheme="https://jinnsjj.github.io/tags/librosa/"/>
-    
       <category term="python" scheme="https://jinnsjj.github.io/tags/python/"/>
+    
+      <category term="librosa" scheme="https://jinnsjj.github.io/tags/librosa/"/>
     
   </entry>
   
@@ -154,9 +154,9 @@
     
       <category term="signal processing" scheme="https://jinnsjj.github.io/tags/signal-processing/"/>
     
-      <category term="librosa" scheme="https://jinnsjj.github.io/tags/librosa/"/>
-    
       <category term="python" scheme="https://jinnsjj.github.io/tags/python/"/>
+    
+      <category term="librosa" scheme="https://jinnsjj.github.io/tags/librosa/"/>
     
   </entry>
   
@@ -260,9 +260,9 @@
       <category term="audio" scheme="https://jinnsjj.github.io/categories/tech/audio/"/>
     
     
-      <category term="spatial audio" scheme="https://jinnsjj.github.io/tags/spatial-audio/"/>
-    
       <category term="HOA" scheme="https://jinnsjj.github.io/tags/HOA/"/>
+    
+      <category term="spatial audio" scheme="https://jinnsjj.github.io/tags/spatial-audio/"/>
     
       <category term="sound field reproduction" scheme="https://jinnsjj.github.io/tags/sound-field-reproduction/"/>
     
@@ -314,9 +314,9 @@
       <category term="audio" scheme="https://jinnsjj.github.io/categories/tech/audio/"/>
     
     
-      <category term="librosa" scheme="https://jinnsjj.github.io/tags/librosa/"/>
-    
       <category term="python" scheme="https://jinnsjj.github.io/tags/python/"/>
+    
+      <category term="librosa" scheme="https://jinnsjj.github.io/tags/librosa/"/>
     
   </entry>
   

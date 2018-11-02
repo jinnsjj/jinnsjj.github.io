@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/linux-useless-toy/</loc>
-    <lastmod>2018-11-02T07:49:28.170Z</lastmod>
+    <lastmod>2018-11-02T07:59:33.732Z</lastmod>
     <data>
         <display>
         <title>linux 上的小玩具 cmatrix 和 cowsay</title>
@@ -107,9 +107,9 @@
         
         <tag>signal processing</tag>
          
-        <tag>librosa</tag>
-         
         <tag>python</tag>
+         
+        <tag>librosa</tag>
          
          
            
@@ -132,9 +132,9 @@
         <title>librosa.load() 读取音频的采样率处理</title>
         <pubTime>2018-10-18T04:22:34.000Z</pubTime>
         
-        <tag>librosa</tag>
-         
         <tag>python</tag>
+         
+        <tag>librosa</tag>
          
          
            
@@ -240,9 +240,9 @@
         <title>HOA声场重建原理</title>
         <pubTime>2018-07-12T14:00:46.000Z</pubTime>
         
-        <tag>spatial audio</tag>
-         
         <tag>HOA</tag>
+         
+        <tag>spatial audio</tag>
          
         <tag>sound field reproduction</tag>
          
@@ -286,9 +286,9 @@
         <title>librosa音频操作基础和特征提取</title>
         <pubTime>2018-07-12T05:43:41.000Z</pubTime>
         
-        <tag>librosa</tag>
-         
         <tag>python</tag>
+         
+        <tag>librosa</tag>
          
          
            
