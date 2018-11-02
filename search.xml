@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[linux 上的小玩具 cmatrix 和 cowsay]]></title>
+    <url>%2Ftech%2Flinux-useless-toy%2F</url>
+    <content type="text"><![CDATA[在 linux 上打发时间，发现两个无用但有趣的小玩具，cmatrix 和 cowsay。安装分别用 sudo apt-get install cmatrix 和 sudo apt-get install cowsay。 cmatrix 的效果是很俗的下字母雨。 cowboy 则是画一头牛，让它说一句话。 123456789$ cowsay 咩 ____&lt; 咩 &gt; ---- \ ^__^ \ (oo)\_______ (__)\ )\/\ ||----w | || || Have fun!]]></content>
+      <categories>
+        <category>tech</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>cmatrix</tag>
+        <tag>cowsay</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Matlab 窗可视化工具 wvtool]]></title>
     <url>%2Ftech%2Fwvtool%2F</url>
-    <content type="text"><![CDATA[通过matlab的 wvtool 可以看到不同窗的时域和频域特性，使用起来也十分方便。 1wvtool(hamming(64),hann(64),gausswin(64)) https://www.mathworks.com/help/signal/ref/wvtool.html]]></content>
+    <content type="text"><![CDATA[通过matlab的 wvtool 可以看到不同窗的时域和频域特性，使用起来也十分方便。 1wvtool(hamming(64),hann(64),gausswin(64)) h https://www.mathworks.com/help/signal/ref/wvtool.html]]></content>
       <categories>
         <category>tech</category>
       </categories>
@@ -32,8 +45,8 @@
         <category>audio</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>librosa</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -46,8 +59,8 @@
       </categories>
       <tags>
         <tag>signal processing</tag>
-        <tag>python</tag>
         <tag>librosa</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -98,8 +111,8 @@
         <category>audio</category>
       </categories>
       <tags>
-        <tag>HOA</tag>
         <tag>spatial audio</tag>
+        <tag>HOA</tag>
         <tag>sound field reproduction</tag>
       </tags>
   </entry>
@@ -121,8 +134,8 @@
         <category>audio</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>librosa</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
