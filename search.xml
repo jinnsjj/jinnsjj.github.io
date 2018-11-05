@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[冥想]]></title>
+    <url>%2Fmeditation%2Fmeditation%2F</url>
+    <content type="text"><![CDATA[我站在阳台冥想，想要了解生命的意义。远方的天空，一下泛蓝，一下泛红。但我猜那只是云后飞机的灯。附近河的流水吵吵闹闹。我想要抛开世界的噪音，洁净我的灵魂。我点燃一根烟，弄脏我的肺。]]></content>
+      <categories>
+        <category>meditation</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[linux 上的小玩具 cmatrix 和 cowsay]]></title>
     <url>%2Ftech%2Flinux-useless-toy%2F</url>
     <content type="text"><![CDATA[在 linux 上打发时间，发现两个无用但有趣的小玩具，cmatrix 和 cowsay。安装分别用 sudo apt-get install cmatrix 和 sudo apt-get install cowsay。 cmatrix 的效果是很俗的下字母雨。 cowboy 则是画一头牛，让它说一句话。 123456789$ cowsay 咩 ____&lt; 咩 &gt; ---- \ ^__^ \ (oo)\_______ (__)\ )\/\ ||----w | || || Have fun!]]></content>
@@ -16,7 +24,7 @@
   <entry>
     <title><![CDATA[Matlab 窗可视化工具 wvtool]]></title>
     <url>%2Ftech%2Fwvtool%2F</url>
-    <content type="text"><![CDATA[通过matlab的 wvtool 可以看到不同窗的时域和频域特性，使用起来也十分方便。 1wvtool(hamming(64),hann(64),gausswin(64)) h https://www.mathworks.com/help/signal/ref/wvtool.html]]></content>
+    <content type="text"><![CDATA[通过matlab的 wvtool 可以看到不同窗的时域和频域特性，使用起来也十分方便。 1wvtool(hamming(64),hann(64),gausswin(64)) https://www.mathworks.com/help/signal/ref/wvtool.html]]></content>
       <categories>
         <category>tech</category>
       </categories>
@@ -45,8 +53,8 @@
         <category>audio</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>librosa</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -59,8 +67,8 @@
       </categories>
       <tags>
         <tag>signal processing</tag>
-        <tag>python</tag>
         <tag>librosa</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -134,8 +142,8 @@
         <category>audio</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>librosa</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
