@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Matlab 音频低通滤波]]></title>
+    <url>%2Ftech%2Faudio%2Fmatlab-audio-lowpass%2F</url>
+    <content type="text"><![CDATA[用仿真生成的 transfer function，再高频部分精确度比较糟糕，所以希望只保留一定频率以下的部分，需要设计一个低通滤波器。这里介绍最为直接的办法，使用 matlab 里的 fir1 函数设计滤波器，并用 fftfilt 进行滤波。 1234b = fir1(n,fcut/(Fs/2)); % 第一个参数n是fir阶数，对应滤波器在时域的长度。 % 第二个参数是相对截止频率。 % 音频采样率Fs，对应的最高频率就是Fs/2，fcut是实际的截止频率。y = fftfilt(b,x) % 假设x是原始信号，用fftfilt对x进行滤波。 https://www.mathworks.com/help/signal/ref/fir1.htmlhttps://www.mathworks.com/help/signal/ref/fftfilt.html matlab中实际应用代码]]></content>
+      <categories>
+        <category>tech</category>
+        <category>audio</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+        <tag>filter</tag>
+        <tag>fir</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[冥想]]></title>
     <url>%2Fmeditation%2Fmeditation%2F</url>
     <content type="text"><![CDATA[我站在阳台冥想，想要了解生命的意义。远方的天空，一下泛蓝，一下泛红。但我猜那只是云后飞机的灯。附近河的流水吵吵闹闹。我想要抛开世界的噪音，洁净我的灵魂。我点燃一根烟，弄脏我的肺。]]></content>

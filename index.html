@@ -405,6 +405,199 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/tech/audio/matlab-audio-lowpass/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JOHZEN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/tech/audio/matlab-audio-lowpass/" itemprop="url">
+                  Matlab 音频低通滤波
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-11-07 15:28:42 / Modified: 16:04:48" itemprop="dateCreated datePublished" datetime="2018-11-07T15:28:42+09:00">2018-11-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">tech</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/audio/" itemprop="url" rel="index"><span itemprop="name">audio</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/tech/audio/matlab-audio-lowpass/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="tech/audio/matlab-audio-lowpass/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/tech/audio/matlab-audio-lowpass/" class="leancloud_visitors" data-flag-title="Matlab 音频低通滤波">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>用仿真生成的 transfer function，再高频部分精确度比较糟糕，所以希望只保留一定频率以下的部分，需要设计一个低通滤波器。这里介绍最为直接的办法，使用 matlab 里的 <code>fir1</code> 函数设计滤波器，并用 <code>fftfilt</code> 进行滤波。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">b = fir1(n,fcut/(Fs/<span class="number">2</span>));    <span class="comment">% 第一个参数n是fir阶数，对应滤波器在时域的长度。</span></span><br><span class="line">                            <span class="comment">% 第二个参数是相对截止频率。</span></span><br><span class="line">                            <span class="comment">% 音频采样率Fs，对应的最高频率就是Fs/2，fcut是实际的截止频率。</span></span><br><span class="line">y = fftfilt(b,x)            <span class="comment">% 假设x是原始信号，用fftfilt对x进行滤波。</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="https://www.mathworks.com/help/signal/ref/fir1.html" target="_blank" rel="noopener">https://www.mathworks.com/help/signal/ref/fir1.html</a><br><a href="https://www.mathworks.com/help/signal/ref/fftfilt.html" target="_blank" rel="noopener">https://www.mathworks.com/help/signal/ref/fftfilt.html</a></p>
+</blockquote>
+<p><a href="../../projects/src/matlab_audio_filter.html">matlab中实际应用代码</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/meditation/meditation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2150,210 +2343,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/tech/audio/something-of-HOA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jon">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar2.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JOHZEN">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/tech/audio/something-of-HOA/" itemprop="url">
-                  HOA声场重建原理
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-12 23:00:46" itemprop="dateCreated datePublished" datetime="2018-07-12T23:00:46+09:00">2018-07-12</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-31 15:58:44" itemprop="dateModified" datetime="2018-07-31T15:58:44+09:00">2018-07-31</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">tech</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/audio/" itemprop="url" rel="index"><span itemprop="name">audio</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/tech/audio/something-of-HOA/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="tech/audio/something-of-HOA/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/tech/audio/something-of-HOA/" class="leancloud_visitors" data-flag-title="HOA声场重建原理">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Views: </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/tech/audio/something-of-HOA/">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2405,7 +2394,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2477,7 +2466,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">19</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
