@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[poletti2005]]></title>
+    <url>%2Fnote%2Fpoletti2005%2F</url>
+    <content type="text"><![CDATA[Three-dimensional surround sound systems based on spherical harmonics Poletti, M. A. (2005). Three-dimensional surround sound systems based on spherical harmonics. Journal of the Audio Engineering Society, 53(11), 1004-1025. IntroductionApproaches to 3D sound field reproduction The Kirchhoff–Helmholtz integral The Kirchhoff–Helmholtz integral shows that reproduction is possible inside a region if the pressure and normal velocity are known on the surface of the region. basis for the wave field synthesis (WFS). In practice simplifications are possible; for example, monopole sources are sufficient, and only those transducers in the direction of the sound source are required. Inverse method an inverse matrix is derived for a given geometry of loudspeakers and receiver positions, which allows the creation of the required sound pressure at a set of discrete points. 3D Ambisonics approach based on a spherical harmonic decomposition of the sound field This paper reviews and extends the theory of 3D sound systems based on spherical harmonics. Description of 3D sound fieldsspherical harmonics/Spherical Bessel DescriptionFor the interior case, where all sources lie outside the region of interest: $$p(r,\theta,\phi,k)=\sum_{n=0}^{\infty}{\sum_{m=-n}^{n}{A_n^m(k)j_n(kr)Y_n^m}(\theta,\phi)}$$ $j_n(kr)$: the spherical Bessel function of the first kind. An important feature of this expansion is that for small $kr$, that is, for low frequencies or small distances from the origin, the summation in $n$ may be truncated to a finite value $N$ with little error, because only the low-order spherical Bessel functions have significant values for small $kr$. The pressure is then accurately represented by a total of $(N+1)^2$ terms. For the exterior case, where all sources lie within a region of space: $$p(r,\theta,\phi,k)=\sum_{n=0}^{\infty}{\sum_{m=-n}^{n}{B_n^m(k)h_n(kr)Y_n^m}(\theta,\phi)}$$ $h_n(kr)$: the spherical Hankel function. $h_n(kr)=j_n(kr)+iy_n(kr)$, $y_n(kr)$ is the spherical Bessel function of the second kind. The Wronskian relationship: $$j_n(x)h_n’(x)-j_n’(x)h_n(x)=\frac{i}{x^2}$$ Spherical harmonics form an orthonormal basis for any function defined on a sphere $$f(\theta,\phi)=\sum_{n=0}^{\infty}{\sum_{m=-n}^{n}{A_n^mY_n^m}(\theta,\phi)}$$ $$A_n^m = \int_0^{2\pi}{\int_0^{\pi}{f(\theta,\phi)Y_n^m(\theta,\phi)^*d\theta}d\phi}$$ Plane and spherical wave expansionsThe spherical harmonic expansion of a plane wave arriving from incidence angles $(\theta_i, \phi_i)$ is $$e^{i\boldsymbol{k_ir}}=4\pi\sum_{n=0}^{\infty}{i^nj_n(kr)\sum_{m=-n}^{n}{Y_n^m(\theta,\phi)Y_n^m(\theta_i,\phi_i)^*}}.$$ The spherical harmonic expansion of the wavefield due to a point source with position $(r_s, \theta_s, \phi_s)$, and with $r&lt;r_s$, is $$G(\boldsymbol{r}|\boldsymbol{r_s},k)=\frac{e^{ik|\boldsymbol{r}-\boldsymbol{r_s}|}}{4\pi|\boldsymbol{r}-\boldsymbol{r_s}|}=ik\sum_{n=0}^{\infty}{j_n(kr)h_n(kr_s)\sum_{m=-n}^{n}{Y_n^m(\theta,\phi)Y_n^m(\theta_i,\phi_i)^*}}.$$ Kirchhoff-Helmholtz descriptionThe Kirchhoff–Helmholtz integral shows that the sound pressure within an arbitrarily shaped volume of space may be calculated from the pressure and normal velocity on its surface $$p(\boldsymbol{r},k)=\int_S{\int{[ G(\boldsymbol{r}|\boldsymbol{r_s},k)\frac{\partial p(\boldsymbol{r_s},k)}{\partial n}-p(\boldsymbol{r_s},k)\frac{\partial G(\boldsymbol{r}|\boldsymbol{r_s},k)}{\partial n}]}dS}$$ This shows that the sound field may be reproduced from an infinite distribution of monopole sources excited by the normal gradient of the pressure on the surface ($G(\boldsymbol{r}|\boldsymbol{r_s},k)\frac{\partial p(\boldsymbol{r_s},k)}{\partial n}$), and an infinite distribution of dipole sources excited by the pressure on the surface ($p(\boldsymbol{r_s},k)\frac{\partial G(\boldsymbol{r}|\boldsymbol{r_s},k)}{\partial n}$). In practice, since most loudspeakers are monopoles at low frequencies, the dipole sources are less practical to implement (requiring, for example, unbaffled drivers). It has been shown that the monopole and dipole sources are not independent and that in practice the dipole sources may be ignored. 3D sound field recording]]></content>
+      <categories>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>sound field reproduction</tag>
+        <tag>spatial audio</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Matlab 音频低通滤波]]></title>
     <url>%2Ftech%2Faudio%2Fmatlab-audio-lowpass%2F</url>
     <content type="text"><![CDATA[用仿真生成的 transfer function，再高频部分精确度比较糟糕，所以希望只保留一定频率以下的部分，需要设计一个低通滤波器。这里介绍最为直接的办法，使用 matlab 里的 fir1 函数设计滤波器，并用 fftfilt 进行滤波。 1234b = fir1(n,fcut/(Fs/2)); % 第一个参数n是fir阶数，对应滤波器在时域的长度。 % 第二个参数是相对截止频率。 % 音频采样率Fs，对应的最高频率就是Fs/2，fcut是实际的截止频率。y = fftfilt(b,x) % 假设x是原始信号，用fftfilt对x进行滤波。 https://www.mathworks.com/help/signal/ref/fir1.htmlhttps://www.mathworks.com/help/signal/ref/fftfilt.html matlab中实际应用代码]]></content>
@@ -67,8 +79,8 @@
         <category>audio</category>
       </categories>
       <tags>
-        <tag>librosa</tag>
         <tag>python</tag>
+        <tag>librosa</tag>
       </tags>
   </entry>
   <entry>
@@ -81,8 +93,8 @@
       </categories>
       <tags>
         <tag>signal processing</tag>
-        <tag>librosa</tag>
         <tag>python</tag>
+        <tag>librosa</tag>
       </tags>
   </entry>
   <entry>
@@ -133,9 +145,9 @@
         <category>audio</category>
       </categories>
       <tags>
-        <tag>HOA</tag>
-        <tag>spatial audio</tag>
         <tag>sound field reproduction</tag>
+        <tag>spatial audio</tag>
+        <tag>HOA</tag>
       </tags>
   </entry>
   <entry>
@@ -156,8 +168,8 @@
         <category>audio</category>
       </categories>
       <tags>
-        <tag>librosa</tag>
         <tag>python</tag>
+        <tag>librosa</tag>
       </tags>
   </entry>
   <entry>
@@ -209,13 +221,13 @@
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[Projects]]></title>
-    <url>%2Fprojects%2Findex.html</url>
-    <content type="text"><![CDATA[ProjectsAudio basics 通过librosa进行音频的基本操作和特征提取 使用librosa库，读取音频，提取频谱，MFCC等。 librosa进行音频重采样 MATLAB中进行声场可视化 Have fun Urban Sound Classification Inspired by http://aqibsaeed.github.io/2016-09-03-urban-sound-classification-part-1/ Urban Sound Classifier using NN 这是我搭建的第一个神经网络，可以说是边做边学，代码有一些混乱。整个流程几乎是跟着上面博客的思路来，准确度虽然不高，但work了，还是满意的。 Urban Sound Classifier using CNN v2 第一版的CNN非常惨烈，所以废弃了，第二版开始work了，但准确率实在堪忧，只有50%左右。 Urban Sound Classifier using CNN v3 紧接着第二版做的一些变体，单纯的娱乐，看看不同网络效果的区别，虽然没有看到。 Urban Sound Classifier using LSTM v1 第一次尝试LSTM，LSTM的搭建也很简单，预计效果不错，然而实际却低于NN和CNN。原因还不明。 ← Back to blog]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[tags]]></title>
     <url>%2Ftags%2Findex.html</url>
     <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Projects]]></title>
+    <url>%2Fprojects%2Findex.html</url>
+    <content type="text"><![CDATA[ProjectsAudio basics 通过librosa进行音频的基本操作和特征提取 使用librosa库，读取音频，提取频谱，MFCC等。 librosa进行音频重采样 MATLAB中进行声场可视化 matlab中fir设计于滤波 Have fun Urban Sound Classification Inspired by http://aqibsaeed.github.io/2016-09-03-urban-sound-classification-part-1/ Urban Sound Classifier using NN 这是我搭建的第一个神经网络，可以说是边做边学，代码有一些混乱。整个流程几乎是跟着上面博客的思路来，准确度虽然不高，但work了，还是满意的。 Urban Sound Classifier using CNN v2 第一版的CNN非常惨烈，所以废弃了，第二版开始work了，但准确率实在堪忧，只有50%左右。 Urban Sound Classifier using CNN v3 紧接着第二版做的一些变体，单纯的娱乐，看看不同网络效果的区别，虽然没有看到。 Urban Sound Classifier using LSTM v1 第一次尝试LSTM，LSTM的搭建也很简单，预计效果不错，然而实际却低于NN和CNN。原因还不明。 ← Back to blog]]></content>
   </entry>
 </search>

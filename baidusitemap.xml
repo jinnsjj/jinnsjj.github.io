@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>https://jinnsjj.github.io/note/poletti2005/</loc>
+    <lastmod>2018-11-13T08:56:08.349Z</lastmod>
+    <data>
+        <display>
+        <title>poletti2005</title>
+        <pubTime>2018-11-13T02:11:01.000Z</pubTime>
+        
+        <tag>sound field reproduction</tag>
+         
+        <tag>spatial audio</tag>
+         
+         
+           
+             
+              <breadCrumb title="note" url="https://jinnsjj.github.io/categories/note/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
     <loc>https://jinnsjj.github.io/tech/audio/matlab-audio-lowpass/</loc>
     <lastmod>2018-11-07T07:04:48.708Z</lastmod>
     <data>
@@ -119,7 +143,6 @@
     </url>
 
     
-    
   <url>
     <loc>https://jinnsjj.github.io/tech/UnityResourceLoad/</loc>
     <lastmod>2018-10-29T10:16:01.812Z</lastmod>
@@ -152,9 +175,9 @@
         
         <tag>signal processing</tag>
          
-        <tag>librosa</tag>
-         
         <tag>python</tag>
+         
+        <tag>librosa</tag>
          
          
            
@@ -177,9 +200,9 @@
         <title>librosa.load() 读取音频的采样率处理</title>
         <pubTime>2018-10-18T04:22:34.000Z</pubTime>
         
-        <tag>librosa</tag>
-         
         <tag>python</tag>
+         
+        <tag>librosa</tag>
          
          
            
@@ -193,7 +216,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/hello-world/</loc>
@@ -285,11 +307,11 @@
         <title>HOA声场重建原理</title>
         <pubTime>2018-07-12T14:00:46.000Z</pubTime>
         
-        <tag>HOA</tag>
+        <tag>sound field reproduction</tag>
          
         <tag>spatial audio</tag>
          
-        <tag>sound field reproduction</tag>
+        <tag>HOA</tag>
          
          
            
@@ -331,9 +353,9 @@
         <title>librosa音频操作基础和特征提取</title>
         <pubTime>2018-07-12T05:43:41.000Z</pubTime>
         
-        <tag>librosa</tag>
-         
         <tag>python</tag>
+         
+        <tag>librosa</tag>
          
          
            
