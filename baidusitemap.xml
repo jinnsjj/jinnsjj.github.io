@@ -5,20 +5,74 @@
     
   <url>
     <loc>https://jinnsjj.github.io/note/poletti2005/</loc>
-    <lastmod>2018-11-13T08:56:08.349Z</lastmod>
+    <lastmod>2018-11-14T06:11:07.619Z</lastmod>
     <data>
         <display>
-        <title>poletti2005</title>
+        <title>论文笔记 - poletti2005</title>
         <pubTime>2018-11-13T02:11:01.000Z</pubTime>
         
         <tag>sound field reproduction</tag>
          
         <tag>spatial audio</tag>
          
+        <tag>spherical harmonics</tag>
+         
          
            
              
               <breadCrumb title="note" url="https://jinnsjj.github.io/categories/note/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jinnsjj.github.io/tech/audio/something-of-HOA/</loc>
+    <lastmod>2018-11-14T02:21:42.180Z</lastmod>
+    <data>
+        <display>
+        <title>HOA声场重建原理</title>
+        <pubTime>2018-07-12T14:00:46.000Z</pubTime>
+        
+        <tag>sound field reproduction</tag>
+         
+        <tag>spatial audio</tag>
+         
+        <tag>HOA</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
+          
+             
+              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jinnsjj.github.io/tech/audio/librosa-audio/</loc>
+    <lastmod>2018-11-14T02:21:40.620Z</lastmod>
+    <data>
+        <display>
+        <title>librosa音频操作基础和特征提取</title>
+        <pubTime>2018-07-12T05:43:41.000Z</pubTime>
+        
+        <tag>librosa</tag>
+         
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
+          
+             
+              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
           
         </display>
     </data>
@@ -175,9 +229,9 @@
         
         <tag>signal processing</tag>
          
-        <tag>python</tag>
-         
         <tag>librosa</tag>
+         
+        <tag>python</tag>
          
          
            
@@ -200,9 +254,9 @@
         <title>librosa.load() 读取音频的采样率处理</title>
         <pubTime>2018-10-18T04:22:34.000Z</pubTime>
         
-        <tag>python</tag>
-         
         <tag>librosa</tag>
+         
+        <tag>python</tag>
          
          
            
@@ -300,33 +354,6 @@
 
     
   <url>
-    <loc>https://jinnsjj.github.io/tech/audio/something-of-HOA/</loc>
-    <lastmod>2018-07-31T06:58:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>HOA声场重建原理</title>
-        <pubTime>2018-07-12T14:00:46.000Z</pubTime>
-        
-        <tag>sound field reproduction</tag>
-         
-        <tag>spatial audio</tag>
-         
-        <tag>HOA</tag>
-         
-         
-           
-             
-              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
-          
-             
-              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://jinnsjj.github.io/uncategorized/hexo-next-note/</loc>
     <lastmod>2018-07-13T06:12:02.000Z</lastmod>
     <data>
@@ -340,31 +367,6 @@
          
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://jinnsjj.github.io/tech/audio/librosa-audio/</loc>
-    <lastmod>2018-07-12T16:19:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>librosa音频操作基础和特征提取</title>
-        <pubTime>2018-07-12T05:43:41.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>librosa</tag>
-         
-         
-           
-             
-              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
-          
-             
-              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
-          
         </display>
     </data>
     </url>

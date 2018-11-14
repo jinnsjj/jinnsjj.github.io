@@ -150,18 +150,18 @@
 
 
 
-  <meta name="description" content="Three-dimensional surround sound systems based on spherical harmonics  Poletti, M. A. (2005). Three-dimensional surround sound systems based on spherical harmonics. Journal of the Audio Engineering S">
-<meta name="keywords" content="sound field reproduction,spatial audio">
+  <meta name="description" content="如果关于HOA只能读一篇论文，那就是这一篇了。">
+<meta name="keywords" content="sound field reproduction,spatial audio,spherical harmonics">
 <meta property="og:type" content="article">
-<meta property="og:title" content="poletti2005">
+<meta property="og:title" content="论文笔记 - poletti2005">
 <meta property="og:url" content="https://jinnsjj.github.io/note/poletti2005/index.html">
 <meta property="og:site_name" content="JOHZEN">
-<meta property="og:description" content="Three-dimensional surround sound systems based on spherical harmonics  Poletti, M. A. (2005). Three-dimensional surround sound systems based on spherical harmonics. Journal of the Audio Engineering S">
+<meta property="og:description" content="如果关于HOA只能读一篇论文，那就是这一篇了。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-13T08:56:08.349Z">
+<meta property="og:updated_time" content="2018-11-14T06:11:07.619Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="poletti2005">
-<meta name="twitter:description" content="Three-dimensional surround sound systems based on spherical harmonics  Poletti, M. A. (2005). Three-dimensional surround sound systems based on spherical harmonics. Journal of the Audio Engineering S">
+<meta name="twitter:title" content="论文笔记 - poletti2005">
+<meta name="twitter:description" content="如果关于HOA只能读一篇论文，那就是这一篇了。">
 
 
 
@@ -180,7 +180,7 @@
   };
 </script>
 
-  <title>poletti2005 | JOHZEN</title>
+  <title>论文笔记 - poletti2005 | JOHZEN</title>
   
 
 
@@ -426,7 +426,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">poletti2005
+          <h2 class="post-title" itemprop="name headline">论文笔记 - poletti2005
               
             
           </h2>
@@ -451,12 +451,24 @@
                 
               
 
-              <time title="Created: 2018-11-13 11:11:01 / Modified: 17:56:08" itemprop="dateCreated datePublished" datetime="2018-11-13T11:11:01+09:00">2018-11-13</time>
+              <time title="Created: 2018-11-13 11:11:01" itemprop="dateCreated datePublished" datetime="2018-11-13T11:11:01+09:00">2018-11-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-11-14 15:11:07" itemprop="dateModified" datetime="2018-11-14T15:11:07+09:00">2018-11-14</time>
               
             
           </span>
@@ -499,7 +511,7 @@
 
           
           
-             <span id="/note/poletti2005/" class="leancloud_visitors" data-flag-title="poletti2005">
+             <span id="/note/poletti2005/" class="leancloud_visitors" data-flag-title="论文笔记 - poletti2005">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -515,6 +527,8 @@
 
           
 
+          
+              <div class="post-description">如果关于HOA只能读一篇论文，那就是这一篇了。</div>
           
 
         </div>
@@ -535,6 +549,7 @@
 <blockquote>
 <p><a href="https://drive.google.com/file/d/1RSA84IWjh62Txpw9e5q4PCT93h-yJ6xd/view?usp=sharing" target="_blank" rel="noopener">Poletti, M. A. (2005). Three-dimensional surround sound systems based on spherical harmonics. Journal of the Audio Engineering Society, 53(11), 1004-1025.</a></p>
 </blockquote>
+<hr>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Approaches to 3D sound field reproduction</p>
 <ol>
 <li><strong>The Kirchhoff–Helmholtz integral</strong><ul>
@@ -565,7 +580,7 @@
 <p>$$<br>j_n(x)h_n’(x)-j_n’(x)h_n(x)=\frac{i}{x^2}<br>$$</p>
 <p>Spherical harmonics form an orthonormal basis for any function defined on a sphere</p>
 <p>$$<br>f(\theta,\phi)=\sum_{n=0}^{\infty}{\sum_{m=-n}^{n}{A_n^mY_n^m}(\theta,\phi)}<br>$$</p>
-<p>$$<br>A_n^m = \int_0^{2\pi}{\int_0^{\pi}{f(\theta,\phi)Y_n^m(\theta,\phi)^*d\theta}d\phi}<br>$$</p>
+<p>$$<br>A_n^m = \int_0^{2\pi}{\int_0^{\pi}{f(\theta,\phi)Y_n^m(\theta,\phi)^*\sin(\theta)d\theta}d\phi}<br>$$</p>
 <h3 id="Plane-and-spherical-wave-expansions"><a href="#Plane-and-spherical-wave-expansions" class="headerlink" title="Plane and spherical wave expansions"></a>Plane and spherical wave expansions</h3><p>The spherical harmonic expansion of a plane wave arriving from incidence angles $(\theta_i, \phi_i)$ is</p>
 <p>$$<br>e^{i\boldsymbol{k_ir}}=4\pi\sum_{n=0}^{\infty}{i^nj_n(kr)\sum_{m=-n}^{n}{Y_n^m(\theta,\phi)Y_n^m(\theta_i,\phi_i)^*}}.<br>$$</p>
 <p>The spherical harmonic expansion of the wavefield due to a point source with position $(r_s, \theta_s, \phi_s)$, and with $r&lt;r_s$, is</p>
@@ -573,7 +588,31 @@
 <h3 id="Kirchhoff-Helmholtz-description"><a href="#Kirchhoff-Helmholtz-description" class="headerlink" title="Kirchhoff-Helmholtz description"></a>Kirchhoff-Helmholtz description</h3><p>The Kirchhoff–Helmholtz integral shows that the sound pressure within an arbitrarily shaped volume of space may be calculated from the pressure and normal velocity on its surface</p>
 <p>$$<br>p(\boldsymbol{r},k)=\int_S{\int{[ G(\boldsymbol{r}|\boldsymbol{r_s},k)\frac{\partial p(\boldsymbol{r_s},k)}{\partial n}-p(\boldsymbol{r_s},k)\frac{\partial G(\boldsymbol{r}|\boldsymbol{r_s},k)}{\partial n}]}dS}<br>$$</p>
 <p>This shows that <strong>the sound field may be reproduced from an infinite distribution of monopole sources excited by the normal gradient of the pressure on the surface ($G(\boldsymbol{r}|\boldsymbol{r_s},k)\frac{\partial p(\boldsymbol{r_s},k)}{\partial n}$), and an infinite distribution of dipole sources excited by the pressure on the surface ($p(\boldsymbol{r_s},k)\frac{\partial G(\boldsymbol{r}|\boldsymbol{r_s},k)}{\partial n}$)</strong>. In practice, since most loudspeakers are monopoles at low frequencies, the dipole sources are less practical to implement (requiring, for example, unbaffled drivers). It has been shown that the monopole and dipole sources are not independent and that <strong>in practice the dipole sources may be ignored</strong>.</p>
-<h2 id="3D-sound-field-recording"><a href="#3D-sound-field-recording" class="headerlink" title="3D sound field recording"></a>3D sound field recording</h2>
+<h2 id="3D-sound-field-recording"><a href="#3D-sound-field-recording" class="headerlink" title="3D sound field recording"></a>3D sound field recording</h2><p>The accurate recording of sound fields requires the synthesis of higher directivities than are available from first-order microphones. These directivities can be obtained using microphone arrays.</p>
+<ul>
+<li>array beamforming</li>
+<li>multiple discrete microphones</li>
+<li>the combination of dipole responses</li>
+<li>single with multiple radii</li>
+</ul>
+<blockquote>
+<p>A first-order microphone has response that is proportional to the pressure gradient, whereas a second-order microphone design has response proportional to the gradient of the gradient.</p>
+</blockquote>
+<h3 id="Free-field-sphere-Decomposition"><a href="#Free-field-sphere-Decomposition" class="headerlink" title="Free-field sphere Decomposition"></a>Free-field sphere Decomposition</h3><p>$$<br>A_n^m(k) = \frac{1}{j_n(kr)} \int_0^{2\pi}{\int_0^{\pi}{p(r,\theta,\phi,k)Y_n^m(\theta,\phi)^*\sin(\theta)d\theta}d\phi}<br>$$</p>
+<p><strong>The zeros of $j_n(kr)$ produce equalization problems.</strong></p>
+<p>One approach to removing the problem is to use first-order microphones facing radially outward. <strong>The general form of a radial first-order response</strong> is</p>
+<p>$$<br>s_\alpha(r,\theta,\phi,k) = \alpha p(r,\theta,\phi,k)-(1-\alpha)\rho cv_R(r,\theta,\phi,k)<br>$$</p>
+<p>where $\alpha$ is the first-order parameter, $v_R$ is the radial velocity, and $\rho c$ is the impedance of free space.</p>
+<p>The first-order response then has the spherical harmonic expansion</p>
+<p>$$<br>s_\alpha(r,\theta,\phi,k) = \sum_{n=0}^{\infty}{[\alpha j_n(kr)-\mathrm{i}(1-\alpha)j_n’(kr)]\sum_{m=-n}^{n}{A_n^m(k)Y_n^m}(\theta,\phi)}<br>$$</p>
+<p>and the spherical harmonic coefficients are</p>
+<p>$$<br>A_n^m(k) = \frac{1}{\alpha j_n(kr)-\mathrm{i}(1-\alpha)j_n’(kr)} \int_0^{2\pi}{\int_0^{\pi}{s_\alpha(r,\theta,\phi,k) Y_n^m(\theta,\phi)^*\sin(\theta)d\theta}d\phi}<br>$$</p>
+<h3 id="Solid-sphere-decomposition"><a href="#Solid-sphere-decomposition" class="headerlink" title="Solid sphere decomposition"></a>Solid sphere decomposition</h3><p>A solid sphere containing flush mounted pressure microphones also allows the coefficients to be found without the risk of zeros in the response.</p>
+<p>The scattering of sound around a sphere for a sound field is obtained by assuming that <strong>the resultant field is the sum of the original field and a scattered field that is radiating outward</strong>.</p>
+<p>$$<br>p_t(r,\theta,\phi,k) = \sum_{n=0}^{\infty}{[j_n(kr)-\frac{j_n’(ka)}{h_n’(ka)}h_n(kr)]\sum_{m=-n}^{n}{A_n^m(k)Y_n^m}(\theta,\phi)}<br>$$</p>
+<p>where $a$ is the radius of the sphere. This is the sum of the original wavefield without the sphere and a scattering field consisting of outgoing waves whose coefficients are modified by a ratio of spherical Bessel terms. The sound field coefficients may be found from the pressure at $r = a$,</p>
+<p>$$<br>A_n^m(k) = -\mathrm{i}(ka)^2h_n’(ka) \int_0^{2\pi}{\int_0^{\pi}{p_t(a,\theta,\phi,k) Y_n^m(\theta,\phi)^*\sin(\theta)d\theta}d\phi}<br>$$</p>
+
       
     </div>
 
@@ -625,6 +664,8 @@
             <a href="/tags/sound-field-reproduction/" rel="tag"><i class="fa fa-tag"></i> sound field reproduction</a>
           
             <a href="/tags/spatial-audio/" rel="tag"><i class="fa fa-tag"></i> spatial audio</a>
+          
+            <a href="/tags/spherical-harmonics/" rel="tag"><i class="fa fa-tag"></i> spherical harmonics</a>
           
         </div>
       
@@ -817,7 +858,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">21</span>
+                      
+                    
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -880,7 +923,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Three-dimensional-surround-sound-systems-based-on-spherical-harmonics"><span class="nav-number">1.</span> <span class="nav-text">Three-dimensional surround sound systems based on spherical harmonics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Description-of-3D-sound-fields"><span class="nav-number">1.2.</span> <span class="nav-text">Description of 3D sound fields</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#spherical-harmonics-Spherical-Bessel-Description"><span class="nav-number">1.2.1.</span> <span class="nav-text">spherical harmonics/Spherical Bessel Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Plane-and-spherical-wave-expansions"><span class="nav-number">1.2.2.</span> <span class="nav-text">Plane and spherical wave expansions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kirchhoff-Helmholtz-description"><span class="nav-number">1.2.3.</span> <span class="nav-text">Kirchhoff-Helmholtz description</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3D-sound-field-recording"><span class="nav-number">1.3.</span> <span class="nav-text">3D sound field recording</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Three-dimensional-surround-sound-systems-based-on-spherical-harmonics"><span class="nav-number">1.</span> <span class="nav-text">Three-dimensional surround sound systems based on spherical harmonics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Description-of-3D-sound-fields"><span class="nav-number">1.2.</span> <span class="nav-text">Description of 3D sound fields</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#spherical-harmonics-Spherical-Bessel-Description"><span class="nav-number">1.2.1.</span> <span class="nav-text">spherical harmonics/Spherical Bessel Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Plane-and-spherical-wave-expansions"><span class="nav-number">1.2.2.</span> <span class="nav-text">Plane and spherical wave expansions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kirchhoff-Helmholtz-description"><span class="nav-number">1.2.3.</span> <span class="nav-text">Kirchhoff-Helmholtz description</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3D-sound-field-recording"><span class="nav-number">1.3.</span> <span class="nav-text">3D sound field recording</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Free-field-sphere-Decomposition"><span class="nav-number">1.3.1.</span> <span class="nav-text">Free-field sphere Decomposition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solid-sphere-decomposition"><span class="nav-number">1.3.2.</span> <span class="nav-text">Solid sphere decomposition</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1054,7 +1097,7 @@
       var disqus_config = function () {
         this.page.url = 'https://jinnsjj.github.io/note/poletti2005/';
         this.page.identifier = 'note/poletti2005/';
-        this.page.title = 'poletti2005';
+        this.page.title = '论文笔记 - poletti2005';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
