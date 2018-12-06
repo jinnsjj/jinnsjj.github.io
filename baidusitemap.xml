@@ -4,6 +4,60 @@
 
     
   <url>
+    <loc>https://jinnsjj.github.io/tech/audio/pre-defense/</loc>
+    <lastmod>2018-12-06T04:52:01.168Z</lastmod>
+    <data>
+        <display>
+        <title>pre-defense</title>
+        <pubTime>2018-12-06T04:46:55.000Z</pubTime>
+        
+        <tag>spatial audio</tag>
+         
+        <tag>hoa</tag>
+         
+        <tag>room acoustics</tag>
+         
+        <tag>ard</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
+          
+             
+              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://jinnsjj.github.io/note/poletti2005/</loc>
+    <lastmod>2018-11-14T08:27:05.415Z</lastmod>
+    <data>
+        <display>
+        <title>论文笔记 - poletti2005</title>
+        <pubTime>2018-11-13T02:11:01.000Z</pubTime>
+        
+        <tag>sound field reproduction</tag>
+         
+        <tag>spatial audio</tag>
+         
+        <tag>spherical harmonics</tag>
+         
+         
+           
+             
+              <breadCrumb title="note" url="https://jinnsjj.github.io/categories/note/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jinnsjj.github.io/tech/wvtool/</loc>
     <lastmod>2018-11-14T06:17:28.975Z</lastmod>
     <data>
@@ -355,31 +409,6 @@
     </data>
     </url>
 
-    
-  <url>
-    <loc>https://jinnsjj.github.io/note/poletti2005/</loc>
-    <lastmod>2018-11-14T06:13:39.529Z</lastmod>
-    <data>
-        <display>
-        <title>论文笔记 - poletti2005</title>
-        <pubTime>2018-11-13T02:11:01.000Z</pubTime>
-        
-        <tag>sound field reproduction</tag>
-         
-        <tag>spatial audio</tag>
-         
-        <tag>spherical harmonics</tag>
-         
-         
-           
-             
-              <breadCrumb title="note" url="https://jinnsjj.github.io/categories/note/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
     
     
   <url>
