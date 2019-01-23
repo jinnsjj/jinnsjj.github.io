@@ -150,22 +150,17 @@
 
 
 
-  <meta name="description" content="在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。">
-<meta name="keywords" content="HOA,spatial audio,sound field reproduction,空间音频,声场重建">
+  <meta name="description" content="完成了一个基于 ARD 的三维声场仿真程序 -&amp;gt; https://github.com/jinnsjj/ARD-simulator-190113">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HOA声场重建原理">
-<meta property="og:url" content="https://jinnsjj.github.io/tech/audio/something-of-HOA/index.html">
+<meta property="og:title" content="ARD simulator">
+<meta property="og:url" content="https://jinnsjj.github.io/uncategorized/ARD-simulator/index.html">
 <meta property="og:site_name" content="JOHZEN">
-<meta property="og:description" content="在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。">
+<meta property="og:description" content="完成了一个基于 ARD 的三维声场仿真程序 -&amp;gt; https://github.com/jinnsjj/ARD-simulator-190113">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a0596b0e92.png">
-<meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a059786b90.png">
-<meta property="og:image" content="https://i.loli.net/2018/07/14/5b4a059ae5ed3.png">
-<meta property="og:updated_time" content="2018-11-14T06:16:47.097Z">
+<meta property="og:updated_time" content="2019-01-23T04:32:32.095Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HOA声场重建原理">
-<meta name="twitter:description" content="在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。">
-<meta name="twitter:image" content="https://i.loli.net/2018/07/14/5b4a0596b0e92.png">
+<meta name="twitter:title" content="ARD simulator">
+<meta name="twitter:description" content="完成了一个基于 ARD 的三维声场仿真程序 -&amp;gt; https://github.com/jinnsjj/ARD-simulator-190113">
 
 
 
@@ -174,7 +169,7 @@
 
 
 
-  <link rel="canonical" href="https://jinnsjj.github.io/tech/audio/something-of-HOA/"/>
+  <link rel="canonical" href="https://jinnsjj.github.io/uncategorized/ARD-simulator/"/>
 
 
 
@@ -184,7 +179,7 @@
   };
 </script>
 
-  <title>HOA声场重建原理 | JOHZEN</title>
+  <title>ARD simulator | JOHZEN</title>
   
 
 
@@ -413,7 +408,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/tech/audio/something-of-HOA/">
+    <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/uncategorized/ARD-simulator/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jon">
@@ -430,7 +425,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">HOA声场重建原理
+          <h2 class="post-title" itemprop="name headline">ARD simulator
               
             
           </h2>
@@ -455,53 +450,16 @@
                 
               
 
-              <time title="Created: 2018-07-12 23:00:46" itemprop="dateCreated datePublished" datetime="2018-07-12T23:00:46+09:00">2018-07-12</time>
+              <time title="Created: 2019-01-23 13:30:44 / Modified: 13:32:32" itemprop="dateCreated datePublished" datetime="2019-01-23T13:30:44+09:00">2019-01-23</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-11-14 15:16:47" itemprop="dateModified" datetime="2018-11-14T15:16:47+09:00">2018-11-14</time>
               
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">tech</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tech/audio/" itemprop="url" rel="index"><span itemprop="name">audio</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -511,10 +469,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/tech/audio/something-of-HOA/#comments" itemprop="discussionUrl">
+                <a href="/uncategorized/ARD-simulator/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="tech/audio/something-of-HOA/" itemprop="commentCount"></span>
+                        data-disqus-identifier="uncategorized/ARD-simulator/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -522,7 +480,7 @@
 
           
           
-             <span id="/tech/audio/something-of-HOA/" class="leancloud_visitors" data-flag-title="HOA声场重建原理">
+             <span id="/uncategorized/ARD-simulator/" class="leancloud_visitors" data-flag-title="ARD simulator">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -539,8 +497,6 @@
           
 
           
-              <div class="post-description">在空间音频尤其是声场重建的任务中，HOA绝对是最为重要的技术之一，但这个HOA涉及到调和分解等一系列概念，理解起来其实并不容易。最近要写一篇基于HOA的声场重建论文，但在background的时候就感到头疼，不知怎么下手，于是借着这篇文章，回头看看HOA，也好梳理一下自己的思路。</div>
-          
 
         </div>
       </header>
@@ -555,52 +511,8 @@
       
 
       
-        <h2 id="空间音频是什么？"><a href="#空间音频是什么？" class="headerlink" title="空间音频是什么？"></a>空间音频是什么？</h2><p>空间音频很多地方也叫做三维音频，它源于我们人据有分辨声音来源方向的能力。虽然一直是比较冷门的研究方向，但在VR的发展下，空间音频也火了一把，很大程度是因为空间音频在在VR的应用所讲究的沉浸感中扮演着极为重要的作用，当声音的方向与画面不匹配的时候，沉浸感会荡然无存，所以高品质的空间音频也成为了VR研究中很重要的一环。</p>
-<!-- ![](RA_Discover.png) -->
-<p><img src="https://i.loli.net/2018/07/14/5b4a0596b0e92.png" alt="RA_Discover.png"></p>
-<blockquote>
-<p><a href="https://developers.google.com/resonance-audio/discover/overview" target="_blank" rel="noopener">https://developers.google.com/resonance-audio/discover/overview</a></p>
-</blockquote>
-<h2 id="HOA"><a href="#HOA" class="headerlink" title="HOA?"></a>HOA?</h2><p>HOA 全称是 Higher Order Ambisonics，强硬的翻译的话就是高次混响。它最初的目的是要重建空间中声场的分布。我们可以想象一个空间中的一个球面，我们在球的中心，那么从球外传来的声音会在这个球面上有一个投影，这让我们想到，我们可以把球面以外的声音都无视掉，并假设声源分布在这个球面上。用球面上的声源产生的声场来拟合原来生源产生的声场。HOA就是一个这样去拟合声场的方法。</p>
-<!-- ![](speakers-surround-head-3d.png) -->
-<p><img src="https://i.loli.net/2018/07/14/5b4a059786b90.png" alt="speakers-surround-head-3d.png"></p>
-<blockquote>
-<p><a href="https://developers.google.com/resonance-audio/discover/concepts" target="_blank" rel="noopener">https://developers.google.com/resonance-audio/discover/concepts</a></p>
-</blockquote>
-<h2 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h2><h3 id="球面调和函数-Spherical-harmonics"><a href="#球面调和函数-Spherical-harmonics" class="headerlink" title="球面调和函数 Spherical harmonics"></a>球面调和函数 Spherical harmonics</h3><p>球面调和函数也叫球谐函数，它并不好理解，有机会可以详细的聊一聊，这里只做最最最抽象的介绍，力求知其然不求知其所以然。</p>
-<p>这里要做的是类比一下傅里叶变换。我们通常接触的函数都是分布在一维的，每一个 $x$ 对应一个 $f(x)$，我们对 $f(x)$ 进行傅里叶变换会得到 $F(\omega)$。现在我们的目标是一个在球面上分布的函数，我们使用一个球坐标系，球面上的点 $(r,\theta,\phi)$，而对于一个固定大小的球，$r$是一个定值，我们可以暂时只关注$\theta$和$\phi$，那么对于每一组 $(\theta,\phi)$对应一个$f(\theta,\phi)$。傅里叶变换可以将时域信号转化到频域，这样方便我们分析特定频域的信号，对于 $f(\theta,\phi)$，我们只想知道这个函数在空间中一个大概的分布，所以$f(\theta,\phi)$记录的东西无疑太多了，所以我们可以把它转换为 $F_n^m$，这里的 $n$ 和 $m$ 就类似与傅里叶中的 $\omega$。当我们只需要粗略的空间分辨率时，很小的$n$就足够，当需要更精细的空间分辨率时，就需要较大的 $n$ 时的 $F_n^m$，它们会对小的$n$的$F_n^m$的空间的缝隙中进行插值，使空间的分辨率增高。通过球谐分解，我们可以把球面上的函数用更少的数值表达。就如下面这张图，从上至下$n$逐渐增大，对空间的描述能力也逐渐增强。</p>
-<!-- ![spherical harmonics](Spherical_Harmonics.png) -->
-<p><img src="https://i.loli.net/2018/07/14/5b4a059ae5ed3.png" alt="Spherical_Harmonics.png"></p>
-<blockquote>
-<p><a href="https://en.wikipedia.org/wiki/Spherical_harmonics" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Spherical_harmonics</a></p>
-</blockquote>
-<p>基于球谐函数，球面上的任意函数可以被分解为球谐系数：</p>
-<p>$$p(\theta,\phi) = \sum_{n=0}^\infty \sum_{m=-n}^{n} P_n^m Y_n^m(\theta,\phi) $$</p>
-<p>声场中方向的信息都被转换到了球谐因子 $Y_n^m(\theta,\phi)$ 中，这个式子看起来是不是也非常像傅里叶变换呢。</p>
-<h3 id="球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function"><a href="#球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function" class="headerlink" title="球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function"></a>球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function</h3><p>这两个函数的表达式也比较复杂，好在我们通常也不需要记住，只需要知道它门描述了波动方程在球坐标系下的解，它与三个参数有关，对应的上面的球谐函数的阶数 $n$，波的频率球面的半径有关，在之后的数学中我们会用到。贝塞尔函数写作 $j_n(kr)$ 或者 $j_n(\frac{\omega}{c}r)$，$k$是一个波的波数，它等于 $\frac{\omega}{c}$，$\omega$ 表示声音的角频率，$r$表示球面的半径。汉克尔函数类似，但有一类汉克尔函数和二类汉克尔函数，分别表示从内往外传递的出射波和从外往内传播的入射波，写作 $h_n^{(1)}(kr)$ 与 $h_n^{(2)}(kr)$。</p>
-<h3 id="格林函数-Green-function"><a href="#格林函数-Green-function" class="headerlink" title="格林函数 Green function"></a>格林函数 Green function</h3><p>格林函数用于描述在开放空间中（没有障碍物没有反射折射）一个声源到空间另外一点的响应。用$\boldsymbol{x_0}$表示声源的位置，声源到$\boldsymbol{x}$点的传达函数为为 $G(\boldsymbol{x}-\boldsymbol{x_0},\omega) = \dfrac{e^{ik|\boldsymbol{x}-\boldsymbol{x_0}|}}{4\pi|\boldsymbol{x}-\boldsymbol{x_0}|}$。$\omega$表示声音的角频率，格林函数同样有在时域上的表达，可以看作是一个延时函数。</p>
-<h2 id="HOA-1"><a href="#HOA-1" class="headerlink" title="HOA!"></a>HOA!</h2><p>我们之前说到了，HOA的思路是用一个球面上的音源去拟合球内的声场。我们把这个思想在球坐标系中用公式描述出来。对于一个特定频率的声波（角频率为 $\omega$ ）球内一点 $\boldsymbol{x}$，该点的声强是球面$S_0$上声源的在该点的响应的叠加：</p>
-<p>$$p(\boldsymbol{x},\omega) = \int_{\Omega_0 \in S_0} D(\boldsymbol{x_0},\omega) G(\boldsymbol{x}-\boldsymbol{x_0},\omega)d\Omega_0$$</p>
-<p>这里 $D(\boldsymbol{x_0},\omega)$ 表示了球面分布的声源的驱动信号(driving signal)，$\boldsymbol{x_0}$ 则代表着它们对应的坐标。</p>
-<p>于此同时，我们也可以对 $p(\boldsymbol{x},\omega)$ 进行球谐分解，把它写作：</p>
-<p>$$p(r,\theta,\phi,\omega) = \sum_{n=0}^\infty \sum_{m=-n}^{n} j_n(\frac{\omega}{c}r) P_n^m(\omega) Y_n^m(\theta,\phi)$$</p>
-<p>这一步，我们也叫做<strong>声场的编码</strong>，$p(\boldsymbol{x},\omega)$可以是录音得到的，也可以是仿真生成的。</p>
-<blockquote>
-<p>因为$j_n(\frac{\omega}{c}r)$可能等于0，在某些频率无法得到$P_n^m(\omega)$,这时候就会遇到禁止频率的问题。这也是声场重建中一个比较重要的问题。</p>
-</blockquote>
-<p>同样 $G(\boldsymbol{x}-\boldsymbol{x_0},\omega)$ 也进行对应的球谐变换。如果我们用$L$个扬声器重建声场，那么上面这个式子可以写作</p>
-<p>$$p(r,\theta,\phi,\omega) = \sum_{n=0}^\infty \sum_{m=-n}^{n} j_n(\frac{\omega}{c}r) { \sum_{\ell=1}^{L} D_\ell(\boldsymbol{x_0},\omega)G_{nm}^{\ell}(\omega) } Y_n^m(\theta,\phi)$$</p>
-<!-- $$P_n^m(r,\omega) =  2\pi r_0 \sqrt{\frac{4\pi}{2n+1}} D_n^m(r_0,\omega) G_n^m(r,\omega)$$ -->
-<p>$$P_n^m = \boldsymbol{C(\omega)} \cdot \boldsymbol{D(\boldsymbol x_0,\omega)}$$</p>
-<p>$$\boldsymbol{C(\omega)} = [G_{nm}^{1}(\omega) \quad G_{nm}^{2}(\omega) \quad \cdots \quad G_{nm}^{L}(\omega)]$$</p>
-<p>这样通过求矩阵的逆，我们就可以求得驱动信号$D(\boldsymbol x_0,\omega)$，从而重建声场。这也是HOA的<strong>解码</strong>。</p>
-<blockquote>
-<p>同时我们也可以避免矩阵的求逆，直接算出驱动函数的解析解。这里就不展开了。</p>
-</blockquote>
-<!-- <div class="note warning"><p>UNDER CONSTRUCTION…</p></div> –&gt;
-<hr>
-<blockquote class="blockquote-center"><p><strong>行路难·其一</strong><br>李白<br>金樽清酒斗十千，玉盘珍羞直万钱。停杯投箸不能食，拔剑四顾心茫然。<br>欲渡黄河冰塞川，将登太行雪满山。闲来垂钓碧溪上，忽复乘舟梦日边。<br>行路难！行路难！多歧路，今安在？长风破浪会有时，直挂云帆济沧海。</p>
-</blockquote>-->
+        <p>完成了一个基于 ARD 的三维声场仿真程序 -&gt; <a href="https://github.com/jinnsjj/ARD-simulator-190113" target="_blank" rel="noopener">https://github.com/jinnsjj/ARD-simulator-190113</a></p>
+
       
     </div>
 
@@ -647,16 +559,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/sound-field-reproduction/" rel="tag"><i class="fa fa-tag"></i> sound field reproduction</a>
-          
-            <a href="/tags/spatial-audio/" rel="tag"><i class="fa fa-tag"></i> spatial audio</a>
-          
-            <a href="/tags/HOA/" rel="tag"><i class="fa fa-tag"></i> HOA</a>
-          
-        </div>
-      
 
       
       
@@ -666,8 +568,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uncategorized/hexo-next-note/" rel="next" title="在hexo-NexT中插入note提示块">
-                <i class="fa fa-chevron-left"></i> 在hexo-NexT中插入note提示块
+              <a href="/tech/audio/pre-defense/" rel="next" title="pre-defense">
+                <i class="fa fa-chevron-left"></i> pre-defense
               </a>
             
           </div>
@@ -675,10 +577,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/tech/audio/speech-emotion-recognition-survey/" rel="prev" title="语音情感识别探讨">
-                语音情感识别探讨 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -743,17 +641,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -911,22 +800,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#空间音频是什么？"><span class="nav-number">1.</span> <span class="nav-text">空间音频是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HOA"><span class="nav-number">2.</span> <span class="nav-text">HOA?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关知识"><span class="nav-number">3.</span> <span class="nav-text">相关知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#球面调和函数-Spherical-harmonics"><span class="nav-number">3.1.</span> <span class="nav-text">球面调和函数 Spherical harmonics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#球谐贝塞尔函数-amp-汉克尔函数-Spherical-Bessel-function-Spherical-Hanker-function"><span class="nav-number">3.2.</span> <span class="nav-text">球谐贝塞尔函数&amp;汉克尔函数 Spherical Bessel function, Spherical Hanker function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格林函数-Green-function"><span class="nav-number">3.3.</span> <span class="nav-text">格林函数 Green function</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HOA-1"><span class="nav-number">4.</span> <span class="nav-text">HOA!</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -1093,9 +966,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://jinnsjj.github.io/tech/audio/something-of-HOA/';
-        this.page.identifier = 'tech/audio/something-of-HOA/';
-        this.page.title = 'HOA声场重建原理';
+        this.page.url = 'https://jinnsjj.github.io/uncategorized/ARD-simulator/';
+        this.page.identifier = 'uncategorized/ARD-simulator/';
+        this.page.title = 'ARD simulator';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
