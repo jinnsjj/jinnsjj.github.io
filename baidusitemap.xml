@@ -4,6 +4,49 @@
 
     
   <url>
+    <loc>https://jinnsjj.github.io/tech/audio/rt-ref/</loc>
+    <lastmod>2019-01-24T15:49:43.412Z</lastmod>
+    <data>
+        <display>
+        <title>混响时间的资料</title>
+        <pubTime>2019-01-24T15:31:52.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
+          
+             
+              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jinnsjj.github.io/tech/audio/ARD-simulator/</loc>
+    <lastmod>2019-01-24T15:33:19.207Z</lastmod>
+    <data>
+        <display>
+        <title>ARD simulator</title>
+        <pubTime>2019-01-23T04:30:44.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
+          
+             
+              <breadCrumb title="audio" url="https://jinnsjj.github.io/categories/tech/audio/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>https://jinnsjj.github.io/note/poletti2005/</loc>
     <lastmod>2019-01-23T04:34:20.232Z</lastmod>
     <data>
@@ -26,22 +69,6 @@
     </data>
     </url>
 
-    
-  <url>
-    <loc>https://jinnsjj.github.io/uncategorized/ARD-simulator/</loc>
-    <lastmod>2019-01-23T04:32:32.095Z</lastmod>
-    <data>
-        <display>
-        <title>ARD simulator</title>
-        <pubTime>2019-01-23T04:30:44.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/pre-defense/</loc>

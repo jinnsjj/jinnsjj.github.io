@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jinnsjj.github.io/"/>
-  <updated>2019-01-23T04:32:32.095Z</updated>
+  <updated>2019-01-24T15:49:43.412Z</updated>
   <id>https://jinnsjj.github.io/</id>
   
   <author>
@@ -17,22 +17,52 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ARD simulator</title>
-    <link href="https://jinnsjj.github.io/uncategorized/ARD-simulator/"/>
-    <id>https://jinnsjj.github.io/uncategorized/ARD-simulator/</id>
-    <published>2019-01-23T04:30:44.000Z</published>
-    <updated>2019-01-23T04:32:32.095Z</updated>
+    <title>混响时间的资料</title>
+    <link href="https://jinnsjj.github.io/tech/audio/rt-ref/"/>
+    <id>https://jinnsjj.github.io/tech/audio/rt-ref/</id>
+    <published>2019-01-24T15:31:52.000Z</published>
+    <updated>2019-01-24T15:49:43.412Z</updated>
     
-    <content type="html"><![CDATA[<p>完成了一个基于 ARD 的三维声场仿真程序 -&gt; <a href="https://github.com/jinnsjj/ARD-simulator-190113" target="_blank" rel="noopener">https://github.com/jinnsjj/ARD-simulator-190113</a></p>]]></content>
+    <content type="html"><![CDATA[<p>-&gt; <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Acoustic/revtim.html" target="_blank" rel="noopener">http://hyperphysics.phy-astr.gsu.edu/hbase/Acoustic/revtim.html</a></p><h2 id="Highlights"><a href="#Highlights" class="headerlink" title="Highlights"></a>Highlights</h2><ul><li>$\text{RT}_{60}$: time to drop $60~\text{dB}$ below original level.</li><li>For a general purpose auditorium for both speech and music: 1.5 to 2.5 seconds.<ul><li>Longer RT: richer musical sound, more difficulty understanding speech.</li><li>Shorter RT: clearer speech, loss of richness and fullness.</li></ul></li><li>Reverberation time approximation: Sabine formula, $\text{RT}_{60} = 0.16 \frac{V}{S_e}$, $S_e$ is the effective absorbing area, $a$ is the absorption coefficient. $S_e=a_1S_1+a_2S_2+a_3S_3+\cdots$. -&gt; <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Acoustic/revmod.html#c2" target="_blank" rel="noopener">http://hyperphysics.phy-astr.gsu.edu/hbase/Acoustic/revmod.html#c2</a></li><li>Examples of reverberation times:<ul><li>Vienna, Musikvereinsaal: 2.05 seconds</li><li>Boston, Symphony Hall: 1.8 seconds</li><li>New York, Carnegie Hall: 1.7 seconds</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;完成了一个基于 ARD 的三维声场仿真程序 -&amp;gt; &lt;a href=&quot;https://github.com/jinnsjj/ARD-simulator-190113&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/j
+        &lt;p&gt;-&amp;gt; &lt;a href=&quot;http://hyperphysics.phy-astr.gsu.edu/hbase/Acoustic/revtim.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://hyperphysics.phy-as
       
     
     </summary>
+    
+      <category term="tech" scheme="https://jinnsjj.github.io/categories/tech/"/>
+    
+      <category term="audio" scheme="https://jinnsjj.github.io/categories/tech/audio/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ARD simulator</title>
+    <link href="https://jinnsjj.github.io/tech/audio/ARD-simulator/"/>
+    <id>https://jinnsjj.github.io/tech/audio/ARD-simulator/</id>
+    <published>2019-01-23T04:30:44.000Z</published>
+    <updated>2019-01-24T15:33:19.207Z</updated>
+    
+    <content type="html"><![CDATA[<p>完成了一个基于 ARD 的三维声场仿真程序 -&gt; <a href="https://jinnsjj.github.io/ARD-simulator/">https://jinnsjj.github.io/ARD-simulator/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;完成了一个基于 ARD 的三维声场仿真程序 -&amp;gt; &lt;a href=&quot;https://jinnsjj.github.io/ARD-simulator/&quot;&gt;https://jinnsjj.github.io/ARD-simulator/&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="tech" scheme="https://jinnsjj.github.io/categories/tech/"/>
+    
+      <category term="audio" scheme="https://jinnsjj.github.io/categories/tech/audio/"/>
     
     
   </entry>
@@ -545,24 +575,6 @@
       <category term="leetcode" scheme="https://jinnsjj.github.io/tags/leetcode/"/>
     
       <category term="c++" scheme="https://jinnsjj.github.io/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://jinnsjj.github.io/uncategorized/hello-world/"/>
-    <id>https://jinnsjj.github.io/uncategorized/hello-world/</id>
-    <published>1998-12-31T15:00:00.000Z</published>
-    <updated>2018-10-17T07:46:56.164Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
     
   </entry>
   
