@@ -150,13 +150,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="JOHZEN">
-<meta property="og:url" content="https://jinnsjj.github.io/categories/coding/index.html">
+  <meta name="description" content="37. Sudoku Solver求解数独。前两天做了验证数独那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。 我之前的版本，dfs">
+<meta name="keywords" content="leetcode,c++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode-37 Sudoku Solver">
+<meta property="og:url" content="https://jinnsjj.github.io/leetcode/Sudoku-Solver/index.html">
 <meta property="og:site_name" content="JOHZEN">
+<meta property="og:description" content="37. Sudoku Solver求解数独。前两天做了验证数独那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。 我之前的版本，dfs">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-02-03T03:01:25.542Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JOHZEN">
+<meta name="twitter:title" content="LeetCode-37 Sudoku Solver">
+<meta name="twitter:description" content="37. Sudoku Solver求解数独。前两天做了验证数独那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。 我之前的版本，dfs">
 
 
 
@@ -165,7 +170,7 @@
 
 
 
-  <link rel="canonical" href="https://jinnsjj.github.io/categories/coding/"/>
+  <link rel="canonical" href="https://jinnsjj.github.io/leetcode/Sudoku-Solver/"/>
 
 
 
@@ -175,7 +180,7 @@
   };
 </script>
 
-  <title>Category: coding | JOHZEN</title>
+  <title>LeetCode-37 Sudoku Solver | JOHZEN</title>
   
 
 
@@ -231,7 +236,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -312,7 +317,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories</a>
   </li>
@@ -384,119 +389,299 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>coding<small>Category</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jinnsjj.github.io/leetcode/Sudoku-Solver/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JOHZEN">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/coding/Sudoku-Solver/" itemprop="url">
-              
-                <span itemprop="name">LeetCode-37 Sudoku Solver</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">LeetCode-37 Sudoku Solver
+              
+            
+          </h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-11T21:18:58+09:00"
-              content="2018-07-11" >
-          07-11
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-11 21:18:58" itemprop="dateCreated datePublished" datetime="2018-07-11T21:18:58+09:00">2018-07-11</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-02-03 12:01:25" itemprop="dateModified" datetime="2019-02-03T12:01:25+09:00">2019-02-03</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/leetcode/Sudoku-Solver/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="leetcode/Sudoku-Solver/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/leetcode/Sudoku-Solver/" class="leancloud_visitors" data-flag-title="LeetCode-37 Sudoku Solver">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/coding/Valid-Sudoku/" itemprop="url">
-              
-                <span itemprop="name">LeetCode-36 Valid Sudoku</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-11T21:18:41+09:00"
-              content="2018-07-11" >
-          07-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <h1 id="37-Sudoku-Solver"><a href="#37-Sudoku-Solver" class="headerlink" title="37. Sudoku Solver"></a><a href="https://leetcode.com/problems/sudoku-solver/description/" target="_blank" rel="noopener">37. Sudoku Solver</a></h1><p>求解数独。前两天做了<a href="https://leetcode.com/problems/valid-sudoku/description/" target="_blank" rel="noopener">验证数独</a>那道题，当时对于遍历hash的使用有了一些感悟，但看这道题时候特别头疼。这两天HackerRank也刷了一下，对于DFS和BFS的理解加深了一些，渐渐的思路就变得清晰。其实是很暴力的解法，但把他转化为代码，对几天前的我来说还有一些难度。经过这两天的学习，总算是可以勉强完成，但参考别人的答案后，果然进步空间还比较大。</p>
+<p>我之前的版本，dfs函数没有加入i与j两个变量，每次调用都重新扫描一遍需要填的空，这导致效率很低，引入i和j后果然好了很多。另外之前的dfs是void不返回值，通过一个cnt变量计算总共的空数，当cnt等于0时停止，但由于我们需要在中途中断dfs函数（找到正确的解时，否则答案会被填回’.’），采用void的类型也会比较难以中断。借鉴了别人的解法，让dfs返回一个值来判定是否完成整个数独，这样好了很多。</p>
+<a id="more"></a>
+<p><strong>算法解释：</strong> </p>
+<ul>
+<li>solveSudoku： 功能函数入口。</li>
+<li>dfs：深度优先搜索函数。<ul>
+<li>输入整个表和一个坐标。</li>
+<li>如果该坐标已有数字，搜索下一个格子<code>j++</code>；当<code>j==9</code>，说明这一排已搜索完，搜索下一排的第一个格子<code>i++, j=0</code>；如果所有的行都已搜索完，说明所有的格子都被正确的填入了数字，则返回<code>true</code>。</li>
+<li>如果该坐标下没有数字<code>&#39;.&#39;</code>，从1开始填入，并验证该数字是否可行<code>isValid(board, i, j)</code>。如果不可行，擦除填入的数字并填入下一个数字直到9。如果可行，搜索下一个格子，并直到整张表被填完。</li>
+<li>如果一个没有填的格子所有的数字都不可行，代表之前填的数字有错，那么返回<code>false</code>。</li>
+</ul>
+</li>
+<li>isValid：验证某个格子里的数字是否可行，是之前验证数独的简化版，因为只用验证特定位置的数字。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">solveSudoku</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board)</span> </span>&#123;</span><br><span class="line">        dfs(board, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i&gt;=<span class="number">9</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (j&gt;=<span class="number">9</span>) <span class="keyword">return</span> dfs(board, i+<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (board[i][j]==<span class="string">'.'</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> num = <span class="number">1</span>; num &lt;= <span class="number">9</span>; num++)&#123;</span><br><span class="line">                board[i][j] = (<span class="keyword">char</span>)(num+<span class="string">'0'</span>);</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span>(isValid(board, i, j))&#123;</span><br><span class="line">                    <span class="keyword">if</span>(dfs(board, i, j+<span class="number">1</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                </span><br><span class="line">                board[i][j] = <span class="string">'.'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> dfs(board, i, j+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> col = <span class="number">0</span>; col &lt; <span class="number">9</span>; col++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (col != j &amp;&amp; board[i][j]==board[i][col]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> row = <span class="number">0</span>; row &lt; <span class="number">9</span>; row++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (row != i &amp;&amp; board[i][j]==board[row][j]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> row = i / <span class="number">3</span> * <span class="number">3</span>; row &lt; i / <span class="number">3</span> * <span class="number">3</span> + <span class="number">3</span>; ++row) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> col = j / <span class="number">3</span> * <span class="number">3</span>; col &lt; j / <span class="number">3</span> * <span class="number">3</span> + <span class="number">3</span>; ++col) &#123;</span><br><span class="line">                <span class="keyword">if</span> ((row != i || col != j) &amp;&amp; board[i][j] == board[row][col]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><blockquote>
+<p><a href="http://www.cnblogs.com/grandyang/p/4421852.html" target="_blank" rel="noopener">http://www.cnblogs.com/grandyang/p/4421852.html</a></p>
+</blockquote>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Jon WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Jon Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/leetcode/" rel="tag"><i class="fa fa-tag"></i> leetcode</a>
+          
+            <a href="/tags/c/" rel="tag"><i class="fa fa-tag"></i> c++</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/leetcode/Valid-Sudoku/" rel="next" title="LeetCode-36 Valid Sudoku">
+                <i class="fa fa-chevron-left"></i> LeetCode-36 Valid Sudoku
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/uncategorized/build-projects-page/" rel="prev" title="搭建hexo+next博客并把项目主页放在上面">
+                搭建hexo+next博客并把项目主页放在上面 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b4608edadb7a028" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -517,8 +702,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -537,7 +731,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -560,7 +754,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -623,7 +819,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">25</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -676,6 +878,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#37-Sudoku-Solver"><span class="nav-number">1.</span> <span class="nav-text">37. Sudoku Solver</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.1.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -821,6 +1039,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
@@ -835,6 +1057,23 @@
     <script id="dsq-count-scr" src="https://jinnsjj-github-io.disqus.com/count.js" async></script>
   
 
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://jinnsjj.github.io/leetcode/Sudoku-Solver/';
+        this.page.identifier = 'leetcode/Sudoku-Solver/';
+        this.page.title = 'LeetCode-37 Sudoku Solver';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://jinnsjj-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
   
 
 

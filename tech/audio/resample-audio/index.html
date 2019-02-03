@@ -150,18 +150,18 @@
 
 
 
-  <meta name="description" content="python中的 librosa.resample() 让我们可以非常方便的对音频文件进行重采样。 1234567891011import librosa# to install librosa package# &amp;gt; conda install -c conda-forge librosa filename = &apos;ClapSound.wav&apos;newFilename = &apos;ClapSound_">
-<meta name="keywords" content="signal processing,python,librosa">
+  <meta name="description" content="Update: 一个音频重采样并保存的脚本。    python中的 librosa.resample() 让我们可以非常方便的对音频文件进行重采样。 1234567891011import librosa# to install librosa package# &amp;gt; conda install -c conda-forge librosa filename = &apos;ClapSound.wav">
+<meta name="keywords" content="signal processing,librosa,python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="音频重采样 python+librosa">
 <meta property="og:url" content="https://jinnsjj.github.io/tech/audio/resample-audio/index.html">
 <meta property="og:site_name" content="JOHZEN">
-<meta property="og:description" content="python中的 librosa.resample() 让我们可以非常方便的对音频文件进行重采样。 1234567891011import librosa# to install librosa package# &amp;gt; conda install -c conda-forge librosa filename = &apos;ClapSound.wav&apos;newFilename = &apos;ClapSound_">
+<meta property="og:description" content="Update: 一个音频重采样并保存的脚本。    python中的 librosa.resample() 让我们可以非常方便的对音频文件进行重采样。 1234567891011import librosa# to install librosa package# &amp;gt; conda install -c conda-forge librosa filename = &apos;ClapSound.wav">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-14T06:16:34.249Z">
+<meta property="og:updated_time" content="2019-01-25T06:21:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="音频重采样 python+librosa">
-<meta name="twitter:description" content="python中的 librosa.resample() 让我们可以非常方便的对音频文件进行重采样。 1234567891011import librosa# to install librosa package# &amp;gt; conda install -c conda-forge librosa filename = &apos;ClapSound.wav&apos;newFilename = &apos;ClapSound_">
+<meta name="twitter:description" content="Update: 一个音频重采样并保存的脚本。    python中的 librosa.resample() 让我们可以非常方便的对音频文件进行重采样。 1234567891011import librosa# to install librosa package# &amp;gt; conda install -c conda-forge librosa filename = &apos;ClapSound.wav">
 
 
 
@@ -468,7 +468,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-11-14 15:16:34" itemprop="dateModified" datetime="2018-11-14T15:16:34+09:00">2018-11-14</time>
+                <time title="Modified: 2019-01-25 15:21:31" itemprop="dateModified" datetime="2019-01-25T15:21:31+09:00">2019-01-25</time>
               
             
           </span>
@@ -549,7 +549,12 @@
       
 
       
-        <p>python中的 <code>librosa.resample()</code> 让我们可以非常方便的对音频文件进行重采样。</p>
+        <p>Update:</p>
+<p>一个音频重采样并保存的脚本。</p>
+<script src="https://gist.github.com/jinnsjj/3d2f2b0b3ba85e455f9b7d0eae1e82a7.js"></script>
+
+<hr>
+<p>python中的 <code>librosa.resample()</code> 让我们可以非常方便的对音频文件进行重采样。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> librosa</span><br><span class="line"><span class="comment"># to install librosa package</span></span><br><span class="line"><span class="comment"># &gt; conda install -c conda-forge librosa </span></span><br><span class="line"></span><br><span class="line">filename = <span class="string">'ClapSound.wav'</span></span><br><span class="line">newFilename = <span class="string">'ClapSound_8k.wav'</span></span><br><span class="line"></span><br><span class="line">y, sr = librosa.load(filename, sr=<span class="number">48000</span>)</span><br><span class="line">y_8k = librosa.resample(y,sr,<span class="number">8000</span>)</span><br><span class="line"></span><br><span class="line">librosa.output.write_wav(newFilename, y_8k, <span class="number">8000</span>)</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>目标是一个48kHz的音频</p>
@@ -610,9 +615,9 @@
           
             <a href="/tags/signal-processing/" rel="tag"><i class="fa fa-tag"></i> signal processing</a>
           
-            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
-          
             <a href="/tags/librosa/" rel="tag"><i class="fa fa-tag"></i> librosa</a>
+          
+            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
           
         </div>
       
@@ -722,7 +727,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -745,7 +750,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -808,7 +815,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">25</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

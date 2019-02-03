@@ -2,163 +2,170 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jinnsjj.github.io/tech/audio/rt-ref/</loc>
+    <loc>https://jinnsjj.github.io/leetcode/Sudoku-Solver/</loc>
     
-    <lastmod>2019-01-24T15:49:43.412Z</lastmod>
+    <lastmod>2019-02-03T03:01:25.542Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinnsjj.github.io/leetcode/Valid-Sudoku/</loc>
+    
+    <lastmod>2019-02-03T03:01:19.557Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinnsjj.github.io/tech/coding/avoid-vector-bool/</loc>
+    
+    <lastmod>2019-02-03T03:00:29.119Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/ARD-simulator/</loc>
     
-    <lastmod>2019-01-24T15:33:19.207Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/projects/index.html</loc>
-    
-    <lastmod>2019-01-23T12:28:03.788Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/note/poletti2005/</loc>
-    
-    <lastmod>2019-01-23T04:34:20.232Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/tech/audio/pre-defense/</loc>
-    
-    <lastmod>2018-12-06T04:52:01.168Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/about/index.html</loc>
-    
-    <lastmod>2018-11-17T05:32:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/tech/wvtool/</loc>
-    
-    <lastmod>2018-11-14T06:17:28.975Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/coding/Valid-Sudoku/</loc>
-    
-    <lastmod>2018-11-14T06:17:25.208Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/tech/UnityResourceLoad/</loc>
-    
-    <lastmod>2018-11-14T06:17:19.481Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/coding/Sudoku-Solver/</loc>
-    
-    <lastmod>2018-11-14T06:17:14.095Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/tech/audio/speech-emotion-recognition-survey/</loc>
-    
-    <lastmod>2018-11-14T06:17:03.425Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/tech/audio/spatially-oriented-format-for-acoustics/</loc>
-    
-    <lastmod>2018-11-14T06:16:52.591Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/tech/audio/something-of-HOA/</loc>
-    
-    <lastmod>2018-11-14T06:16:47.097Z</lastmod>
+    <lastmod>2019-01-26T05:27:34.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/resample-audio/</loc>
     
-    <lastmod>2018-11-14T06:16:34.249Z</lastmod>
+    <lastmod>2019-01-25T06:21:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinnsjj.github.io/tech/audio/rt-ref/</loc>
+    
+    <lastmod>2019-01-24T15:49:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinnsjj.github.io/projects/index.html</loc>
+    
+    <lastmod>2019-01-23T12:28:03.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinnsjj.github.io/note/poletti2005/</loc>
+    
+    <lastmod>2019-01-23T04:34:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinnsjj.github.io/tech/audio/pre-defense/</loc>
+    
+    <lastmod>2018-12-06T04:52:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinnsjj.github.io/about/index.html</loc>
+    
+    <lastmod>2018-11-17T05:32:59.503Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinnsjj.github.io/tech/wvtool/</loc>
+    
+    <lastmod>2018-11-14T06:17:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinnsjj.github.io/tech/UnityResourceLoad/</loc>
+    
+    <lastmod>2018-11-14T06:17:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinnsjj.github.io/tech/audio/speech-emotion-recognition-survey/</loc>
+    
+    <lastmod>2018-11-14T06:17:03.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinnsjj.github.io/tech/audio/spatially-oriented-format-for-acoustics/</loc>
+    
+    <lastmod>2018-11-14T06:16:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jinnsjj.github.io/tech/audio/something-of-HOA/</loc>
+    
+    <lastmod>2018-11-14T06:16:47.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/meditation/meditation/</loc>
     
-    <lastmod>2018-11-14T06:16:26.159Z</lastmod>
+    <lastmod>2018-11-14T06:16:26.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/matlab-audio-lowpass/</loc>
     
-    <lastmod>2018-11-14T06:16:20.521Z</lastmod>
+    <lastmod>2018-11-14T06:16:20.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/tech/linux-useless-toy/</loc>
     
-    <lastmod>2018-11-14T06:16:15.225Z</lastmod>
+    <lastmod>2018-11-14T06:16:15.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/librosa-load/</loc>
     
-    <lastmod>2018-11-14T06:16:07.809Z</lastmod>
+    <lastmod>2018-11-14T06:16:07.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/librosa-audio/</loc>
     
-    <lastmod>2018-11-14T06:15:56.377Z</lastmod>
+    <lastmod>2018-11-14T06:15:56.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/hexo-next-note/</loc>
     
-    <lastmod>2018-11-14T06:15:49.088Z</lastmod>
+    <lastmod>2018-11-14T06:15:49.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/cconv/</loc>
     
-    <lastmod>2018-11-14T06:15:23.209Z</lastmod>
+    <lastmod>2018-11-14T06:15:23.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/hello-world/</loc>
     
-    <lastmod>2018-10-17T07:46:56.164Z</lastmod>
+    <lastmod>2018-10-17T07:46:56.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/build-projects-page/</loc>
     
-    <lastmod>2018-10-17T03:22:30.495Z</lastmod>
+    <lastmod>2018-10-17T03:22:30.000Z</lastmod>
     
   </url>
   
