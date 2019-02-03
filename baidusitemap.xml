@@ -4,6 +4,33 @@
 
     
   <url>
+    <loc>https://jinnsjj.github.io/tech/coding/avoid-vector-bool/</loc>
+    <lastmod>2019-02-03T03:05:07.111Z</lastmod>
+    <data>
+        <display>
+        <title>避免使用 vector-bool</title>
+        <pubTime>2019-02-03T02:56:09.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+        <tag>vector</tag>
+         
+        <tag>STL</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
+          
+             
+              <breadCrumb title="coding" url="https://jinnsjj.github.io/categories/tech/coding/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jinnsjj.github.io/leetcode/Sudoku-Solver/</loc>
     <lastmod>2019-02-03T03:01:25.542Z</lastmod>
     <data>
@@ -41,33 +68,6 @@
            
              
               <breadCrumb title="leetcode" url="https://jinnsjj.github.io/categories/leetcode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://jinnsjj.github.io/tech/coding/avoid-vector-bool/</loc>
-    <lastmod>2019-02-03T03:00:29.119Z</lastmod>
-    <data>
-        <display>
-        <title>避免使用 vector<bool></title>
-        <pubTime>2019-02-03T02:56:09.000Z</pubTime>
-        
-        <tag>C++</tag>
-         
-        <tag>vector</tag>
-         
-        <tag>STL</tag>
-         
-         
-           
-             
-              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
-          
-             
-              <breadCrumb title="coding" url="https://jinnsjj.github.io/categories/tech/coding/"/>
           
         </display>
     </data>

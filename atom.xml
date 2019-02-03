@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jinnsjj.github.io/"/>
-  <updated>2019-02-03T03:00:29.119Z</updated>
+  <updated>2019-02-03T03:05:07.111Z</updated>
   <id>https://jinnsjj.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>避免使用 vector&lt;bool&gt;</title>
+    <title>避免使用 vector-bool</title>
     <link href="https://jinnsjj.github.io/tech/coding/avoid-vector-bool/"/>
     <id>https://jinnsjj.github.io/tech/coding/avoid-vector-bool/</id>
     <published>2019-02-03T02:56:09.000Z</published>
-    <updated>2019-02-03T03:00:29.119Z</updated>
+    <updated>2019-02-03T03:05:07.111Z</updated>
     
     <content type="html"><![CDATA[<p><code>vector&lt;bool&gt;</code> 在STL中被优化为每个bool之占用一个bit而不是一个字节的内存，这导致地址可能不能被正确的返回，所以要避免 <code>vector&lt;bool&gt;</code> 的使用，可以用 <code>vector&lt;int&gt;</code> 代替。</p>]]></content>
     

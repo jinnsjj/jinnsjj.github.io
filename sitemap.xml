@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jinnsjj.github.io/tech/coding/avoid-vector-bool/</loc>
+    
+    <lastmod>2019-02-03T03:05:07.111Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jinnsjj.github.io/leetcode/Sudoku-Solver/</loc>
     
     <lastmod>2019-02-03T03:01:25.542Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://jinnsjj.github.io/leetcode/Valid-Sudoku/</loc>
     
     <lastmod>2019-02-03T03:01:19.557Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/tech/coding/avoid-vector-bool/</loc>
-    
-    <lastmod>2019-02-03T03:00:29.119Z</lastmod>
     
   </url>
   
