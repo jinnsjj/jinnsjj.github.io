@@ -4,8 +4,31 @@
 
     
   <url>
+    <loc>https://jinnsjj.github.io/tech/coding/skip-getline/</loc>
+    <lastmod>2019-02-10T05:24:11.338Z</lastmod>
+    <data>
+        <display>
+        <title>cin 后使用 getline()</title>
+        <pubTime>2019-02-10T05:18:25.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://jinnsjj.github.io/categories/tech/"/>
+          
+             
+              <breadCrumb title="coding" url="https://jinnsjj.github.io/categories/tech/coding/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jinnsjj.github.io/tech/coding/avoid-vector-bool/</loc>
-    <lastmod>2019-02-03T03:05:07.111Z</lastmod>
+    <lastmod>2019-02-03T03:05:07.000Z</lastmod>
     <data>
         <display>
         <title>避免使用 vector-bool</title>
@@ -32,7 +55,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/leetcode/Sudoku-Solver/</loc>
-    <lastmod>2019-02-03T03:01:25.542Z</lastmod>
+    <lastmod>2019-02-03T03:01:25.000Z</lastmod>
     <data>
         <display>
         <title>LeetCode-37 Sudoku Solver</title>
@@ -54,7 +77,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/leetcode/Valid-Sudoku/</loc>
-    <lastmod>2019-02-03T03:01:19.557Z</lastmod>
+    <lastmod>2019-02-03T03:01:19.000Z</lastmod>
     <data>
         <display>
         <title>LeetCode-36 Valid Sudoku</title>
@@ -76,7 +99,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/ARD-simulator/</loc>
-    <lastmod>2019-01-26T05:27:34.000Z</lastmod>
+    <lastmod>2019-01-26T05:27:34.879Z</lastmod>
     <data>
         <display>
         <title>ARD simulator</title>
@@ -97,7 +120,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/resample-audio/</loc>
-    <lastmod>2019-01-25T06:21:31.000Z</lastmod>
+    <lastmod>2019-01-25T06:21:31.489Z</lastmod>
     <data>
         <display>
         <title>音频重采样 python+librosa</title>
@@ -124,7 +147,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/rt-ref/</loc>
-    <lastmod>2019-01-24T15:49:43.000Z</lastmod>
+    <lastmod>2019-01-24T15:49:43.412Z</lastmod>
     <data>
         <display>
         <title>混响时间的资料</title>
@@ -146,7 +169,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/note/poletti2005/</loc>
-    <lastmod>2019-01-23T04:34:20.000Z</lastmod>
+    <lastmod>2019-01-23T04:34:20.232Z</lastmod>
     <data>
         <display>
         <title>论文笔记 - HOA 的必读论文 poletti2005</title>
@@ -170,7 +193,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/pre-defense/</loc>
-    <lastmod>2018-12-06T04:52:01.000Z</lastmod>
+    <lastmod>2018-12-06T04:52:01.168Z</lastmod>
     <data>
         <display>
         <title>pre-defense</title>
@@ -200,7 +223,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/wvtool/</loc>
-    <lastmod>2018-11-14T06:17:28.000Z</lastmod>
+    <lastmod>2018-11-14T06:17:28.975Z</lastmod>
     <data>
         <display>
         <title>Matlab 窗可视化工具 wvtool</title>
@@ -220,7 +243,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/UnityResourceLoad/</loc>
-    <lastmod>2018-11-14T06:17:19.000Z</lastmod>
+    <lastmod>2018-11-14T06:17:19.481Z</lastmod>
     <data>
         <display>
         <title>Unity 读取资源文件 Resources.Load()</title>
@@ -242,7 +265,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/speech-emotion-recognition-survey/</loc>
-    <lastmod>2018-11-14T06:17:03.000Z</lastmod>
+    <lastmod>2018-11-14T06:17:03.425Z</lastmod>
     <data>
         <display>
         <title>语音情感识别探讨</title>
@@ -265,7 +288,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/spatially-oriented-format-for-acoustics/</loc>
-    <lastmod>2018-11-14T06:16:52.000Z</lastmod>
+    <lastmod>2018-11-14T06:16:52.591Z</lastmod>
     <data>
         <display>
         <title>spatially oriented format for acoustics</title>
@@ -290,7 +313,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/something-of-HOA/</loc>
-    <lastmod>2018-11-14T06:16:47.000Z</lastmod>
+    <lastmod>2018-11-14T06:16:47.097Z</lastmod>
     <data>
         <display>
         <title>HOA声场重建原理</title>
@@ -317,7 +340,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/meditation/meditation/</loc>
-    <lastmod>2018-11-14T06:16:26.000Z</lastmod>
+    <lastmod>2018-11-14T06:16:26.159Z</lastmod>
     <data>
         <display>
         <title>冥想</title>
@@ -335,7 +358,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/matlab-audio-lowpass/</loc>
-    <lastmod>2018-11-14T06:16:20.000Z</lastmod>
+    <lastmod>2018-11-14T06:16:20.521Z</lastmod>
     <data>
         <display>
         <title>Matlab 音频低通滤波</title>
@@ -362,7 +385,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/linux-useless-toy/</loc>
-    <lastmod>2018-11-14T06:16:15.000Z</lastmod>
+    <lastmod>2018-11-14T06:16:15.225Z</lastmod>
     <data>
         <display>
         <title>linux 上的小玩具 cmatrix 和 cowsay</title>
@@ -386,7 +409,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/librosa-load/</loc>
-    <lastmod>2018-11-14T06:16:07.000Z</lastmod>
+    <lastmod>2018-11-14T06:16:07.809Z</lastmod>
     <data>
         <display>
         <title>librosa.load() 读取音频的采样率处理</title>
@@ -411,7 +434,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/librosa-audio/</loc>
-    <lastmod>2018-11-14T06:15:56.000Z</lastmod>
+    <lastmod>2018-11-14T06:15:56.377Z</lastmod>
     <data>
         <display>
         <title>librosa音频操作基础和特征提取</title>
@@ -436,7 +459,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/hexo-next-note/</loc>
-    <lastmod>2018-11-14T06:15:49.000Z</lastmod>
+    <lastmod>2018-11-14T06:15:49.088Z</lastmod>
     <data>
         <display>
         <title>在hexo-NexT中插入note提示块</title>
@@ -455,7 +478,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/tech/audio/cconv/</loc>
-    <lastmod>2018-11-14T06:15:23.000Z</lastmod>
+    <lastmod>2018-11-14T06:15:23.209Z</lastmod>
     <data>
         <display>
         <title>impulse response 使用的踩坑 —— cconv</title>
@@ -482,7 +505,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/hello-world/</loc>
-    <lastmod>2018-10-17T07:46:56.000Z</lastmod>
+    <lastmod>2018-10-17T07:46:56.164Z</lastmod>
     <data>
         <display>
         <title>Hello World</title>
@@ -497,7 +520,7 @@
     
   <url>
     <loc>https://jinnsjj.github.io/uncategorized/build-projects-page/</loc>
-    <lastmod>2018-10-17T03:22:30.000Z</lastmod>
+    <lastmod>2018-10-17T03:22:30.495Z</lastmod>
     <data>
         <display>
         <title>搭建hexo+next博客并把项目主页放在上面</title>

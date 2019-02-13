@@ -435,6 +435,34 @@
 
       <h3 class="post-title">
         
+            <a class="post-title-link" href="/tech/coding/skip-getline/" itemprop="url">
+              
+                <span itemprop="name">cin 后使用 getline()</span>
+              
+            </a>
+        
+      </h3>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2019-02-10T14:18:25+09:00"
+              content="2019-02-10" >
+          02-10
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h3 class="post-title">
+        
             <a class="post-title-link" href="/tech/coding/avoid-vector-bool/" itemprop="url">
               
                 <span itemprop="name">避免使用 vector-bool</span>
@@ -494,7 +522,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/uploads/avatar2.jpg"
+                src="/uploads/avatar3.jpg"
                 alt="Jon" />
             
               <p class="site-author-name" itemprop="name">Jon</p>
@@ -508,7 +536,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1383,33 +1411,6 @@
           return $(e).text()
         }).toArray().join('\n')
         var ta = document.createElement('textarea')
-        document.body.appendChild(ta)
-        ta.style.position = 'absolute'
-        ta.style.top = '0px'
-        ta.style.left = '0px'
-        ta.value = code
-        ta.select()
-        ta.focus()
-        var result = document.execCommand('copy')
-        document.body.removeChild(ta)
-        
-          if(result)$(this).text('Copied')
-          else $(this).text('Copy failed')
-        
-        $(this).blur()
-      })).on('mouseleave', function (e) {
-        var $b = $(this).find('.copy-btn')
-        setTimeout(function () {
-          $b.text('Copy')
-        }, 300)
-      }).append(e)
-    })
-  </script>
-
-
-</body>
-</html>
-ent('textarea')
         document.body.appendChild(ta)
         ta.style.position = 'absolute'
         ta.style.top = '0px'
