@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jinnsjj.github.io/about/index.html</loc>
+    
+    <lastmod>2019-02-14T11:19:10.697Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jinnsjj.github.io/tech/coding/skip-getline/</loc>
     
     <lastmod>2019-02-10T05:24:11.338Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>https://jinnsjj.github.io/tech/audio/pre-defense/</loc>
     
     <lastmod>2018-12-06T04:52:01.168Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jinnsjj.github.io/about/index.html</loc>
-    
-    <lastmod>2018-11-17T05:32:59.000Z</lastmod>
     
   </url>
   
